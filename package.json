@@ -1,0 +1,54 @@
+{
+    "name": "seokdong-dday",
+    "version": "2.0.8",
+    "private": true,
+    "scripts": {
+        "dev": "next dev -p 80",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "format": "prettier --write \"**/*.*\"",
+        "prepare": "husky install"
+    },
+    "prettier": {
+        "printWidth": 120,
+        "tabWidth": 4,
+        "arrowParens": "avoid",
+        "trailingComma": "none",
+        "overrides": [
+            {
+                "files": "ddayStorage.tsx",
+                "options": {
+                    "printWidth": 256
+                }
+            }
+        ]
+    },
+    "dependencies": {
+        "@types/node": "18.15.13",
+        "@types/react": "18.0.37",
+        "@types/react-dom": "18.0.11",
+        "@vercel/analytics": "^1.0.0",
+        "@microsoft/eslint-formatter-sarif": "3.0.0",
+        "autoprefixer": "10.4.14",
+        "eslint": "8.38.0",
+        "eslint-config-next": "13.3.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "flowbite": "^1.6.5",
+        "luxon": "^3.3.0",
+        "next": "13.2.4",
+        "postcss": "8.4.23",
+        "prettier": "^2.7.1",
+        "prettier-plugin-tailwindcss": "^0.2.7",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "tailwindcss": "3.3.1",
+        "typescript": "5.0.4",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.1"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    }
+}

@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "S-CoreDream-3Light";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navigation-bar a {
+    margin-right: 0.75em;
+}
+
+@layer components {
+    .show {
+        display: unset;
+    }
+
+    .hide {
+        display: none;
+    }
+}
+
+hr {
+    @apply h-px border-0;
+}
+
+.dday-box {
+    @apply pt-12 text-center;
+}
+
+.dday-box .name {
+    @apply pb-2.5 text-xl text-dark dark:text-white;
+}
+
+.dday-box .content {
+    @apply ml-auto flex border-2 border-gray-300 bg-white;
+    border-radius: 18px;
+    width: 27em;
+}
+
+.dday-box .content.exam {
+    @apply border-red-300;
+}
+
+.dday-box .content.holiday {
+    @apply border-green-300;
+}
+
+.dday-box .content.event {
+    @apply border-blue-300;
+}
+
+.dday-box .content.special {
+    @apply border-yellow-200;
+}
+
+.dday-box .content.disaster {
+    @apply bg-gray-100;
+}
+
+@media (max-width: 432px) {
+    .dday-box .content {
+        @apply w-screen;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-version {
+        @apply ml-3;
+    }
+}
+
+.dday-box .content .affect-grade {
+    @apply rounded-2xl bg-gray-300;
+}
+
+.dday-box .content .affect-grade.exam {
+    @apply bg-red-300;
+}
+
+.dday-box .content .affect-grade.holiday {
+    @apply bg-green-300;
+}
+
+.dday-box .content .affect-grade.event {
+    @apply bg-blue-300;
+}
+
+.dday-box .content .affect-grade.special {
+    @apply bg-yellow-200;
+}
+
+.dday-box .content .affect-grade div {
+    @apply w-20 pt-2;
+    height: 40px;
+}
+
+.dday-box .content .affect-grade .affect {
+    @apply bg-gray-300 text-gray-800;
+}
+
+.dday-box .content .affect-grade .affect.exam {
+    @apply bg-red-300 text-red-800;
+}
+
+.dday-box .content .affect-grade .affect.holiday {
+    @apply bg-green-300 text-green-800;
+}
+
+.dday-box .content .affect-grade .affect.event {
+    @apply bg-blue-300 text-blue-800;
+}
+
+.dday-box .content .affect-grade .affect.special {
+    @apply bg-yellow-200 text-yellow-600;
+}
+
+.dday-box .content .affect-grade .unaffect {
+    @apply border-r-2 border-gray-300 bg-white text-gray-500;
+}
+
+.dday-box .content .affect-grade .unaffect.exam {
+    @apply border-red-300 text-red-500;
+}
+
+.dday-box .content .affect-grade .unaffect.holiday {
+    @apply border-green-300 text-green-500;
+}
+
+.dday-box .content .affect-grade .unaffect.event {
+    @apply border-blue-300 text-blue-500;
+}
+
+.dday-box .content .affect-grade .unaffect.special {
+    @apply border-yellow-200 text-yellow-400;
+}
+
+.dday-box .content .affect-grade .unaffect.disaster {
+    @apply bg-gray-100;
+}
+
+.dday-box .content .affect-grade hr {
+    width: 78px;
+}
+
+.dday-box .content .affect-grade .affect-hr {
+    @apply bg-gray-800;
+}
+
+.dday-box .content .affect-grade .affect-hr.exam {
+    @apply bg-red-800;
+}
+
+.dday-box .content .affect-grade .affect-hr.holiday {
+    @apply bg-green-800;
+}
+
+.dday-box .content .affect-grade .affect-hr.event {
+    @apply bg-blue-800;
+}
+
+.dday-box .content .affect-grade .affect-hr.special {
+    @apply bg-yellow-600;
+}
+
+.dday-box .content .affect-grade .unaffect-hr {
+    @apply bg-gray-300;
+}
+
+.dday-box .content .affect-grade .unaffect-hr.exam {
+    @apply bg-red-300;
+}
+
+.dday-box .content .affect-grade .unaffect-hr.holiday {
+    @apply bg-green-300;
+}
+
+.dday-box .content .affect-grade .unaffect-hr.event {
+    @apply bg-blue-300;
+}
+
+.dday-box .content .affect-grade .unaffect-hr.special {
+    @apply bg-yellow-200;
+}
+
+.dday-box .content .affect-grade .a {
+    border-radius: 15px 0 0 0;
+}
+
+.dday-box .content .affect-grade .b {
+    border-radius: 0;
+}
+
+.dday-box .content .affect-grade .c {
+    border-radius: 0 0 0 15px;
+}
+
+.dday-box .content .date {
+    @apply mx-auto w-80 py-6 text-center text-black;
+    width: auto;
+    border-radius: 0 15px 15px 0;
+}
+
+@keyframes time_change {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.date-section .changed {
+    animation-name: time_change;
+    animation-duration: 0.75s;
+}
