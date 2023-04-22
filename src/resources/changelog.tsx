@@ -102,14 +102,19 @@ const versionInformation = {
         },
         {
             version: "2.2.0",
-            date: "2023년 4월 22일 오전 9시 53분",
+            date: "2023년 4월 22일 오전 9시 52분",
             content: [
                 "HOTFIX: 모바일에서 필터링 버튼이 이상한 위치에 표시되는 오류 해결",
                 "새해까지 남은 날짜 진행바 추가"
             ]
+        },
+        {
+            version: "2.2.1",
+            date: "2023년 4월 22일 오전 9시 54분",
+            content: ["HOTFIX: 업데이트 기록"]
         }
     ],
-    version: "2.1.0"
+    version: "2.2.1"
 };
 
 export default versionInformation;
