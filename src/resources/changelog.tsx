@@ -94,9 +94,14 @@ const versionInformation = {
             version: "2.0.9",
             date: "2023년 4월 22일 오전 2시 34분",
             content: ["깃헙 레포지토리 설명 개선"]
+        },
+        {
+            version: "2.1.0",
+            date: "2023년 4월 22일 오전 9시 15분",
+            content: ["필터링 기능 추가"]
         }
     ],
-    version: "2.0.9"
+    version: "2.1.0"
 };
 
 export default versionInformation;

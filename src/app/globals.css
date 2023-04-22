@@ -9,6 +9,62 @@
     font-style: normal;
 }
 
+.type-selector button {
+    @apply m-3 mt-6 rounded-xl border-2 border-gray-300 px-7 py-4;
+}
+
+.type-selector .exam {
+    @apply border-red-300 text-red-800;
+}
+
+.type-selector .exam.on {
+    @apply bg-red-300;
+}
+
+.type-selector .holiday {
+    @apply border-green-300 text-green-800;
+}
+
+.type-selector .holiday.on {
+    @apply bg-green-300;
+}
+
+.type-selector .festival {
+    @apply border-blue-300 text-blue-800;
+}
+
+.type-selector .festival.on {
+    @apply bg-blue-300;
+}
+
+.type-selector .special {
+    @apply border-yellow-200 text-yellow-600;
+}
+
+.type-selector .special.on {
+    @apply bg-yellow-200;
+}
+
+.type-selector .others.on {
+    @apply bg-gray-300;
+}
+
+.other-selector .grade button {
+    @apply border-2 border-teal-200 px-4 py-2 text-teal-800;
+}
+
+.other-selector .grade .on {
+    @apply bg-teal-200;
+}
+
+.other-selector .semester button {
+    @apply border-2 border-purple-200 px-4 py-2 text-purple-800;
+}
+
+.other-selector .semester .on {
+    @apply bg-purple-200;
+}
+
 .navigation-bar a {
     margin-right: 0.75em;
 }
@@ -20,6 +76,10 @@
 
     .hide {
         display: none;
+    }
+
+    .bl0-imp {
+        border-left: 0 !important;
     }
 }
 

@@ -32,6 +32,6 @@ const ddays = [
     ["새해", 1, [true, true, true], DateTime.local(2024, 1, 1), null],
     ["종업식", 2, [true, true, false], DateTime.local(2024, 1, 5, 8, 50), null],
     ["졸업식", 2, [false, false, true], DateTime.local(2024, 1, 5, 8, 50), null],
-    ["또 다른 시작", 3, [true, true, true], DateTime.local(2024, 3, 1, 8, 50), null]
+    ["또 다른 시작", 3, [true, true, true], DateTime.local(2024, 3, 2, 8, 50), null]
 ];
 export default ddays;
