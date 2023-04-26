@@ -1,8 +1,29 @@
 version: 2
 updates:
-    - package-ecosystem: "npm"
-      directory: "/"
+    - package-ecosystem: "github-actions"
+      directory: "/.github/workflows"
+      rebase-strategy: "auto"
+      target-branch: "dev"
+      assignees:
+          - "AlphaKR93"
+      reviewers:
+          - "AlphaKR93"
       schedule:
           interval: "daily"
+          time: "00:00"
+          timezone: "Asia/Seoul"
+
+    - package-ecosystem: "npm"
+      directory: "/"
+      rebase-strategy: "auto"
+      target-branch: "dev"
+      assignees:
+          - "AlphaKR93"
+      reviewers:
+          - "AlphaKR93"
+      schedule:
+          interval: "daily"
+          time: "00:00"
+          timezone: "Asia/Seoul"
       ignore:
           - dependency-name: "next"
