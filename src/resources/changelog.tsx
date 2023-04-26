@@ -1,3 +1,5 @@
+import * as pack from "../../package.json";
+
 const versionInformation = {
     changelog: [
         {
@@ -112,9 +114,14 @@ const versionInformation = {
             version: "2.2.1",
             date: "2023년 4월 22일 오전 9시 54분",
             content: ["HOTFIX: 업데이트 기록"]
+        },
+        {
+            version: "2.3.0.0",
+            date: "2023년 4월 22일 오전 9시 54분",
+            content: ["상단 바 개선", "버전명 규칙 변경", "GitHub 브랜치 보안 강화", "종속성 업데이트"]
         }
-    ],
-    version: "2.2.1"
+    ].reverse(),
+    version: pack.version
 };
 
 export default versionInformation;
