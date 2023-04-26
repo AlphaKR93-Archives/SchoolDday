@@ -65,8 +65,9 @@
     @apply bg-purple-200;
 }
 
-.navigation-bar a {
+.navigation-bar .navbar a {
     margin-right: 0.75em;
+    line-height: 30px;
 }
 
 @layer components {

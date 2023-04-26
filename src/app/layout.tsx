@@ -1,9 +1,9 @@
 import "./globals.css";
-import navigation from "@/components/navigation";
 import React from "react";
 import { Analytics } from "@vercel/analytics/react";
-import footer from "@/components/footer";
 import { Metadata } from "next";
+import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
     title: "석동중학교 라이브 디데이 카운터",
@@ -20,9 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="ko">
             <Analytics />
             <body>
-                {navigation()}
+                <Navigation />
                 <div className={"wrapper bg-light dark:bg-primary h-auto w-auto"}>{children}</div>
-                {footer()}
+                <Footer />
             </body>
         </html>
     );

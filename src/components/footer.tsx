@@ -3,7 +3,7 @@ import Link from "next/link";
 import GitHub from "@/assets/icon/github.svg";
 import versionInformation from "@/resources/changelog";
 
-export default function footer() {
+export default function Footer() {
     return (
         <footer className={"footer pt-12"}>
             <hr className={"bg-gray-400"} />
