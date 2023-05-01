@@ -2,7 +2,9 @@ name: "Analyze Codes"
 
 on:
     push:
+        branches: ["master", "dev"]
     pull_request:
+        branches: ["master", "dev"]
     workflow_dispatch:
 
 jobs:
