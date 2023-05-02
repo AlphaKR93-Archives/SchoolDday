@@ -119,6 +119,11 @@ const versionInformation = {
             version: "2.3.0.0",
             date: "2023년 4월 22일 오전 9시 54분",
             content: ["상단 바 개선", "버전명 규칙 변경", "GitHub 브랜치 보안 강화", "종속성 업데이트"]
+        },
+        {
+            version: "2.3.1.0",
+            date: "2023년 5월 2일 오후 11시 24분",
+            content: ["디데이 업데이트", "종속성 업데이트"]
         }
     ].reverse(),
     version: pack.version
