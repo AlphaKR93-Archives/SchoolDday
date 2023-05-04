@@ -32,7 +32,7 @@
         "@microsoft/eslint-formatter-sarif": "3.0.0",
         "autoprefixer": "10.4.14",
         "eslint": "8.38.0",
-        "eslint-config-next": "13.3.0",
+        "eslint-config-next": "13.4.0",
         "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-prettier": "^4.2.1",
         "flowbite": "^1.6.5",
