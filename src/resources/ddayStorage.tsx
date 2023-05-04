@@ -4,11 +4,8 @@ const { DateTime } = require("luxon");
  * -2: 참사 dark, -1: 기타 default, 0: 고사 red, 1: 휴교 green, 2: 행사 blue, 3: 특수교육 yellow
  */
 const ddays = [
-    ["1학기 1차고사", 0, [false, true, true], DateTime.local(2023, 4, 27, 8, 50), DateTime.local(2023, 4, 28, 12, 10)],
-    ["개교기념일", 1, [true, true, true], DateTime.local(2023, 5, 1), null],
-    ["스포츠클럽행사", 2, [true, true, true], DateTime.local(2023, 5, 4, 8, 50), null],
-    ["5월 버스킹", 2, [true, true, true], DateTime.local(2023, 5, 3, 12, 20), null],
     ["어린이날", 1, [true, true, true], DateTime.local(2023, 5, 5), null],
+    ["5월 버스킹", 2, [true, true, true], DateTime.local(2023, 5, 17, 12, 20), null],
     ["대체공휴일", 1, [true, true, true], DateTime.local(2023, 5, 29), null],
     ["진로캠프", 2, [true, false, false], DateTime.local(2023, 5, 31, 8, 30), DateTime.local(2023, 6, 2)],
     ["수학여행", 2, [false, true, false], DateTime.local(2023, 5, 31, 8, 30), DateTime.local(2023, 6, 2)],
