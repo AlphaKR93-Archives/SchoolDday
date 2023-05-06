@@ -1,0 +1,44 @@
+.year_remain {
+    @apply rounded-3xl p-7;
+    box-shadow: 24px 24px 50px #999999, -24px -24px 50px #FFFFFF;
+}
+
+.year_remain .title {
+    @apply inline-flex w-full items-center;
+}
+
+.year_remain .title .year {
+    @apply min-w-max pl-1 pr-8 text-2xl text-gray-900;
+}
+
+.year_remain .title .line {
+    @apply w-full bg-gray-400;
+}
+
+.year_remain .title .days {
+    @apply flex min-w-max items-center gap-3 pl-6 text-xl text-gray-500;
+}
+
+.year_remain .title .days .passed {
+    @apply border-r border-gray-300 pr-3;
+}
+
+.year_remain .content {
+    @apply mt-7 flex items-center gap-6;
+}
+
+.year_remain .content .progress {
+    @apply w-full h-5;
+    border-radius: 50px;
+    box-shadow: inset 2px 2px 5px #bfbfbf, inset -2px -2px 5px #ffffff;
+}
+
+.year_remain .content .progress .passed {
+    @apply h-full;
+    background: linear-gradient(145deg, #3cac70, #32915f);
+    border-radius: 50px;
+}
+
+.year_remain .content .passed {
+    @apply min-w-max text-xl;
+}

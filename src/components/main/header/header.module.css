@@ -1,0 +1,39 @@
+.header {
+    @apply w-full h-20;
+}
+
+.header nav {
+    @apply h-full flex items-center w-full max-w-screen-xl px-4 mx-auto;
+}
+
+.header .logo {
+    @apply text-2xl min-w-max;
+}
+
+.header .quick_move {
+    @apply flex items-center gap-6 ml-11 text-gray-500 min-w-max;
+}
+
+.header .features {
+    @apply justify-end w-full flex gap-4;
+}
+
+.header .features .outside {
+    @apply flex gap-4;
+}
+
+.header .features .outside a {
+    @apply text-sm font-medium px-4 h-9 rounded-md items-center flex;
+}
+
+.header .features .outside .default {
+    @apply border border-gray-200 text-gray-500;
+}
+
+.header .features .outside .highlight {
+    @apply bg-black text-white;
+}
+
+.header .features .feature {
+    @apply flex my-auto h-min pr-3 border-r border-gray-300;
+}
