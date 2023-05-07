@@ -27,6 +27,8 @@ module.exports = {
         "react/jsx-filename-extension": ["off"],
         "import/extensions": ["off"],
         "import/no-extraneous-dependencies": ["off"],
-        "global-require": ["off"]
+        "global-require": ["off"],
+        "lines-between-class-members": ["off"],
+        "no-param-reassign": ["off"]
     }
 };

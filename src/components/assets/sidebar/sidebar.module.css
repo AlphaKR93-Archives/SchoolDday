@@ -1,0 +1,15 @@
+.sidebar {
+    @apply h-full w-72 p-7;
+}
+
+.sidebar li {
+    @apply mb-4;
+}
+
+.sidebar h1 {
+    @apply mb-2 font-bold;
+}
+
+.sidebar ul {
+    @apply flex items-center justify-between border-l border-gray-300 py-1 pl-4;
+}

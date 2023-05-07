@@ -1,0 +1,78 @@
+@tailwind components;
+
+.button {
+    @apply button_main border-gray-300;
+    box-shadow: inset 5px 5px 5px #d9d9d9, inset -5px -5px 5px #ffffff;
+}
+
+.inner {
+    @apply inner_main ml-1;
+    animation-name: button_off;
+}
+
+.button_on {
+    @apply button_main border-white;
+}
+
+.button_on .inner {
+    @apply inner_main ml-auto mr-1;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    animation-name: button_on;
+}
+
+@layer components {
+    .button_main {
+        @apply flex h-6 w-12 items-center rounded-full border;
+        transition: all .5s ease-in-out;
+    }
+
+    .inner_main {
+        @apply h-4 w-4 rounded-full;
+        transition: all .5s ease-in-out;
+        animation-duration: .5s;
+    }
+}
+
+@keyframes button_off {
+    0% {
+        @apply w-4 ml-auto mr-1;
+    }
+
+    25% {
+        @apply w-4 ml-auto mr-1;
+    }
+
+    45% {
+        @apply ml-auto mr-1;
+    }
+
+    75% {
+        @apply w-10 ml-1;
+    }
+
+    100% {
+        @apply w-4 ml-1;
+    }
+}
+
+@keyframes button_on {
+    0% {
+        @apply w-4 ml-1;
+    }
+
+    25% {
+        @apply w-10 ml-1;
+    }
+
+    45% {
+        @apply ml-auto mr-1;
+    }
+
+    75% {
+        @apply w-4 ml-auto mr-1;
+    }
+
+    100% {
+        @apply w-4 ml-auto mr-1;
+    }
+}

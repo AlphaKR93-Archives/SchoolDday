@@ -16,7 +16,7 @@ export default function Header() {
                 </div>
                 <div className={styles.features}>
                     <div className={styles.feature}>
-                        <button>
+                        <button type="button">
                             <SunIcon className="h-6 w-6 text-gray-400" />
                         </button>
                     </div>

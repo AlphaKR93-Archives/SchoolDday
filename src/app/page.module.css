@@ -1,3 +1,3 @@
 .main {
-    @apply mx-auto max-w-[1340px] mt-3;
+    @apply mx-auto max-w-[1340px] mt-3 h-screen;
 }

@@ -1,6 +1,7 @@
 import "./globals.css";
 import React from "react";
 import Header from "@/components/main/header/header";
+import Providers from "@/components/store/provider";
 
 export const metadata = {
     title: "Create Next App",
@@ -11,8 +12,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="ko">
             <body className="font-escore">
-                <Header />
-                {children}
+                <Providers>
+                    <Header />
+                    {children}
+                </Providers>
             </body>
         </html>
     );

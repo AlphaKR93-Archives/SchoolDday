@@ -28,15 +28,13 @@
 }
 
 .year_remain .content .progress {
-    @apply w-full h-5;
-    border-radius: 50px;
+    @apply w-full h-5 rounded-full;
     box-shadow: inset 2px 2px 5px #bfbfbf, inset -2px -2px 5px #ffffff;
 }
 
 .year_remain .content .progress .passed {
-    @apply h-full;
+    @apply h-full rounded-full;
     background: linear-gradient(145deg, #3cac70, #32915f);
-    border-radius: 50px;
 }
 
 .year_remain .content .passed {
