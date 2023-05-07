@@ -1,6 +1,6 @@
 .year_remain {
     @apply rounded-3xl p-7;
-    box-shadow: 24px 24px 50px #999999, -24px -24px 50px #FFFFFF;
+    box-shadow: 24px 24px 50px #999999, -24px -24px 50px #ffffff;
 }
 
 .year_remain .title {
@@ -28,7 +28,7 @@
 }
 
 .year_remain .content .progress {
-    @apply w-full h-5 rounded-full;
+    @apply h-5 w-full rounded-full;
     box-shadow: inset 2px 2px 5px #bfbfbf, inset -2px -2px 5px #ffffff;
 }
 

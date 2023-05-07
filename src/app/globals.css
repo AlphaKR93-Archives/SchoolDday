@@ -10,9 +10,9 @@
 }
 
 main {
-    @apply w-full;
+    @apply mx-auto mt-3 min-h-screen w-full max-w-[1340px];
 }
 
 hr {
-    @apply border-0 h-px
+    @apply h-px border-0;
 }
