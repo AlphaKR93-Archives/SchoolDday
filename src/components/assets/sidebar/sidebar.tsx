@@ -1,5 +1,6 @@
-import TypeSection from "@/components/assets/sidebar/type_section/type_section";
-import GradeSection from "@/components/assets/sidebar/grade_section/grade_section";
+import TypeSection from "@/components/assets/sidebar/type_section";
+import GradeSection from "@/components/assets/sidebar/grade_section";
+import SemesterSection from "@/components/assets/sidebar/semester_section";
 import styles from "./sidebar.module.css";
 
 export default function Sidebar() {
@@ -7,6 +8,7 @@ export default function Sidebar() {
         <ul className={styles.sidebar}>
             <TypeSection />
             <GradeSection />
+            <SemesterSection />
         </ul>
     );
 }

@@ -1,4 +1,3 @@
-/** @type {import('eslint').Config} */
 module.exports = {
     env: {
         browser: true,

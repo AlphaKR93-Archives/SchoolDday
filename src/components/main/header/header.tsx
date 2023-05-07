@@ -12,12 +12,13 @@ export default function Header() {
                 <div className={styles.quick_move}>
                     <Link href="/">디데이</Link>
                     <Link href="/">시간표</Link>
+                    <Link href="/">유용한 링크</Link>
                     <Link href="/about">사이트 정보</Link>
                 </div>
                 <div className={styles.features}>
                     <div className={styles.feature}>
                         <button type="button">
-                            <SunIcon className="h-6 w-6 text-gray-400" />
+                            <SunIcon className={styles.icon} />
                         </button>
                     </div>
                     <ul className={styles.outside}>

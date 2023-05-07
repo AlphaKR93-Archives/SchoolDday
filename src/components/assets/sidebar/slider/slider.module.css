@@ -23,56 +23,55 @@
 @layer components {
     .button_main {
         @apply flex h-6 w-12 items-center rounded-full border;
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
     }
 
     .inner_main {
         @apply h-4 w-4 rounded-full;
-        transition: all .5s ease-in-out;
-        animation-duration: .5s;
+        animation-duration: 0.5s;
     }
 }
 
 @keyframes button_off {
     0% {
-        @apply w-4 ml-auto mr-1;
+        @apply ml-auto mr-1 w-4;
     }
 
     25% {
-        @apply w-4 ml-auto mr-1;
+        @apply ml-auto mr-1 w-[2.4rem];
     }
 
-    45% {
-        @apply ml-auto mr-1;
+    30% {
+        @apply ml-1;
     }
 
     75% {
-        @apply w-10 ml-1;
+        @apply ml-1 w-4;
     }
 
     100% {
-        @apply w-4 ml-1;
+        @apply ml-1 w-4;
     }
 }
 
 @keyframes button_on {
     0% {
-        @apply w-4 ml-1;
+        @apply ml-1 w-4;
     }
 
     25% {
-        @apply w-10 ml-1;
+        @apply ml-1 w-10;
     }
 
-    45% {
+    40% {
         @apply ml-auto mr-1;
     }
 
     75% {
-        @apply w-4 ml-auto mr-1;
+        @apply ml-auto mr-1 w-4;
     }
 
     100% {
-        @apply w-4 ml-auto mr-1;
+        @apply ml-auto mr-1 w-4;
     }
 }

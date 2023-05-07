@@ -32,18 +32,18 @@ export default function TypeSection() {
                 dispatcher={toggleDdayType("event")}
             />
             <Slider
-                name="생일"
-                enabled={enabledTypes.includes("birthday")}
-                onValue={{ background: "ccb128", shadowPrimary: "ad9622", shadowSecondary: "ebcc2e" }}
-                offValue={{ bgPrimary: "fff48e", bgSecondary: "e6cd78" }}
-                dispatcher={toggleDdayType("birthday")}
-            />
-            <Slider
                 name="기타"
                 enabled={enabledTypes.includes("miscellaneous")}
                 onValue={{ background: "7a7a7a", shadowPrimary: "686868", shadowSecondary: "8c8c8c" }}
                 offValue={{ bgPrimary: "c5c5c5", bgSecondary: "a6a6a6" }}
                 dispatcher={toggleDdayType("miscellaneous")}
+            />
+            <Slider
+                name="생일"
+                enabled={enabledTypes.includes("birthday")}
+                onValue={{ background: "ccb128", shadowPrimary: "ad9622", shadowSecondary: "ebcc2e" }}
+                offValue={{ bgPrimary: "fff48e", bgSecondary: "e6cd78" }}
+                dispatcher={toggleDdayType("birthday")}
             />
         </li>
     );
