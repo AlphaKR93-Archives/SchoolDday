@@ -8,7 +8,7 @@ export default function Home() {
             <RemainBox />
             <section className={styles.main}>
                 <Sidebar />
-                test
+                <div className={styles.content}>여긴어디 나는누구</div>
             </section>
         </main>
     );

@@ -31,7 +31,7 @@ export default function RemainBox() {
             }
 
             updateProgress(100 - (endOfYear.diff(now, "day", true) * 100) / lengthOfYear);
-        }, 1800000);
+        }, 31536);
         return () => clearInterval(interval);
     });
     setTimeout(() => {

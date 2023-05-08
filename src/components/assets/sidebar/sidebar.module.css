@@ -1,9 +1,9 @@
 .sidebar {
-    @apply h-full w-72 p-7;
+    @apply h-full min-w-[18rem] p-7;
 }
 
 .sidebar li {
-    @apply mb-4;
+    @apply mb-10;
 }
 
 .sidebar h1 {

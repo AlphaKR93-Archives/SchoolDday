@@ -10,7 +10,11 @@
 }
 
 main {
-    @apply mx-auto mt-3 min-h-screen w-full max-w-[1340px];
+    @apply mx-auto min-h-screen w-full max-w-[1340px];
+}
+
+body {
+    @apply pt-24;
 }
 
 hr {

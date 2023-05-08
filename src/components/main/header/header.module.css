@@ -1,13 +1,13 @@
-@tailwind component;
+@tailwind components;
 
-@layer component {
+@layer components {
     .trans {
         transition: all 0.25s ease-in-out;
     }
 }
 
 .header {
-    @apply h-20 w-full;
+    @apply fixed left-0 right-0 top-0 h-20 w-full backdrop-blur;
 }
 
 .header nav {

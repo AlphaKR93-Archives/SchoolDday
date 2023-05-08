@@ -1,0 +1,8 @@
+.not_found {
+    @apply rounded-3xl p-7;
+    box-shadow: 24px 24px 50px #999999, -24px -24px 50px #ffffff;
+}
+
+.not_found span {
+    @apply flex justify-center;
+}

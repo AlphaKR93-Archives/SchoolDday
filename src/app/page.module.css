@@ -1,3 +1,7 @@
 .main {
     @apply mt-16 flex h-full;
 }
+
+.main .content {
+    @apply h-full w-full p-7;
+}
