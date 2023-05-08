@@ -11,8 +11,7 @@ export default function Header() {
                 </Link>
                 <div className={styles.quick_move}>
                     <Link href="/">디데이</Link>
-                    <Link href="/">시간표</Link>
-                    <Link href="/">유용한 링크</Link>
+                    <Link href="/links">유용한 링크</Link>
                     <Link href="/about">사이트 정보</Link>
                 </div>
                 <div className={styles.features}>

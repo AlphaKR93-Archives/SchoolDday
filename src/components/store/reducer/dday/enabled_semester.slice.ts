@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { setCookie } from "cookies-next";
 
 const slice = createSlice({
     name: "enabledDdaySemesters",
@@ -11,9 +12,13 @@ const slice = createSlice({
                 if (state.enabled.includes(action.payload))
                     state.enabled = state.enabled.filter(type => type !== action.payload);
                 else state.enabled.push(action.payload);
+            setCookie("enabled_dday_semesters", state.enabled.join(" "));
+        },
+        setEnabledDdaySemesters: (state, action) => {
+            state.enabled = action.payload;
         }
     }
 });
 export default slice.reducer;
 
-export const { toggleDdaySemester } = slice.actions;
+export const { toggleDdaySemester, setEnabledDdaySemesters } = slice.actions;

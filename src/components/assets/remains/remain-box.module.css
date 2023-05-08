@@ -35,6 +35,7 @@
 .year_remain .content .progress .passed {
     @apply h-full rounded-full;
     background: linear-gradient(145deg, #3cac70, #32915f);
+    transition: width 1.5s ease-in-out;
 }
 
 .year_remain .content .passed {

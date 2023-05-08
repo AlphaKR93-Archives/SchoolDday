@@ -1,6 +1,7 @@
 "use client";
 
 import { useAppDispatch } from "@/components/store/store";
+import { useState } from "react";
 import styles from "./slider.module.css";
 
 type SliderProps = {
@@ -23,14 +24,20 @@ type SliderProps = {
 };
 
 export default function Slider(props: SliderProps) {
+    const [isReady, updateStatus] = useState(false);
+
     const { name, onValue, offValue, dispatcher, enabled } = props;
     const dispatch = useAppDispatch();
+
+    setTimeout(() => {
+        updateStatus(true);
+    });
 
     return (
         <ul>
             <p>{name}</p>
             <button type="button" onClick={() => dispatch(dispatcher)}>
-                {enabled ? (
+                {enabled && isReady ? (
                     <div
                         className={styles.button_on}
                         style={{
