@@ -1,6 +1,6 @@
 import RemainBox from "@/components/assets/remains/remain-box";
 import Sidebar from "@/components/assets/sidebar/sidebar";
-import DdayBox from "@/components/assets/dday_box/dday_box";
+import FilteredDdayValues from "@/components/assets/main_content/dday_grids";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
             <section className={styles.main}>
                 <Sidebar />
                 <div className={styles.content}>
-                    <DdayBox />
+                    <FilteredDdayValues />
                 </div>
             </section>
         </main>

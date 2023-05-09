@@ -1,54 +1,27 @@
 .dday_box {
-    @apply max-w-min;
+    @apply flex w-full justify-center pb-7;
 }
 
 .dday_box .title {
-    @apply flex justify-center gap-2 text-xl;
+    @apply flex w-full justify-center gap-2 text-xl;
 }
 
 .dday_box .content_box {
-    @apply mt-2 rounded-xl border border-gray-400 p-1.5;
+    @apply mt-2 w-[427px] rounded-xl border border-gray-400 p-1.5;
     box-shadow: 20px 20px 60px #bdbdbd, -20px -20px 60px #ffffff;
 }
 
 .dday_box .content_box .tags {
-    @apply flex justify-between text-sm;
-}
-
-.dday_box .content_box .tags .grades {
-    @apply flex gap-1.5;
+    @apply flex justify-between rounded-xl border border-gray-400 p-1.5 text-sm;
+    box-shadow: 5px 5px 10px #cccccc, -5px -5px 10px #ffffff;
 }
 
 .dday_box .content_box .tags p {
     @apply rounded-[.4rem] px-1.5 py-1 font-bold text-white;
 }
 
-.dday_box .content_box .tags .grades .first {
-    background: linear-gradient(145deg, #ff9e9e, #e68585);
-}
-
-.dday_box .content_box .tags .grades .second {
-    background: linear-gradient(145deg, #6db4ff, #5c97e6);
-}
-
-.dday_box .content_box .tags .grades .third {
-    background: linear-gradient(145deg, #fbb800, #d49b00);
-}
-
-.dday_box .content_box .tags .type .exam {
-    background: linear-gradient(145deg, #ff9e9e, #e68585);
-}
-
-.dday_box .content_box .counter {
-    @apply mx-2 mt-4 flex min-w-max items-end justify-center gap-2.5;
-}
-
-.dday_box .content_box .counter span {
-    @apply flex justify-center gap-1.5 text-5xl;
-}
-
-.dday_box .content_box .counter .milli {
-    @apply text-2xl;
+.dday_box .content_box .tags .date_informations {
+    @apply flex gap-1.5;
 }
 
 .dday_box .content_box .date {

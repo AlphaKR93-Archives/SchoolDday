@@ -1,0 +1,11 @@
+.counter {
+    @apply mx-2 mt-3 flex min-w-max items-end justify-center;
+}
+
+.counter span {
+    @apply flex justify-center gap-1 text-5xl;
+}
+
+.counter .milli {
+    @apply text-2xl;
+}

@@ -1,39 +1,42 @@
-import styles from "./dday_box.module.css";
 import dayjs from "dayjs";
+import "dayjs/locale/ko";
+import SemesterComponent from "@/components/assets/dday_box/components/tags/date/semester/semester.component";
+import RemainDateComponent from "@/components/assets/dday_box/components/tags/date/remain/remains.component";
+import CounterComponent from "@/components/assets/dday_box/components/content/counter/counter.component";
+import styles from "./dday_box.module.css";
+import GradeSpan from "./components/tags/grades/grades.component";
+import TypeSpan, { DdayType } from "./components/tags/type/type.component";
 
 export default function DdayBox(props: {
     name: string;
+    type: DdayType;
     date: {
         start: dayjs.Dayjs;
         end: dayjs.Dayjs;
     };
-    grade: null | number[];
-    tag: null | string[];
+    grades: null | number[];
 }) {
+    const { name, type, date, grades } = props;
+
     return (
         <div className={styles.dday_box}>
-            <span className={styles.title}>
-                <p>2학기 1차고사</p>
-                <p>(D-69)</p>
-            </span>
-            <div className={styles.content_box}>
-                <section className={styles.tags}>
-                    <span className={styles.grades}>
-                        <p className={styles.first}>1학년</p>
-                        <p className={styles.second}>2학년</p>
-                        <p className={styles.third}>3학년</p>
-                    </span>
-                    <p className={styles.exam}>지필고사</p>
-                </section>
-                <section className={styles.counter}>
-                    <span>
-                        <p>12</p>:<p>34</p>:<p>56</p>:<p>78</p>
-                    </span>
-                    <p className={styles.milli}>.910</p>
-                </section>
-                <section className={styles.date}>
-                    <p>2023. 05. 23. 월</p>~<p>2023. 05. 24. 화</p>
-                </section>
+            <div>
+                <span className={styles.title}>{name}</span>
+                <div className={styles.content_box}>
+                    <section className={styles.tags}>
+                        <span className={styles.date_informations}>
+                            <SemesterComponent date={date} />
+                            <RemainDateComponent start={date.start.valueOf()} end={date.end.valueOf()} />
+                        </span>
+                        <GradeSpan grades={grades} />
+                        <TypeSpan type={type} />
+                    </section>
+                    <CounterComponent start={date.start.valueOf()} end={date.end.valueOf()} />
+                    <section className={styles.date}>
+                        <p>{date.start.locale("ko").format("YYYY. MM. DD ddd")}</p>~
+                        <p>{date.end.locale("ko").format("YYYY. MM. DD ddd")}</p>
+                    </section>
+                </div>
             </div>
         </div>
     );
