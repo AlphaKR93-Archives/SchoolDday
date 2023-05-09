@@ -3,7 +3,7 @@ import React from "react";
 import Header from "@/components/main/header/header";
 import Providers from "@/components/store/provider";
 import { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/dist/react";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
     title: "석동중 디데이",

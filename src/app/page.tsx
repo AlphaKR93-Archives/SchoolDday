@@ -1,5 +1,6 @@
 import RemainBox from "@/components/assets/remains/remain-box";
 import Sidebar from "@/components/assets/sidebar/sidebar";
+import DdayBox from "@/components/assets/dday_box/dday_box";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -8,7 +9,9 @@ export default function Home() {
             <RemainBox />
             <section className={styles.main}>
                 <Sidebar />
-                <div className={styles.content}>여긴어디 나는누구</div>
+                <div className={styles.content}>
+                    <DdayBox />
+                </div>
             </section>
         </main>
     );
