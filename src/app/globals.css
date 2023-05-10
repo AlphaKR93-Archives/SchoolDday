@@ -20,3 +20,21 @@ body {
 hr {
     @apply h-px border-0;
 }
+
+.unsupported-size {
+    @apply hidden;
+}
+
+.unsupported-size p {
+    @apply w-screen text-center;
+}
+
+@media (max-width: 240px) {
+    main {
+        @apply hidden;
+    }
+
+    .unsupported-size {
+        display: unset;
+    }
+}

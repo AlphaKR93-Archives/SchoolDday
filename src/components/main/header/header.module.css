@@ -65,3 +65,17 @@
 .header .features .feature .icon {
     @apply h-6 w-6 text-gray-400;
 }
+
+@media (max-width: 760px) {
+    .header .logo {
+        @apply w-screen text-center;
+    }
+
+    .header .quick_move {
+        @apply hidden;
+    }
+
+    .header .features {
+        @apply hidden;
+    }
+}

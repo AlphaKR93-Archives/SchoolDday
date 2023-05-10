@@ -1,5 +1,5 @@
 .counter {
-    @apply mx-2 mt-3 flex min-w-max items-end justify-center;
+    @apply mt-3 flex min-w-max items-end justify-center;
 }
 
 .counter span {
@@ -8,4 +8,22 @@
 
 .counter .milli {
     @apply text-2xl;
+}
+
+@media (max-width: 428px) {
+    .counter .milli {
+        @apply hidden;
+    }
+}
+
+@media (max-width: 345px) {
+    .counter span {
+        @apply text-4xl;
+    }
+}
+
+@media (max-width: 270px) {
+    .counter span {
+        @apply text-3xl;
+    }
 }

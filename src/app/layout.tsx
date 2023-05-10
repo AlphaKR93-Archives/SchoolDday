@@ -24,6 +24,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <Header />
                     {children}
                 </Providers>
+                <div className="unsupported-size">
+                    <p>본 사이트에서</p>
+                    <p>지원하지 않는</p>
+                    <p>화면 크기입니다.</p>
+                </div>
             </body>
         </html>
     );

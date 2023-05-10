@@ -38,6 +38,64 @@
     transition: width 1.5s ease-in-out;
 }
 
-.year_remain .content .passed {
+.year_remain .content .percentage {
     @apply min-w-max text-xl;
+}
+
+.year_remain .content .percentage_slim {
+    @apply hidden;
+}
+
+.year_remain .mobile_days {
+    @apply mt-4 hidden w-full justify-center gap-3 text-gray-500;
+}
+
+.year_remain .mobile_days .passed {
+    @apply border-r border-gray-300 pr-3;
+}
+
+@media (max-width: 760px) {
+    .year_remain .title {
+        @apply justify-between;
+    }
+
+    .year_remain .title .year {
+        @apply pr-0;
+    }
+
+    .year_remain .title .line {
+        @apply hidden;
+    }
+}
+
+@media (max-width: 467px) {
+    .year_remain .title .passed {
+        @apply hidden;
+    }
+}
+
+@media (max-width: 345px) {
+    .year_remain .title .year {
+        @apply w-full text-center text-xl;
+    }
+
+    .year_remain .title .days {
+        @apply hidden;
+    }
+
+    .year_remain .content {
+        @apply mt-3 gap-3;
+    }
+
+    .year_remain .content .percentage {
+        @apply hidden;
+    }
+
+    .year_remain .content .percentage_slim {
+        display: unset;
+    }
+
+    .year_remain .mobile_days {
+        @apply flex;
+    }
 }

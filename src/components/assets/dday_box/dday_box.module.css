@@ -27,3 +27,27 @@
 .dday_box .content_box .date {
     @apply mt-3 flex justify-center gap-2;
 }
+
+.dday_box .content_box .date_lite {
+    @apply mt-3 hidden justify-center gap-2;
+}
+
+@media (max-width: 428px) {
+    .dday_box .content_box {
+        @apply w-screen;
+    }
+
+    .dday_box .content_box .tags .date_informations {
+        @apply hidden;
+    }
+}
+
+@media (max-width: 278px) {
+    .dday_box .content_box .date {
+        @apply hidden;
+    }
+
+    .dday_box .content_box .date_lite {
+        @apply flex;
+    }
+}

@@ -36,6 +36,10 @@ export default function DdayBox(props: {
                         <p>{date.start.locale("ko").format("YYYY. MM. DD ddd")}</p>~
                         <p>{date.end.locale("ko").format("YYYY. MM. DD ddd")}</p>
                     </section>
+                    <section className={styles.date_lite}>
+                        <p>{date.start.locale("ko").format("MM. DD ddd")}</p>~
+                        <p>{date.end.locale("ko").format("MM. DD ddd")}</p>
+                    </section>
                 </div>
             </div>
         </div>

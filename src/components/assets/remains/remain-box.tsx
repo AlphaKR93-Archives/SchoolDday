@@ -60,7 +60,12 @@ export default function RemainBox() {
                 <div className={styles.progress}>
                     <div className={styles.passed} style={{ width: `${progress}%` }} />
                 </div>
-                <p className={styles.passed}>{isReady ? `${Math.round(progress)}% 진행되었어요!` : "로딩중..."}</p>
+                <p className={styles.percentage}>{isReady ? `${Math.round(progress)}% 진행되었어요!` : "로딩중..."}</p>
+                <p className={styles.percentage_slim}>{`${Math.round(progress)}%`}</p>
+            </div>
+            <div className={styles.mobile_days}>
+                <p className={styles.passed}>{passedDay}일 지남</p>
+                <p>{lengthOfYear - passedDay}일 남음</p>
             </div>
         </section>
     );
