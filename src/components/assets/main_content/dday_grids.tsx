@@ -4,45 +4,59 @@ import { useAppSelector } from "@/components/store/store";
 import ddays from "@/consts/dday_consts";
 import dayjs from "dayjs";
 import DdayBox from "@/components/assets/dday_box/dday_box";
-import { DdayType } from "@/components/assets/dday_box/components/tags/type/type.component";
+import { useState } from "react";
 import styles from "./dday_grids.module.css";
 
 export default function FilteredDdayValues() {
+    const [isReady, updateStatus] = useState(false);
     const enabledDdayTypes = useAppSelector(state => state.enabledDdayTypes.enabled);
     const enabledDdayGrades = useAppSelector(state => state.enabledDdayGrades.enabled);
     const enabledDdaySemesters = useAppSelector(state => state.enabledDdaySemesters.enabled);
 
+    setTimeout(() => updateStatus(true), 1000);
+
     return (
         <div className={styles.content}>
-            {ddays.map(dday => {
-                const now = dayjs();
+            {isReady ? (
+                ddays.map(dday => {
+                    const now = dayjs();
 
-                if (enabledDdayTypes.includes(dday.type)) {
-                    if (dday.date.start < now && dday.date.end < now) return;
-                    if (!enabledDdaySemesters.includes("2024") && dday.date.start < dayjs("2024-01-01")) return;
+                    if (!enabledDdayTypes.includes(dday.type)) return null;
+                    if (dday.date.start < now && dday.date.end < now) return null;
+
+                    if (
+                        !enabledDdaySemesters.includes("2023-1") &&
+                        dday.date.start < dayjs("2023-08-16T08:30:00.000+09:00")
+                    )
+                        return null;
                     if (
                         !enabledDdaySemesters.includes("2023-2") &&
-                        dday.date.start < dayjs("2023-08-16") &&
-                        dday.date.start > dayjs("2023-07-20")
+                        dday.date.start > dayjs("2023-08-16T08:30:00.000+09:00") &&
+                        dday.date.start < dayjs("2024-01-05T12:20:00.000+09:00")
                     )
-                        return;
-                    if (!enabledDdaySemesters.includes("2023-1") && dday.date.start < dayjs("2023-08-16")) return;
+                        return null;
+                    if (
+                        !enabledDdaySemesters.includes("2024") &&
+                        dday.date.start > dayjs("2024-01-01T00:00:00.000+09:00")
+                    )
+                        return null;
+
+                    if (dday.grades !== null && !dday.grades.some(grade => enabledDdayGrades.includes(grade)))
+                        return null;
 
                     return (
                         <DdayBox
-                            key={dday.name}
+                            key={`${dday.name}-${dday.type}-${dday.grades}`}
                             name={dday.name}
-                            type={dday.type as DdayType}
-                            date={{
-                                start: dayjs(dday.date.start),
-                                end: dayjs(dday.date.end)
-                            }}
+                            type={dday.type}
+                            date={dday.date}
                             grades={dday.grades}
                         />
                     );
-                }
-                return null;
-            })}
+                })
+            ) : (
+                <span>Loading...</span>
+            )}
         </div>
     );
 }

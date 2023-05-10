@@ -1,5 +1,5 @@
 .content {
-    @apply grid h-full w-full grid-cols-2 p-7;
+    @apply grid h-full w-full grid-cols-2 gap-10 p-7;
 }
 
 @media (max-width: 1250px) {

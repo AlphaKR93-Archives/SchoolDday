@@ -9,9 +9,7 @@ export default function Home() {
             <RemainBox />
             <section className={styles.main}>
                 <Sidebar />
-                <div className={styles.content}>
-                    <FilteredDdayValues />
-                </div>
+                <FilteredDdayValues />
             </section>
         </main>
     );

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
+import { useAppSelector } from "@/components/store/store";
 import styles from "./counter.module.css";
 
 function process(
@@ -54,6 +55,8 @@ function process(
 }
 
 export default function CounterComponent(props: { start: number; end: number }) {
+    const milli = useAppSelector(state => state.isMillisecondEnabled.enabled);
+
     const [isReady, updateStatus] = useState(false);
     const [passed, updatePassed] = useState(false);
     const [isEnded, endDday] = useState(false);
@@ -108,7 +111,7 @@ export default function CounterComponent(props: { start: number; end: number }) 
                     <p>{data.mins.value.toString().padStart(2, "0")}</p>:
                     <p>{data.secs.value.toString().padStart(2, "0")}</p>
                 </span>
-                <p className={styles.milli}>.{data.milli.toString().padStart(3, "0")}</p>
+                {milli ? <p className={styles.milli}>.{data.milli.toString().padStart(3, "0")}</p> : null}
             </section>
         );
     if (isEnded)
