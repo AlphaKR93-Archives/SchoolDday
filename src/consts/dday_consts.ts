@@ -1,15 +1,24 @@
 import { DdayType } from "@/components/assets/dday_box/components/tags/type/type.component";
 import dayjs from "dayjs";
 
-function date(year: number, month: number, day: number, hour: number, minute: number) {
-    return dayjs(
-        `${year.toString().padStart(4, "0")}-${month.toString().padStart(2, "0")}-${day
+export function date(month: number, day: number, hour = 0, minute = 0) {
+    const returnValue = dayjs(
+        `${dayjs().year()}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}T${hour
             .toString()
-            .padStart(2, "0")}T${hour.toString().padStart(2, "0")}:${minute.toString().padStart(2, "0")}:00.000+09:00`
+            .padStart(2, "0")}:${minute.toString().padStart(2, "0")}:00.000+09:00`
     );
+    if (returnValue < dayjs()) returnValue.add(1, "year");
+    return returnValue;
 }
 
-export type DdayConstsType = {
+export function everyday(month: number, day: number) {
+    return {
+        start: date(month, day, 0, 0),
+        end: date(month, day, 23, 59)
+    };
+}
+
+const ddays: {
     name: string;
     type: DdayType;
     grades: null | number[];
@@ -17,16 +26,14 @@ export type DdayConstsType = {
         start: dayjs.Dayjs;
         end: dayjs.Dayjs;
     };
-}[];
-
-const ddays: DdayConstsType = [
+}[] = [
     {
         name: "5월 버스킹",
         type: DdayType.EVENT,
         grades: [1, 2, 3],
         date: {
-            start: date(2023, 5, 17, 12, 20),
-            end: date(2023, 5, 17, 13, 10)
+            start: date(5, 17, 12, 20),
+            end: date(5, 17, 13, 10)
         }
     },
     {
@@ -34,8 +41,8 @@ const ddays: DdayConstsType = [
         type: DdayType.HOLIDAY,
         grades: null,
         date: {
-            start: date(2023, 5, 27, 0, 0),
-            end: date(2023, 5, 30, 0, 0)
+            start: date(5, 27, 0, 0),
+            end: date(5, 30, 0, 0)
         }
     },
     {
@@ -43,8 +50,8 @@ const ddays: DdayConstsType = [
         type: DdayType.EVENT,
         grades: [1],
         date: {
-            start: date(2023, 5, 31, 8, 30),
-            end: date(2023, 6, 2, 18, 0)
+            start: date(5, 31, 8, 30),
+            end: date(6, 2, 18, 0)
         }
     },
     {
@@ -52,8 +59,8 @@ const ddays: DdayConstsType = [
         type: DdayType.EVENT,
         grades: [2],
         date: {
-            start: date(2023, 5, 31, 8, 30),
-            end: date(2023, 6, 2, 18, 0)
+            start: date(5, 31, 8, 30),
+            end: date(6, 2, 18, 0)
         }
     },
     {
@@ -61,8 +68,8 @@ const ddays: DdayConstsType = [
         type: DdayType.EVENT,
         grades: [3],
         date: {
-            start: date(2023, 5, 31, 8, 30),
-            end: date(2023, 6, 2, 18, 0)
+            start: date(5, 31, 8, 30),
+            end: date(6, 2, 18, 0)
         }
     },
     {
@@ -70,8 +77,8 @@ const ddays: DdayConstsType = [
         type: DdayType.HOLIDAY,
         grades: null,
         date: {
-            start: date(2023, 6, 3, 0, 0),
-            end: date(2023, 6, 7, 0, 0)
+            start: date(6, 3, 0, 0),
+            end: date(6, 7, 0, 0)
         }
     },
     {
@@ -79,8 +86,8 @@ const ddays: DdayConstsType = [
         type: DdayType.EXAMINATION,
         grades: [2, 3],
         date: {
-            start: date(2023, 6, 26, 8, 50),
-            end: date(2023, 6, 28, 12, 10)
+            start: date(6, 26, 8, 50),
+            end: date(6, 28, 12, 10)
         }
     },
     {
@@ -88,8 +95,8 @@ const ddays: DdayConstsType = [
         type: DdayType.MISCELLANEOUS,
         grades: [1],
         date: {
-            start: date(2023, 6, 26, 8, 50),
-            end: date(2023, 6, 26, 15, 0)
+            start: date(6, 26, 8, 50),
+            end: date(6, 26, 15, 0)
         }
     },
     {
@@ -97,8 +104,8 @@ const ddays: DdayConstsType = [
         type: DdayType.EVENT,
         grades: [1, 2, 3],
         date: {
-            start: date(2023, 7, 20, 8, 50),
-            end: date(2023, 7, 20, 12, 20)
+            start: date(7, 20, 8, 50),
+            end: date(7, 20, 12, 20)
         }
     },
     {
@@ -106,35 +113,32 @@ const ddays: DdayConstsType = [
         type: DdayType.HOLIDAY,
         grades: [1, 2, 3],
         date: {
-            start: date(2023, 7, 20, 12, 20),
-            end: date(2023, 8, 16, 0, 0)
+            start: date(7, 20, 12, 20),
+            end: date(8, 16, 0, 0)
         }
     },
     {
         name: "광복절",
         type: DdayType.HOLIDAY,
         grades: null,
-        date: {
-            start: date(2023, 8, 15, 0, 0),
-            end: date(2023, 8, 15, 0, 0)
-        }
+        date: everyday(8, 15)
     },
     {
         name: "개학식",
         type: DdayType.EVENT,
         grades: [1, 2, 3],
         date: {
-            start: date(2023, 8, 16, 8, 50),
-            end: date(2023, 8, 16, 15, 0)
+            start: date(8, 16, 8, 50),
+            end: date(8, 16, 15, 0)
         }
     },
     {
         name: "2학기 1차고사",
-        type: DdayType.EVENT,
+        type: DdayType.EXAMINATION,
         grades: [1, 2, 3],
         date: {
-            start: date(2023, 9, 21, 8, 50),
-            end: date(2023, 9, 22, 12, 10)
+            start: date(9, 21, 8, 50),
+            end: date(9, 22, 12, 10)
         }
     },
     {
@@ -142,35 +146,29 @@ const ddays: DdayConstsType = [
         type: DdayType.HOLIDAY,
         grades: null,
         date: {
-            start: date(2023, 9, 28, 0, 0),
-            end: date(2023, 10, 4, 0, 0)
+            start: date(9, 28, 0, 0),
+            end: date(10, 4, 0, 0)
         }
     },
     {
         name: "한글날",
         type: DdayType.HOLIDAY,
         grades: null,
-        date: {
-            start: date(2023, 10, 9, 0, 0),
-            end: date(2023, 10, 10, 0, 0)
-        }
+        date: everyday(10, 9)
     },
     {
         name: "🎗️ 10.29 이태원 참사",
         type: DdayType.MISCELLANEOUS,
         grades: null,
-        date: {
-            start: date(2023, 10, 29, 0, 0),
-            end: date(2023, 10, 30, 0, 0)
-        }
+        date: everyday(10, 29)
     },
     {
         name: "2학기 2차고사",
         type: DdayType.EXAMINATION,
         grades: [3],
         date: {
-            start: date(2023, 10, 30, 8, 50),
-            end: date(2023, 11, 1, 12, 10)
+            start: date(10, 30, 8, 50),
+            end: date(11, 1, 12, 10)
         }
     },
     {
@@ -178,8 +176,8 @@ const ddays: DdayConstsType = [
         type: DdayType.MISCELLANEOUS,
         grades: null,
         date: {
-            start: date(2023, 11, 16, 8, 10),
-            end: date(2023, 11, 16, 17, 45)
+            start: date(11, 16, 8, 10),
+            end: date(11, 16, 17, 45)
         }
     },
     {
@@ -187,8 +185,8 @@ const ddays: DdayConstsType = [
         type: DdayType.EVENT,
         grades: [3],
         date: {
-            start: date(2023, 11, 22, 8, 50),
-            end: date(2023, 11, 22, 15, 0)
+            start: date(11, 22, 8, 50),
+            end: date(11, 22, 15, 0)
         }
     },
     {
@@ -196,8 +194,8 @@ const ddays: DdayConstsType = [
         type: DdayType.EXAMINATION,
         grades: [1, 2],
         date: {
-            start: date(2023, 12, 4, 8, 50),
-            end: date(2023, 12, 6, 12, 10)
+            start: date(12, 4, 8, 50),
+            end: date(12, 6, 12, 10)
         }
     },
     {
@@ -205,35 +203,29 @@ const ddays: DdayConstsType = [
         type: DdayType.EVENT,
         grades: [1, 2, 3],
         date: {
-            start: date(2023, 12, 22, 8, 50),
-            end: date(2023, 12, 22, 15, 0)
+            start: date(12, 22, 8, 50),
+            end: date(12, 22, 15, 0)
         }
     },
     {
         name: "성탄절",
         type: DdayType.HOLIDAY,
         grades: null,
-        date: {
-            start: date(2023, 12, 25, 0, 0),
-            end: date(2023, 12, 26, 0, 0)
-        }
+        date: everyday(12, 25)
     },
     {
         name: "새해",
         type: DdayType.HOLIDAY,
         grades: null,
-        date: {
-            start: date(2024, 1, 1, 0, 0),
-            end: date(2024, 1, 2, 0, 0)
-        }
+        date: everyday(1, 1)
     },
     {
         name: "종업식",
         type: DdayType.EVENT,
         grades: [1, 2],
         date: {
-            start: date(2024, 1, 5, 8, 50),
-            end: date(2024, 1, 5, 12, 20)
+            start: date(1, 5, 8, 50),
+            end: date(1, 5, 12, 20)
         }
     },
     {
@@ -241,8 +233,8 @@ const ddays: DdayConstsType = [
         type: DdayType.EVENT,
         grades: [3],
         date: {
-            start: date(2024, 1, 5, 8, 50),
-            end: date(2024, 1, 5, 12, 20)
+            start: date(1, 5, 8, 50),
+            end: date(1, 5, 12, 20)
         }
     },
     {
@@ -250,8 +242,8 @@ const ddays: DdayConstsType = [
         type: DdayType.EVENT,
         grades: [1, 2],
         date: {
-            start: date(2024, 3, 2, 8, 50),
-            end: date(2024, 3, 2, 15, 0)
+            start: date(3, 2, 8, 50),
+            end: date(3, 2, 15, 0)
         }
     },
     {
@@ -259,8 +251,8 @@ const ddays: DdayConstsType = [
         type: DdayType.EVENT,
         grades: [3],
         date: {
-            start: date(2024, 3, 2, 8, 50),
-            end: date(2024, 3, 2, 15, 0)
+            start: date(3, 2, 8, 50),
+            end: date(3, 2, 15, 0)
         }
     }
 ];

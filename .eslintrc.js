@@ -19,7 +19,6 @@ module.exports = {
     },
     plugins: ["react", "spellcheck", "@typescript-eslint"],
     rules: {
-        indent: ["error", 4],
         "linebreak-style": ["error", "unix"],
         quotes: ["error", "double"],
         semi: ["error", "always"],
@@ -27,7 +26,6 @@ module.exports = {
         "import/extensions": ["off"],
         "import/no-extraneous-dependencies": ["off"],
         "global-require": ["off"],
-        "lines-between-class-members": ["off"],
-        "no-param-reassign": ["off"]
+        "lines-between-class-members": ["off"]
     }
 };

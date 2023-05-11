@@ -29,7 +29,7 @@ export default function DynamicPage({ params }: { params: { slug: string } }) {
                                 width="523px"
                                 height="598px"
                             />
-                            <div className="mt-10 flex justify-center rounded-xl bg-black p-6 font-bold text-white">
+                            <div className="mt-10 flex h-max w-max justify-center rounded-xl bg-black p-6 font-bold text-white">
                                 돌아가기
                             </div>
                         </div>
