@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import GoogleAnalytics from "@/components/googleAnalytics";
+import NaverAnalytics from "@/components/naverAnalytics";
 
 export const metadata: Metadata = {
     title: "석동중학교 라이브 디데이 카운터",
@@ -19,8 +21,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="ko">
-            <Analytics />
             <body>
+                <Analytics />
+                <GoogleAnalytics />
+                <NaverAnalytics />
                 <Navigation />
                 <div className={"wrapper bg-light dark:bg-primary h-auto w-auto"}>{children}</div>
                 <Footer />

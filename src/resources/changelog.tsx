@@ -134,6 +134,11 @@ const versionInformation = {
             version: "2.3.1.2",
             date: "2023년 5월 12일 오전 11시 45분",
             content: ["검색엔진 인덱싱 업데이트"]
+        },
+        {
+            version: "2.3.1.3",
+            date: "2023년 5월 12일 오전 11시 45분",
+            content: ["구글 애널리틱스 적용", "네이버 애널리틱스 적용", "HOTFIX: 패키지 버전 업데이트"]
         }
     ].reverse(),
     version: pack.version
