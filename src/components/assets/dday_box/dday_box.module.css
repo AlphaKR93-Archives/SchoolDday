@@ -4,16 +4,25 @@
 
 .dday_box .title {
     @apply flex w-full justify-center gap-2 text-xl;
+    color: var(--text-primary);
 }
 
 .dday_box .content_box {
-    @apply mt-2 w-[427px] rounded-xl border border-gray-400 p-1.5;
-    box-shadow: 20px 20px 60px #bdbdbd, -20px -20px 60px #ffffff;
+    @apply mt-2 w-[427px] rounded-xl border p-1.5;
+    background: var(--bg-primary);
+    border-color: var(--bg-secondary);
+    box-shadow: var(--box-shadow);
 }
 
 .dday_box .content_box .tags {
-    @apply flex justify-between rounded-xl border border-gray-400 p-1.5 text-sm;
+    @apply flex justify-between rounded-xl border p-1.5 text-sm;
+    background: var(--bg-primary);
+    border-color: var(--bg-secondary);
     box-shadow: 5px 5px 10px #cccccc, -5px -5px 10px #ffffff;
+}
+
+[data-theme="dark"] .dday_box .content_box .tags {
+    box-shadow: 5px 5px 10px #141414, -5px -5px 10px #1a1a1a;
 }
 
 .dday_box .content_box .tags p {
@@ -24,14 +33,6 @@
     @apply flex gap-1.5;
 }
 
-.dday_box .content_box .date {
-    @apply mt-3 flex justify-center gap-2;
-}
-
-.dday_box .content_box .date_lite {
-    @apply mt-3 hidden justify-center gap-2;
-}
-
 @media (max-width: 428px) {
     .dday_box .content_box {
         @apply w-screen;
@@ -39,15 +40,5 @@
 
     .dday_box .content_box .tags .date_informations {
         @apply hidden;
-    }
-}
-
-@media (max-width: 278px) {
-    .dday_box .content_box .date {
-        @apply hidden;
-    }
-
-    .dday_box .content_box .date_lite {
-        @apply flex;
     }
 }

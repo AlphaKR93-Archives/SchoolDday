@@ -1,6 +1,7 @@
 .not_found {
-    @apply rounded-3xl p-7;
-    box-shadow: 24px 24px 50px #999999, -24px -24px 50px #ffffff;
+    @apply rounded-3xl border p-7;
+    border-color: var(--bg-secondary);
+    box-shadow: var(--box-shadow-highlight);
 }
 
 .not_found span {

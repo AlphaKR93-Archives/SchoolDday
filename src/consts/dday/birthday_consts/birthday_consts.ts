@@ -1,5 +1,5 @@
-import { BirthdayConstsType } from "@/consts/maker";
-import birthdays302 from "@/consts/birthday_consts/third/2rd";
+import { BirthdayConstsType } from "@/consts/dday/builder";
+import birthdays302 from "./third/2rd";
 
 const birthdays: {
     grade: number;

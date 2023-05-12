@@ -1,5 +1,4 @@
-import { everyday } from "@/consts/dday_consts";
-import { BirthdayConstsType } from "@/consts/maker";
+import { BirthdayConstsType, everyday } from "@/consts/dday/builder";
 
 const birthdays302: BirthdayConstsType = [
     {

@@ -1,0 +1,15 @@
+.support {
+    @apply mt-10 flex gap-2.5 rounded-2xl border border-blue-500 bg-blue-500 bg-opacity-20 p-6;
+}
+
+.support .content {
+    @apply flex gap-1.5;
+}
+
+.support .content a {
+    @apply underline;
+}
+
+.main {
+    @apply mt-4 flex h-full min-w-full;
+}

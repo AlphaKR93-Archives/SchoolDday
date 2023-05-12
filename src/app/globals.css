@@ -9,12 +9,57 @@
     font-style: normal;
 }
 
-main {
-    @apply mx-auto min-h-screen w-full max-w-[1340px];
+@layer components {
+    .bg-secondary {
+        background: var(--bg-secondary);
+        border-color: var(--bg-secondary);
+    }
+
+    .bg-highlight {
+        background: var(--bg-highlight);
+    }
+
+    .text-primary {
+        color: var(--text-primary);
+    }
+
+    .text-highlight {
+        color: var(--text-highlight);
+    }
+}
+
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #9ca3af;
+    --bg-highlight: #000000;
+    --text-primary: #000000;
+    --text-secondary: #6b7280;
+    --text-highlight: #ffffff;
+
+    --box-shadow: 20px 20px 60px #bdbdbd, -20px -20px 60px #ffffff;
+    --box-shadow-highlight: 24px 24px 50px #999999, -24px -24px 50px #ffffff;
+    --inner-box-shadow: inset 2px 2px 5px #bfbfbf, inset -2px -2px 5px #ffffff;
 }
 
 body {
     @apply pt-24;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #171717;
+    --bg-secondary: #2c2c2c;
+    --bg-highlight: #e3e3e3;
+    --text-primary: #ffffff;
+    --text-secondary: #6b7280;
+    --text-highlight: #000000;
+
+    --box-shadow: 20px 20px 60px #141414, -20px -20px 60px #1a1a1a;
+    --box-shadow-highlight: 24px 24px 50px #141414, -24px -24px 50px #1a1a1a;
+    --inner-box-shadow: inset 2px 2px 5px #141414, inset -2px -2px 5px #1a1a1a;
+}
+
+main {
+    @apply mx-auto min-h-screen w-full max-w-[1340px];
 }
 
 hr {
@@ -29,7 +74,7 @@ hr {
     @apply w-screen text-center;
 }
 
-@media (max-width: 240px) {
+@media (max-width: 282px) {
     main {
         @apply hidden;
     }

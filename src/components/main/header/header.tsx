@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { SunIcon } from "@heroicons/react/24/outline";
+import ThemeButton from "@/components/main/header/theme_button";
+import SimpleIcon from "@/components/assets/simple-icons/provider";
+import KakaoTalkIcon from "@/components/assets/icons/kakaotalk/kakaotalk";
 import styles from "./header.module.css";
 
 export default function Header() {
@@ -9,18 +11,28 @@ export default function Header() {
                 <Link className={styles.logo} href="/">
                     석동중 디데이
                 </Link>
-                <div className={styles.quick_move}>
+                <div className={styles.links}>
                     <Link href="/">디데이</Link>
                     <Link href="/links">유용한 링크</Link>
                     <Link href="/about">사이트 정보</Link>
                 </div>
-                <div className={styles.features}>
-                    <div className={styles.feature}>
-                        <button type="button">
-                            <SunIcon className={styles.icon} />
-                        </button>
+                <div className={styles.buttons}>
+                    <div className={styles.icons}>
+                        <Link href="https://open.kakao.com/me/alphakr93_education">
+                            <KakaoTalkIcon />
+                        </Link>
+                        <Link href="https://www.instagram.com/alphakr93/">
+                            <SimpleIcon
+                                id="instagram"
+                                color={{
+                                    light: { primary: "6B7280", secondary: "000000" },
+                                    dark: { primary: "6B7280", secondary: "ffffff" }
+                                }}
+                            />
+                        </Link>
+                        <ThemeButton />
                     </div>
-                    <ul className={styles.outside}>
+                    <ul className={styles.button}>
                         <li>
                             <Link className={styles.default} href="https://github.com/AlphaKR93/SchoolDday">
                                 소스코드

@@ -16,66 +16,82 @@
 
 .header .logo {
     @apply min-w-max text-2xl;
+    color: var(--text-primary);
 }
 
-.header .quick_move {
+.header .links {
     @apply ml-11 flex min-w-max items-center gap-6;
 }
 
-.header .quick_move a {
-    @apply trans text-gray-500;
+.header .links a {
+    @apply trans;
+    color: var(--text-secondary);
 }
 
-.header .quick_move a:hover {
-    @apply trans text-black;
+.header .links a:hover {
+    @apply trans;
+    color: var(--text-primary);
 }
 
-.header .features {
+.header .buttons {
     @apply flex w-full justify-end gap-4;
 }
 
-.header .features .outside {
+.header .buttons .button {
     @apply flex gap-4;
 }
 
-.header .features .outside a {
+.header .buttons .button a {
     @apply flex h-9 items-center rounded-md px-4 text-sm font-medium;
 }
 
-.header .features .outside .default {
-    @apply trans border border-gray-200 text-gray-500;
+.header .buttons .button .default {
+    @apply trans border;
+    border-color: var(--bg-secondary);
+    background: var(--bg-primary);
+    color: var(--text-secondary);
 }
 
-.header .features .outside .default:hover {
-    @apply trans border border-black text-black;
+.header .buttons .button .default:hover {
+    border-color: var(--bg-highlight);
+    color: var(--text-primary);
 }
 
-.header .features .outside .highlight {
-    @apply trans bg-black text-white;
+.header .buttons .button .highlight {
+    @apply trans;
+    background: var(--bg-highlight);
+    color: var(--text-highlight);
 }
 
-.header .features .outside .highlight:hover {
-    @apply trans bg-blue-600 text-white;
+.header .buttons .button .highlight:hover {
+    @apply trans bg-blue-600;
+    color: var(--text-highlight);
 }
 
-.header .features .feature {
-    @apply my-auto flex h-min border-r border-gray-300 pr-3;
+.header .buttons .icons {
+    @apply my-auto flex h-min items-center gap-4 border-r pr-3;
+    border-color: var(--bg-secondary);
 }
 
-.header .features .feature .icon {
-    @apply h-6 w-6 text-gray-400;
+.header .buttons .icons .icon {
+    @apply trans h-6 w-6;
+    color: var(--text-secondary);
 }
 
-@media (max-width: 760px) {
+.header .buttons .icons .icon:hover {
+    color: var(--text-primary);
+}
+
+@media (max-width: 830px) {
     .header .logo {
         @apply w-screen text-center;
     }
 
-    .header .quick_move {
+    .header .links {
         @apply hidden;
     }
 
-    .header .features {
+    .header .buttons {
         @apply hidden;
     }
 }

@@ -35,7 +35,7 @@ export default function Slider(props: SliderProps) {
 
     return (
         <ul>
-            <p>{name}</p>
+            <p className="text-primary">{name}</p>
             <button type="button" onClick={() => dispatch(dispatcher)}>
                 {enabled && isReady ? (
                     <div

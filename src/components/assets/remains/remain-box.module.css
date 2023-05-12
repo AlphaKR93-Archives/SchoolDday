@@ -1,6 +1,8 @@
 .year_remain {
-    @apply rounded-3xl p-7;
-    box-shadow: 24px 24px 50px #999999, -24px -24px 50px #ffffff;
+    @apply rounded-3xl border p-7;
+    border-color: var(--bg-secondary);
+    background: var(--bg-primary);
+    box-shadow: var(--box-shadow-highlight);
 }
 
 .year_remain .title {
@@ -8,19 +10,23 @@
 }
 
 .year_remain .title .year {
-    @apply min-w-max pl-1 pr-8 text-2xl text-gray-900;
+    @apply min-w-max pl-1 pr-8 text-2xl;
+    color: var(--text-primary);
 }
 
 .year_remain .title .line {
-    @apply w-full bg-gray-400;
+    @apply w-full;
+    background: var(--bg-secondary);
 }
 
 .year_remain .title .days {
-    @apply flex min-w-max items-center gap-3 pl-6 text-xl text-gray-500;
+    @apply flex min-w-max items-center gap-3 pl-6 text-xl;
+    color: var(--text-secondary);
 }
 
 .year_remain .title .days .passed {
-    @apply border-r border-gray-300 pr-3;
+    @apply border-r pr-3;
+    border-color: var(--bg-secondary);
 }
 
 .year_remain .content {
@@ -29,7 +35,8 @@
 
 .year_remain .content .progress {
     @apply h-5 w-full rounded-full;
-    box-shadow: inset 2px 2px 5px #bfbfbf, inset -2px -2px 5px #ffffff;
+    background: var(--bg-primary);
+    box-shadow: var(--inner-box-shadow);
 }
 
 .year_remain .content .progress .passed {
@@ -40,18 +47,22 @@
 
 .year_remain .content .percentage {
     @apply min-w-max text-xl;
+    color: var(--text-primary);
 }
 
 .year_remain .content .percentage_slim {
     @apply hidden;
+    color: var(--text-primary);
 }
 
 .year_remain .mobile_days {
-    @apply mt-4 hidden w-full justify-center gap-3 text-gray-500;
+    @apply mt-4 hidden w-full justify-center gap-3;
+    color: var(--text-secondary);
 }
 
 .year_remain .mobile_days .passed {
-    @apply border-r border-gray-300 pr-3;
+    @apply border-r pr-3;
+    border-color: var(--bg-secondary);
 }
 
 @media (max-width: 760px) {

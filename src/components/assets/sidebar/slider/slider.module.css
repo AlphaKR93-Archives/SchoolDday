@@ -1,8 +1,10 @@
 @tailwind components;
 
 .button {
-    @apply button_main border-gray-300;
-    box-shadow: inset 5px 5px 5px #d9d9d9, inset -5px -5px 5px #ffffff;
+    @apply button_main;
+    background: var(--bg-primary);
+    border-color: var(--bg-secondary);
+    box-shadow: var(--inner-box-shadow);
 }
 
 .inner {

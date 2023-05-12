@@ -1,5 +1,6 @@
 .counter {
     @apply mt-3 flex min-w-max items-end justify-center;
+    color: var(--text-primary);
 }
 
 .counter span {
@@ -19,11 +20,5 @@
 @media (max-width: 345px) {
     .counter span {
         @apply text-4xl;
-    }
-}
-
-@media (max-width: 270px) {
-    .counter span {
-        @apply text-3xl;
     }
 }

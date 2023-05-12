@@ -1,0 +1,94 @@
+.links section {
+    @apply mb-16 rounded-3xl border p-6;
+    border-color: var(--bg-secondary);
+    background: var(--bg-primary);
+    box-shadow: var(--box-shadow-highlight);
+}
+
+.links .title {
+    @apply flex items-center gap-7;
+}
+
+.links .title h1 {
+    @apply min-w-max text-2xl font-bold;
+    color: var(--text-primary);
+}
+
+.links .title hr {
+    @apply w-full;
+    background: var(--bg-secondary);
+}
+
+.links .text_elements a {
+    @apply flex justify-center;
+}
+
+.links .text_elements li {
+    @apply mt-2 w-full rounded-xl border px-6 py-6 text-xl;
+    background: var(--bg-primary);
+    border-color: var(--bg-secondary);
+    box-shadow: var(--box-shadow);
+}
+
+.links .text_elements p {
+    @apply w-full text-center;
+}
+
+.links .elements a {
+    @apply flex justify-center;
+}
+
+.links .elements li {
+    @apply mt-2 h-[256px] w-max rounded-xl border p-5 text-xl;
+    background: var(--bg-primary);
+    border-color: var(--bg-secondary);
+    box-shadow: var(--box-shadow);
+}
+
+.links .elements img {
+    @apply h-[157px] rounded-xl;
+}
+
+.links .elements p {
+    @apply mt-5 w-full text-center;
+}
+
+.links ul {
+    @apply mt-5 grid w-full grid-cols-7 gap-6;
+}
+
+@media (max-width: 1200px) {
+    .links ul {
+        @apply grid-cols-6;
+    }
+}
+
+@media (max-width: 1032px) {
+    .links ul {
+        @apply grid-cols-5;
+    }
+}
+
+@media (max-width: 864px) {
+    .links ul {
+        @apply grid-cols-4;
+    }
+}
+
+@media (max-width: 698px) {
+    .links ul {
+        @apply grid-cols-3;
+    }
+}
+
+@media (max-width: 529px) {
+    .links ul {
+        @apply grid-cols-2;
+    }
+}
+
+@media (max-width: 361px) {
+    .links ul {
+        @apply grid-cols-1;
+    }
+}

@@ -1,0 +1,25 @@
+none {
+    --primary-light: none;
+    --secondary-light: none;
+    --primary-dark: none;
+    --secondary-dark: none;
+}
+
+.icon {
+    @apply h-[22px] w-[22px];
+    background: var(--primary-light) no-repeat;
+    transition: all 0.25s ease-in-out;
+}
+
+.icon:hover {
+    background: var(--secondary-light) no-repeat;
+    transition: all 0.25s ease-in-out;
+}
+
+[data-theme="dark"] .icon {
+    background: var(--primary-dark) no-repeat;
+}
+
+[data-theme="dark"] .icon:hover {
+    background: var(--secondary-dark) no-repeat;
+}

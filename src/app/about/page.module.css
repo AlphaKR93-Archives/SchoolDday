@@ -1,0 +1,87 @@
+.about section {
+    @apply mb-16 rounded-3xl border p-6;
+    border-color: var(--bg-secondary);
+    background: var(--bg-primary);
+    box-shadow: var(--box-shadow-highlight);
+}
+
+.about hr {
+    @apply w-full;
+    background: var(--bg-secondary);
+}
+
+.about .title {
+    @apply flex items-center gap-7;
+}
+
+.about .title h1 {
+    @apply min-w-max text-2xl font-bold;
+    color: var(--text-primary);
+}
+
+.about .content {
+    @apply mx-6 mb-6 mt-12 flex items-center justify-between;
+}
+
+.about .content .profile {
+    @apply flex items-center gap-10;
+}
+
+.about .content .profile .me {
+    @apply flex items-end justify-between;
+}
+
+.about .content .profile .me .name {
+    @apply text-3xl;
+}
+
+.about .content .profile .me .pronoun {
+    @apply text-2xl;
+    color: var(--text-secondary);
+}
+
+.about .content .profile .desc {
+    @apply text-xl;
+    color: var(--text-secondary);
+}
+
+.about .content .links {
+    @apply grid gap-y-3 text-xl;
+    color: var(--text-secondary);
+}
+
+.about .content .links a {
+    @apply flex items-center gap-1.5;
+}
+
+.about .content .links svg {
+    @apply h-6 w-6;
+}
+
+.about .content .links img {
+    @apply m-0.5 mb-1;
+}
+
+@media (max-width: 758px) {
+    .about .content {
+        display: unset;
+    }
+
+    .about .content .profile {
+        @apply justify-center;
+    }
+
+    .about .content .links {
+        @apply mt-7 grid grid-cols-2;
+    }
+
+    .about .content .links a {
+        @apply justify-center;
+    }
+}
+
+@media (max-width: 490px) {
+    .about {
+        @apply hidden;
+    }
+}
