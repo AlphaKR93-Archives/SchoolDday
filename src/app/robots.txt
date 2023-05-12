@@ -1,5 +1,0 @@
-User-Agent: *
-Disallow: /
-Sitemap: https://dday.alpha93.kr/sitemap.xml
-
-#DaumWebMasterTool:1abb188dbebee38f4bc2065e55d1c3e1f594448bcf8f4852d25ed28a29d5e9b2:sCtxEBmqH6FCunqNY8n+xQ==
