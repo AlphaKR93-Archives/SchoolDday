@@ -129,6 +129,11 @@ const versionInformation = {
             version: "2.3.1.1",
             date: "2023년 5월 5일 오전 8시 26분",
             content: ["디데이 업데이트", "종속성 업데이트", "종속성 확인 작업 추가"]
+        },
+        {
+            version: "2.3.1.2",
+            date: "2023년 5월 12일 오전 11시 45분",
+            content: ["검색엔진 인덱싱 업데이트"]
         }
     ].reverse(),
     version: pack.version

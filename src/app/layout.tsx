@@ -12,7 +12,8 @@ export const metadata: Metadata = {
     creator: "AlphaKR93",
     publisher: "AlphaKR93",
     authors: [{ name: "AlphaKR93", url: "https://alpha93.kr/" }],
-    applicationName: "석동중학교 라이브 디데이 카운터"
+    applicationName: "석동중학교 라이브 디데이 카운터",
+    verification: { other: { "naver-site-verification": "c070ebcbedf1956dadcd0fa3f6c4207d16d21856" } }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
