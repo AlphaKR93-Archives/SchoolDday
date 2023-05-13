@@ -1,7 +1,7 @@
 "use client";
 
 import { useAppDispatch } from "@/components/store/store";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./slider.module.css";
 
 type SliderProps = {
@@ -29,9 +29,9 @@ export default function Slider(props: SliderProps) {
     const { name, onValue, offValue, dispatcher, enabled } = props;
     const dispatch = useAppDispatch();
 
-    setTimeout(() => {
+    useEffect(() => {
         updateStatus(true);
-    });
+    }, []);
 
     return (
         <ul>

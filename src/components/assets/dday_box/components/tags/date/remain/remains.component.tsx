@@ -14,6 +14,7 @@ export default function RemainDateComponent(props: { start: number; end: number 
     const dateEnd = dayjs(end);
 
     useEffect(() => {
+        updateStatus(true);
         const interval = setInterval(() => {
             const now = dayjs();
             if (dateStart < now) {
@@ -28,8 +29,7 @@ export default function RemainDateComponent(props: { start: number; end: number 
             else updateRemain(Math.round(dateEnd.diff(dayjs(), "milliseconds") / (1000 * 60 * 60 * 24)));
         });
         return () => clearInterval(interval);
-    });
-    setTimeout(() => updateStatus(true), 1000);
+    }, [dateStart, passed, dateEnd]);
 
     return (
         <p

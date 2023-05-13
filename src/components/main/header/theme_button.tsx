@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { ComputerDesktopIcon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import styles from "@/components/main/header/header.module.css";
@@ -9,7 +9,7 @@ export default function ThemeButton() {
     const [isReady, updateStatus] = useState(false);
     const { theme, setTheme } = useTheme();
 
-    setTimeout(() => updateStatus(true), 1000);
+    useEffect(() => updateStatus(true), []);
 
     if (!isReady) return <SunIcon className={styles.icon} />; // TODO: Replace with loading icon
 
