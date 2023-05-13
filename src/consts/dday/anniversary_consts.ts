@@ -28,15 +28,15 @@ const anniversaries: {
     {
         name: "🇰🇷 삼일절",
         isHoliday: true,
-        date: everyday(3, 1)
+        date: everyday(3, 1, true)
     },
     {
         name: "또 다른 시작",
         isHoliday: false,
         grades: [1, 2],
         date: {
-            start: date(false, 3, 2, 8, 50),
-            end: date(false, 3, 2, 15, 0)
+            start: date(true, 3, 2, 8, 50),
+            end: date(true, 3, 2, 15, 0)
         }
     },
     {
@@ -44,8 +44,8 @@ const anniversaries: {
         isHoliday: false,
         grades: [3],
         date: {
-            start: date(false, 3, 2, 8, 50),
-            end: date(false, 3, 2, 15, 0)
+            start: date(true, 3, 2, 8, 50),
+            end: date(true, 3, 2, 15, 0)
         }
     },
     {

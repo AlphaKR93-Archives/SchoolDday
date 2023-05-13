@@ -82,6 +82,23 @@
     color: var(--text-primary);
 }
 
+.header .buttons .icons .loading {
+    @apply flex h-6 w-6 items-center justify-center;
+}
+
+.header .buttons .icons .loading svg {
+    @apply h-[20px] w-[20px];
+    animation: spin 0.7s linear infinite;
+    color: var(--text-secondary);
+    fill: var(--text-primary);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 @media (max-width: 830px) {
     .header .logo {
         @apply w-screen text-center;
