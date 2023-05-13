@@ -21,7 +21,7 @@ function LoadCookies() {
     if (typeof enabledDdayGrades === "string")
         dispatch(setEnabledDdayGrades(enabledDdayGrades.split(" ").map(grade => Number(grade))));
     if (typeof enabledDdaySemesters === "string") dispatch(setEnabledDdaySemesters(enabledDdaySemesters.split(" ")));
-    if (typeof isMillisecondEnabled === "string") dispatch(setMillisecondStatus(isMillisecondEnabled === "true"));
+    dispatch(setMillisecondStatus(isMillisecondEnabled));
 
     return <div />;
 }
