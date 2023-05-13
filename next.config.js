@@ -43,14 +43,5 @@ module.exports = {
                 pathname: "/u/44059783"
             }
         ]
-    },
-    async redirects() {
-        return [
-            {
-                source: "/",
-                destination: "/index",
-                permanent: true
-            }
-        ];
     }
 };
