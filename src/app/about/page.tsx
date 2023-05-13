@@ -3,7 +3,7 @@ import { AtSymbolIcon, CurrencyDollarIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import styles from "./page.module.css";
 
-export default function UsefulLinksPage() {
+export default function AboutPage() {
     return (
         <main className={styles.about}>
             <section>

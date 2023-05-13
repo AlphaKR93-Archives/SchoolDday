@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
-export default function AboutPage() {
+export default function UsefulLinksPage() {
     return (
         <main className={styles.links}>
             <section>
