@@ -185,7 +185,7 @@ const ddays: ddayListType = [
     }
 ];
 
-export default function buildDdayList(includeBirthday: boolean) {
+export default function buildDdayList() {
     const returnValue: ddayListType = [];
 
     ddays.forEach(dday => returnValue.push(dday));
@@ -197,17 +197,16 @@ export default function buildDdayList(includeBirthday: boolean) {
             date: anniversary.date
         })
     );
-    if (includeBirthday)
-        birthdays.forEach(birthdayList => {
-            birthdayList.list.forEach(birthday =>
-                returnValue.push({
-                    name: `${birthday.name}의 생일`,
-                    type: DdayType.BIRTHDAY,
-                    grades: [birthdayList.grade],
-                    date: birthday.date
-                })
-            );
-        });
+    birthdays.forEach(birthdayList => {
+        birthdayList.list.forEach(birthday =>
+            returnValue.push({
+                name: `${birthday.name}의 생일`,
+                type: DdayType.BIRTHDAY,
+                grades: [birthdayList.grade],
+                date: birthday.date
+            })
+        );
+    });
     if (getCookie("rohunji") === "yeah")
         returnValue.push({
             name: "중력절",

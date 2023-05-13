@@ -5,11 +5,12 @@ import buildDdayList from "@/consts/dday/dday_consts";
 import dayjs from "dayjs";
 import DdayBox from "@/components/assets/dday_box/dday_box";
 import { useEffect, useState } from "react";
-import { DdayType } from "@/components/assets/dday_box/components/tags/type/type.component";
 import styles from "./dday_grids.module.css";
 
 export default function FilteredDdayValues() {
     const [isReady, updateStatus] = useState(false);
+
+    const buildedDdays = buildDdayList();
     const enabledDdayTypes = useAppSelector(state => state.enabledDdayTypes.enabled);
     const enabledDdayGrades = useAppSelector(state => state.enabledDdayGrades.enabled);
     const enabledDdaySemesters = useAppSelector(state => state.enabledDdaySemesters.enabled);
@@ -22,7 +23,7 @@ export default function FilteredDdayValues() {
 
     return isReady ? (
         <div className={styles.content}>
-            {buildDdayList(enabledDdayTypes.includes(DdayType.BIRTHDAY)).map(dday => {
+            {buildedDdays.map(dday => {
                 if (!enabledDdayTypes.includes(dday.type)) return null;
                 if (dday.grades !== undefined && !dday.grades.some(grade => enabledDdayGrades.includes(grade)))
                     return null;
