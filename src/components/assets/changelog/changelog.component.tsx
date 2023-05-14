@@ -24,6 +24,7 @@ export default function ChangelogSection() {
                             <p className={styles.date}>적용일자: {version.date}</p>
                             <ul>
                                 {version.content.map((line, index) => {
+                                    // eslint-disable-next-line react/no-array-index-key
                                     return <li key={`${version.version}-${index}`}>{line}</li>;
                                 })}
                             </ul>
