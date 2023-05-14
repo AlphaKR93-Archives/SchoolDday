@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { AtSymbolIcon, CurrencyDollarIcon } from "@heroicons/react/24/outline";
+import { AtSymbolIcon, CurrencyDollarIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import ChangelogSection from "@/components/assets/changelog/changelog.component";
 import styles from "./page.module.css";
 
 export default function AboutPage() {
@@ -22,6 +23,13 @@ export default function AboutPage() {
                         />
                         <div>
                             <div className={styles.me}>
+                                <Image
+                                    src="https://avatars.githubusercontent.com/u/44059783"
+                                    alt="Developer's profile avatar"
+                                    width={32}
+                                    height={32}
+                                    className="hidden rounded-full"
+                                />
                                 <p className={styles.name}>AlphaKR93</p>
                                 <p className={styles.pronoun}>He/Him</p>
                             </div>
@@ -30,35 +38,42 @@ export default function AboutPage() {
                         </div>
                     </div>
                     <div className={styles.links}>
-                        <Link href="mailto:dev@alpha93.kr">
-                            <AtSymbolIcon />
-                            <p>dev@alpha93.kr</p>
-                        </Link>
-                        <Link href="https://github.com/AlphaKR93">
-                            <Image
-                                src="https://cdn.simpleicons.org/github/6B7280"
-                                alt="github icon"
-                                width={21}
-                                height={21}
-                            />
-                            <p>AlphaKR93</p>
-                        </Link>
-                        <Link href="https://toss.me/alphakr93">
-                            <CurrencyDollarIcon />
-                            <p>AlphaKR93</p>
-                        </Link>
-                        <Link href="https://instagram.com/@alphakr93">
-                            <Image
-                                src="https://cdn.simpleicons.org/instagram/6B7280"
-                                alt="instagram icon"
-                                width={21}
-                                height={21}
-                            />
-                            <p>AlphaKR93</p>
-                        </Link>
+                        <div className={styles.social}>
+                            <Link href="mailto:dev@alpha93.kr">
+                                <AtSymbolIcon />
+                                <p>dev@alpha93.kr</p>
+                            </Link>
+                            <Link href="https://github.com/AlphaKR93">
+                                <Image
+                                    src="https://cdn.simpleicons.org/github/6B7280"
+                                    alt="github icon"
+                                    width={21}
+                                    height={21}
+                                />
+                                <p>AlphaKR93</p>
+                            </Link>
+                            <Link href="https://instagram.com/@alphakr93">
+                                <Image
+                                    src="https://cdn.simpleicons.org/instagram/6B7280"
+                                    alt="instagram icon"
+                                    width={21}
+                                    height={21}
+                                />
+                                <p>AlphaKR93</p>
+                            </Link>
+                        </div>
+                        <div className={styles.icons}>
+                            <Link href="https://toss.me/alphakr93">
+                                <CurrencyDollarIcon />
+                            </Link>
+                            <Link href="https://alpha93.kr/">
+                                <GlobeAltIcon />
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
+            <ChangelogSection />
         </main>
     );
 }

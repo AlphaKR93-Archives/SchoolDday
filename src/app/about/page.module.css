@@ -20,15 +20,15 @@
 }
 
 .about .content {
-    @apply mx-6 mb-6 mt-12 flex items-center justify-between;
+    @apply m-6 flex items-center justify-between;
 }
 
 .about .content .profile {
-    @apply flex items-center gap-10;
+    @apply flex items-center gap-6;
 }
 
 .about .content .profile .me {
-    @apply flex items-end justify-between;
+    @apply flex items-end justify-between gap-3;
 }
 
 .about .content .profile .me .name {
@@ -41,17 +41,16 @@
 }
 
 .about .content .profile .desc {
-    @apply text-xl;
+    @apply text-center text-xl;
     color: var(--text-secondary);
 }
 
 .about .content .links {
-    @apply grid gap-y-3 text-xl;
     color: var(--text-secondary);
 }
 
-.about .content .links a {
-    @apply flex items-center gap-1.5;
+.about .content .links .social {
+    @apply grid gap-y-3 text-xl;
 }
 
 .about .content .links svg {
@@ -62,26 +61,82 @@
     @apply m-0.5 mb-1;
 }
 
+.about .content .links .social a {
+    @apply flex items-center gap-1.5;
+}
+
+.about .content .links .icons {
+    @apply mt-3 flex justify-center gap-3;
+}
+
 @media (max-width: 758px) {
     .about .content {
-        display: unset;
+        display: block;
     }
 
     .about .content .profile {
         @apply justify-center;
     }
 
-    .about .content .links {
-        @apply mt-7 grid grid-cols-2;
+    .about .content .links .social {
+        @apply mt-7 grid grid-cols-3;
     }
 
-    .about .content .links a {
+    .about .content .links .social a {
         @apply justify-center;
+    }
+
+    .about .content .links .icons a {
+        @apply flex w-full justify-center;
     }
 }
 
-@media (max-width: 490px) {
-    .about {
+@media (max-width: 633px) {
+    .about .content .links .social p {
+        @apply hidden;
+    }
+}
+
+@media (max-width: 533px) {
+    .about .content .profile .me .name {
+        @apply text-2xl;
+    }
+
+    .about .content .profile .me .pronoun {
+        @apply text-xl;
+    }
+
+    .about .content .profile .desc {
+        @apply text-base;
+    }
+}
+
+@media (max-width: 457px) {
+    .about .content .profile img {
+        @apply hidden;
+    }
+
+    .about .content .profile .me img {
+        display: unset;
+    }
+}
+
+@media (max-width: 345px) {
+    .about .content .profile .me .name {
+        @apply text-xl;
+    }
+
+    .about .content .profile .me .pronoun {
+        @apply text-base;
+    }
+}
+
+@media (max-width: 318px) {
+    .about .content .profile .me {
+        @apply justify-center;
+    }
+
+    .about .content .profile .me .pronoun {
         @apply hidden;
     }
 }
