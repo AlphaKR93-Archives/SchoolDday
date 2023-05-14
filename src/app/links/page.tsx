@@ -28,18 +28,39 @@ export default function UsefulLinksPage() {
                         </li>
                     </Link>
                     <Link href="https://www.instagram.com/jinhae_seokdongjung/">
-                        <li>
-                            <p>대전</p>
+                        <li className="flex w-full items-center justify-center">
+                            <Image
+                                src="https://cdn.simpleicons.org/instagram/6B7280"
+                                alt="github icon"
+                                width={21}
+                                height={21}
+                                className="mb-1 mr-3"
+                            />
+                            대전
                         </li>
                     </Link>
                     <Link href="https://www.instagram.com/sdbs_sd/">
-                        <li>
-                            <p>방송부</p>
+                        <li className="flex w-full items-center justify-center">
+                            <Image
+                                src="https://cdn.simpleicons.org/instagram/6B7280"
+                                alt="github icon"
+                                width={21}
+                                height={21}
+                                className="mb-1 mr-3"
+                            />
+                            방송부
                         </li>
                     </Link>
                     <Link href="https://www.instagram.com/sd_mathclub/">
-                        <li>
-                            <p>수체실</p>
+                        <li className="flex w-full items-center justify-center">
+                            <Image
+                                src="https://cdn.simpleicons.org/instagram/6B7280"
+                                alt="github icon"
+                                width={21}
+                                height={21}
+                                className="mb-1 mr-3"
+                            />
+                            수체실
                         </li>
                     </Link>
                     <Link href="https://naver.com">

@@ -16,7 +16,9 @@ export default function AmountSection() {
     const second = dayjs("2024-01-05T12:20:00.000+09:00");
     const now = dayjs();
 
-    useEffect(() => updateStatus(true), []);
+    useEffect(() => {
+        setTimeout(() => updateStatus(true), 1000);
+    }, []);
 
     if (!isReady) return <h1 className="!mb-8">로딩중...</h1>;
     return (

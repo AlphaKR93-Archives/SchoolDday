@@ -19,7 +19,9 @@ export default function FilteredDdayValues() {
     const second = dayjs("2024-01-05T12:20:00.000+09:00");
     const now = dayjs();
 
-    useEffect(() => updateStatus(true), []);
+    useEffect(() => {
+        setTimeout(() => updateStatus(true), 1000);
+    }, []);
 
     return isReady ? (
         <div className={styles.content}>

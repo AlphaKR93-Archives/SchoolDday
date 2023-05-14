@@ -9,7 +9,9 @@ export default function ThemeButton() {
     const [isReady, updateStatus] = useState(false);
     const { theme, setTheme } = useTheme();
 
-    useEffect(() => updateStatus(true), []);
+    useEffect(() => {
+        setTimeout(() => updateStatus(true), 1000);
+    }, []);
 
     if (!isReady)
         return (

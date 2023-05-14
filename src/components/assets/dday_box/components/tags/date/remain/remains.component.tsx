@@ -14,7 +14,7 @@ export default function RemainDateComponent(props: { start: number; end: number 
     const dateEnd = dayjs(end);
 
     useEffect(() => {
-        updateStatus(true);
+        setTimeout(() => updateStatus(true), 1000);
         const interval = setInterval(() => {
             const now = dayjs();
             if (dateStart < now) {

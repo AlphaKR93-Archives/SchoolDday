@@ -85,6 +85,7 @@ export default function CounterComponent(props: { start: number; end: number }) 
     const dateEnd = dayjs(end);
 
     useEffect(() => {
+        setTimeout(() => updateStatus(true), 1000);
         const interval = setInterval(() => {
             const now = dayjs();
             if (dateStart < now) {
@@ -100,7 +101,6 @@ export default function CounterComponent(props: { start: number; end: number }) 
         });
         return () => clearInterval(interval);
     });
-    setTimeout(() => updateStatus(true), 1000);
 
     if (isReady && !isEnded)
         return (

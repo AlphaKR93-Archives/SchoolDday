@@ -30,7 +30,7 @@ export default function Slider(props: SliderProps) {
     const dispatch = useAppDispatch();
 
     useEffect(() => {
-        updateStatus(true);
+        setTimeout(() => updateStatus(true), 1000);
     }, []);
 
     return (

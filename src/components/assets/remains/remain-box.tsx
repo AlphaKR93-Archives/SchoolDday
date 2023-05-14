@@ -17,7 +17,7 @@ export default function RemainBox() {
     const [progress, updateProgress] = useState(100 - (endOfYear.diff(initialValue, "day", true) * 100) / lengthOfYear);
 
     useEffect(() => {
-        updateStatus(true);
+        setTimeout(() => updateStatus(true), 1000);
         const interval = setInterval(() => {
             const now = dayjs();
 
