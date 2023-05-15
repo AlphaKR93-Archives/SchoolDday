@@ -5,7 +5,7 @@ module.exports = {
             {
                 protocol: "https",
                 hostname: "cdn.simpleicons.org",
-                pathname: "/**"
+                pathname: "/**/**"
             },
             {
                 protocol: "https",
