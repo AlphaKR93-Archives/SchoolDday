@@ -12,7 +12,9 @@ export default function ChangelogSection() {
                     <p>현재 버전: {pack.version}</p>
                 </span>
                 <p className={styles.vlite}>현재 버전: {pack.version}</p>
-                <p className={styles.date}>적용 일자: {changelog.find(version => version.version === pack.version)?.date}</p>
+                <p className={styles.date}>
+                    적용 일자: {changelog.find(version => version.version === pack.version)?.date}
+                </p>
             </div>
             <ul className={styles.content}>
                 {changelog.map(version => {
