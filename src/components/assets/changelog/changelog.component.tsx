@@ -1,6 +1,6 @@
 import changelog from "@/consts/changelog";
-import styles from "./changelog.module.css";
 import * as pack from "@/../package.json";
+import styles from "./changelog.module.css";
 
 export default function ChangelogSection() {
     return (
