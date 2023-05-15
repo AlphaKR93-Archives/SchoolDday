@@ -1,5 +1,6 @@
 import changelog from "@/consts/changelog";
 import styles from "./changelog.module.css";
+import * as pack from "@/../package.json";
 
 export default function ChangelogSection() {
     return (
@@ -8,10 +9,10 @@ export default function ChangelogSection() {
                 <span className={styles.title}>
                     <h1>패치노트</h1>
                     <hr />
-                    <p>현재 버전: DEV 3.0.0.0</p>
+                    <p>현재 버전: {pack.version}</p>
                 </span>
-                <p className={styles.vlite}>현재 버전: DEV 3.0.0.0</p>
-                <p className={styles.date}>적용 일자: {changelog.find(version => version.version === "2.0.0")?.date}</p>
+                <p className={styles.vlite}>현재 버전: {pack.version}</p>
+                <p className={styles.date}>적용 일자: {changelog.find(version => version.version === pack.version)?.date}</p>
             </div>
             <ul className={styles.content}>
                 {changelog.map(version => {

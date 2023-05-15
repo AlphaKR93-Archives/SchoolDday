@@ -14,6 +14,7 @@ export default function Header() {
                 <div className={styles.links}>
                     <Link href="/">디데이</Link>
                     <Link href="/links">유용한 링크</Link>
+                    <Link href="/temp">물온도 체크</Link>
                     <Link href="/about">사이트 정보</Link>
                 </div>
                 <div className={styles.buttons}>
