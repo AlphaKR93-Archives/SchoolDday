@@ -66,8 +66,8 @@ const ddays: ddayListType = [
 		name: "석동중 디데이 1주년 / 베타 릴리스",
 		type: DdayType.EVENT,
 		date: {
-			start: date(false, 6, 7, 18, 00),
-			end: date(false, 6, 7, 18, 00)
+			start: date(false, 6, 7, 18, 0),
+			end: date(false, 6, 7, 18, 0)
 		}
 	},
     {
