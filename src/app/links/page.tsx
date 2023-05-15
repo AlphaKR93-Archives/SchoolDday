@@ -6,6 +6,7 @@ import {
 } from "@/components/assets/icons/textbook_provider/textbook_provider";
 import Image from "next/image";
 import Link from "next/link";
+import AnimatedSimpleIcon from "@/components/assets/icons/simple-icons/provider";
 import styles from "./page.module.css";
 
 export default function UsefulLinksPage() {
@@ -17,58 +18,58 @@ export default function UsefulLinksPage() {
                     <hr />
                 </div>
                 <ul className={styles.text_elements}>
-                    <Link href="https://naver.com">
+                    <Link href="https://seokdong-m.gne.go.kr/seokdong-m/main.do">
                         <li>
                             <p>홈페이지</p>
                         </li>
                     </Link>
-                    <Link href="https://naver.com">
+                    <Link href="https://www.1365.go.kr/vols/main.do">
                         <li>
                             <p>1365</p>
                         </li>
                     </Link>
                     <Link href="https://www.instagram.com/jinhae_seokdongjung/">
                         <li className="flex w-full items-center justify-center">
-                            <Image
-                                src="https://cdn.simpleicons.org/instagram/6B7280"
-                                alt="github icon"
-                                width={21}
-                                height={21}
-                                className="mb-1 mr-3"
+                            <AnimatedSimpleIcon
+                                id="instagram"
+                                color={{
+                                    light: { primary: "6B7280", secondary: "6B7280" },
+                                    dark: { primary: "6B7280", secondary: "6B7280" }
+                                }}
                             />
                             대전
                         </li>
                     </Link>
                     <Link href="https://www.instagram.com/sdbs_sd/">
                         <li className="flex w-full items-center justify-center">
-                            <Image
-                                src="https://cdn.simpleicons.org/instagram/6B7280"
-                                alt="github icon"
-                                width={21}
-                                height={21}
-                                className="mb-1 mr-3"
+                            <AnimatedSimpleIcon
+                                id="instagram"
+                                color={{
+                                    light: { primary: "6B7280", secondary: "6B7280" },
+                                    dark: { primary: "6B7280", secondary: "6B7280" }
+                                }}
                             />
                             방송부
                         </li>
                     </Link>
                     <Link href="https://www.instagram.com/sd_mathclub/">
                         <li className="flex w-full items-center justify-center">
-                            <Image
-                                src="https://cdn.simpleicons.org/instagram/6B7280"
-                                alt="github icon"
-                                width={21}
-                                height={21}
-                                className="mb-1 mr-3"
+                            <AnimatedSimpleIcon
+                                id="instagram"
+                                color={{
+                                    light: { primary: "6B7280", secondary: "6B7280" },
+                                    dark: { primary: "6B7280", secondary: "6B7280" }
+                                }}
                             />
                             수체실
                         </li>
                     </Link>
-                    <Link href="https://naver.com">
+                    <Link href="https://ebook.mirae-n.com/@kb2070">
                         <li>
                             <p>사회과부도</p>
                         </li>
                     </Link>
-                    <Link href="https://naver.com">
+                    <Link href="https://ebook.mirae-n.com/@kb3813">
                         <li>
                             <p>역사부도</p>
                         </li>

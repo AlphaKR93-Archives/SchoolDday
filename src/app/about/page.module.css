@@ -57,12 +57,12 @@
     @apply h-6 w-6;
 }
 
-.about .content .links img {
-    @apply m-0.5 mb-1;
-}
-
 .about .content .links .social a {
     @apply flex items-center gap-1.5;
+}
+
+.about .content .links .social div {
+    @apply mb-1 ml-0.5 h-5 w-5;
 }
 
 .about .content .links .icons {

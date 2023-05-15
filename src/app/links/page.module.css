@@ -34,6 +34,10 @@
     @apply w-full text-center;
 }
 
+.links .text_elements div {
+    @apply mb-1 mr-3 h-[21px] w-[21px];
+}
+
 .links .elements a {
     @apply flex justify-center;
 }

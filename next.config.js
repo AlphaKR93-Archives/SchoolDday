@@ -4,11 +4,6 @@ module.exports = {
         remotePatterns: [
             {
                 protocol: "https",
-                hostname: "cdn.simpleicons.org",
-                pathname: "/**/**"
-            },
-            {
-                protocol: "https",
                 hostname: "www.mirae-n.com",
                 pathname: "/UPLOAD/EShop/Product/01/**"
             },

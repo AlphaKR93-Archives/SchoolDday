@@ -2,6 +2,7 @@ import Image from "next/image";
 import { AtSymbolIcon, CurrencyDollarIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import ChangelogSection from "@/components/main/content/about/changelog/changelog.component";
+import AnimatedSimpleIcon from "@/components/assets/icons/simple-icons/provider";
 import styles from "./page.module.css";
 
 export default function AboutPage() {
@@ -44,20 +45,22 @@ export default function AboutPage() {
                                 <p>dev@alpha93.kr</p>
                             </Link>
                             <Link href="https://github.com/AlphaKR93">
-                                <Image
-                                    src="https://cdn.simpleicons.org/github/6B7280"
-                                    alt="github icon"
-                                    width={21}
-                                    height={21}
+                                <AnimatedSimpleIcon
+                                    id="github"
+                                    color={{
+                                        light: { primary: "6B7280", secondary: "6B7280" },
+                                        dark: { primary: "6B7280", secondary: "6B7280" }
+                                    }}
                                 />
                                 <p>AlphaKR93</p>
                             </Link>
                             <Link href="https://instagram.com/@alphakr93">
-                                <Image
-                                    src="https://cdn.simpleicons.org/instagram/6B7280"
-                                    alt="instagram icon"
-                                    width={21}
-                                    height={21}
+                                <AnimatedSimpleIcon
+                                    id="instagram"
+                                    color={{
+                                        light: { primary: "6B7280", secondary: "6B7280" },
+                                        dark: { primary: "6B7280", secondary: "6B7280" }
+                                    }}
                                 />
                                 <p>AlphaKR93</p>
                             </Link>
