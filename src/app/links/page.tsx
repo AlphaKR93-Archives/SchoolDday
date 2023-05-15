@@ -106,12 +106,6 @@ export default function UsefulLinksPage() {
                             <p>음악 2</p>
                         </li>
                     </Link>
-                    <Link href="https://mid.tsherpa.co.kr/mCurri/textBook-type.html?tBook=M-textBook-art_01_01&tab=class">
-                        <li>
-                            <ChungaeTextbook path="9e224a8b9a163179b23e23e3fc7b85fb" />
-                            <p>미술 1</p>
-                        </li>
-                    </Link>
                     <Link href="http://cdata2.tsherpa.co.kr/tsherpa/DocumentFile/pdf/2018/20180912/%EC%B2%9C%EC%9E%AC%EA%B5%90%EA%B3%BC%EC%84%9C_%EC%A4%91%EB%93%B1%EA%B5%90%EA%B3%BC%EC%84%9C_%EB%AF%B8%EC%88%A0%E2%91%A1_%EA%B9%80%EC%84%A0%EC%95%84(15%EA%B0%9C%EC%A0%95)_%EA%B5%90%EA%B3%BC%EC%84%9C%20%EB%B3%B8%EB%AC%B8.pdf">
                         <li>
                             <ChungaeTextbook path="ff6752237d363fee13778cff6e92f0d8" />
@@ -248,13 +242,13 @@ export default function UsefulLinksPage() {
                     <hr />
                 </div>
                 <ul className={styles.elements}>
-                    <Link href="https://ebook.mirae-n.com/@kb3086">
+                    <Link href="https://ebook.mirae-n.com/@kb3806">
                         <li>
                             <CdnMiraeN path="6005100/6005100_20200427135742" />
                             <p>국어 3-1</p>
                         </li>
                     </Link>
-                    <Link href="https://ebook.mirae-n.com/@kb3087">
+                    <Link href="https://ebook.mirae-n.com/@kb3807">
                         <li>
                             <CdnMiraeN path="6005101/6005101_20200427140739" />
                             <p>국어 3-2</p>
