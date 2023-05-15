@@ -1,5 +1,5 @@
 .kakaotalk {
-    @apply h-[22px] w-[22px];
+    @apply !h-[22px] !w-[22px];
     fill: var(--text-secondary);
     transition: all 0.25s ease-in-out;
 }

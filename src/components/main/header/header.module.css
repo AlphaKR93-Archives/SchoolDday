@@ -15,7 +15,7 @@
 }
 
 .header .logo {
-    @apply min-w-max text-2xl;
+    @apply min-w-max text-2xl font-bold;
     color: var(--text-primary);
 }
 
@@ -34,7 +34,11 @@
 }
 
 .header .buttons {
-    @apply flex w-full justify-end gap-4;
+    @apply ml-11 flex w-full justify-end gap-4;
+}
+
+.header .button .only_icons {
+    @apply my-auto hidden;
 }
 
 .header .buttons .button {
@@ -99,16 +103,32 @@
     }
 }
 
-@media (max-width: 830px) {
-    .header .logo {
-        @apply w-screen text-center;
+@media (max-width: 962px) {
+    .header nav {
+        @apply w-full justify-center;
     }
 
-    .header .links {
+    .header .buttons .only_icons {
+        @apply flex;
+    }
+
+    .header .buttons .icons {
         @apply hidden;
     }
 
+    .header .buttons .button {
+        @apply hidden;
+    }
+}
+
+@media (max-width: 789px) {
     .header .buttons {
+        @apply hidden;
+    }
+}
+
+@media (max-width: 598px) {
+    .header .links {
         @apply hidden;
     }
 }

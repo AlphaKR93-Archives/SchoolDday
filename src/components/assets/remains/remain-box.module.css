@@ -69,23 +69,15 @@
     .year_remain .title {
         @apply justify-between;
     }
-
-    .year_remain .title .year {
-        @apply pr-0;
-    }
-
-    .year_remain .title .line {
-        @apply hidden;
-    }
 }
 
-@media (max-width: 467px) {
+@media (max-width: 500px) {
     .year_remain .title .passed {
         @apply hidden;
     }
 }
 
-@media (max-width: 345px) {
+@media (max-width: 375px) {
     .year_remain .title .year {
         @apply w-full text-center text-xl;
     }

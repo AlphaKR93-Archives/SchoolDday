@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./style.module.css";
 
-export default function SimpleIcon(props: {
+export default function AnimatedSimpleIcon(props: {
     id: string;
     color: { light: { primary: string; secondary: string }; dark: { primary: string; secondary: string } };
 }) {

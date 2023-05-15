@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { ComputerDesktopIcon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
-import styles from "@/components/main/header/header.module.css";
+import styles from "./theme_button.module.css";
 
 export default function ThemeButton() {
     const [isReady, updateStatus] = useState(false);

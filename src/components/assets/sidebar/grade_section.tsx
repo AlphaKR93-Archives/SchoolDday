@@ -1,8 +1,8 @@
 "use client";
 
 import Slider from "@/components/assets/sidebar/slider/slider.component";
-import { useAppSelector } from "@/components/store/store";
-import { toggleDdayGrade } from "@/components/store/reducer/dday/enabled_grades.slice";
+import { useAppSelector } from "@/store/store";
+import { toggleDdayGrade } from "@/store/reducer/dday/enabled_grades.slice";
 
 export default function GradeSection() {
     const enabledGrades = useAppSelector(state => state.enabledDdayGrades.enabled);

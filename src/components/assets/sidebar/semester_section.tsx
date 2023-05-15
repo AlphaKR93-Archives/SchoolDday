@@ -1,8 +1,8 @@
 "use client";
 
 import Slider from "@/components/assets/sidebar/slider/slider.component";
-import { useAppSelector } from "@/components/store/store";
-import { toggleDdaySemester } from "@/components/store/reducer/dday/enabled_semester.slice";
+import { useAppSelector } from "@/store/store";
+import { toggleDdaySemester } from "@/store/reducer/dday/enabled_semester.slice";
 
 export default function SemesterSection() {
     const enabledTypes = useAppSelector(state => state.enabledDdaySemesters.enabled);

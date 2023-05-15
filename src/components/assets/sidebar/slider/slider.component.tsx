@@ -1,6 +1,6 @@
 "use client";
 
-import { useAppDispatch } from "@/components/store/store";
+import { useAppDispatch } from "@/store/store";
 import { useEffect, useState } from "react";
 import styles from "./slider.module.css";
 

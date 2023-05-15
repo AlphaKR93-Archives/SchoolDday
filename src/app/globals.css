@@ -75,7 +75,7 @@ hr {
 }
 
 @media (max-width: 282px) {
-    main {
+    .body {
         @apply hidden;
     }
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { AtSymbolIcon, CurrencyDollarIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import ChangelogSection from "@/components/assets/changelog/changelog.component";
+import ChangelogSection from "@/components/main/content/about/changelog/changelog.component";
 import styles from "./page.module.css";
 
 export default function AboutPage() {

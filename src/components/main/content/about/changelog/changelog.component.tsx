@@ -1,5 +1,5 @@
 import changelog from "@/consts/changelog";
-import * as pack from "@/../package.json";
+import * as pack from "../../../../../../package.json";
 import styles from "./changelog.module.css";
 
 export default function ChangelogSection() {

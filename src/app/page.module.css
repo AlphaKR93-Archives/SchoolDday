@@ -9,3 +9,9 @@
 .main {
     @apply mt-4 flex h-full min-w-full;
 }
+
+@media (max-width: 714px) {
+    .main ul {
+        @apply hidden;
+    }
+}

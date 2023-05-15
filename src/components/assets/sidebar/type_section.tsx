@@ -1,8 +1,8 @@
 "use client";
 
 import Slider from "@/components/assets/sidebar/slider/slider.component";
-import { useAppSelector } from "@/components/store/store";
-import { toggleDdayType } from "@/components/store/reducer/dday/enabled_types.slice";
+import { useAppSelector } from "@/store/store";
+import { toggleDdayType } from "@/store/reducer/dday/enabled_types.slice";
 import { DdayType } from "@/components/assets/dday_box/components/tags/type/type.component";
 
 export default function TypeSection() {

@@ -1,11 +1,11 @@
 "use client";
 
-import { useAppSelector } from "@/components/store/store";
+import { useAppSelector } from "@/store/store";
 import buildDdayList from "@/consts/dday/dday_consts";
 import dayjs from "dayjs";
 import DdayBox from "@/components/assets/dday_box/dday_box";
 import { useEffect, useState } from "react";
-import styles from "./dday_grids.module.css";
+import styles from "./dday_grid.module.css";
 
 export default function FilteredDdayValues() {
     const [isReady, updateStatus] = useState(false);

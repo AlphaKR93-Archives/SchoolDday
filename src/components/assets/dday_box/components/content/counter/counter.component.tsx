@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
-import { useAppSelector } from "@/components/store/store";
+import { useAppSelector } from "@/store/store";
 import styles from "./counter.module.css";
 
 function process(

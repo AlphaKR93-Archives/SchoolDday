@@ -1,7 +1,8 @@
 import Link from "next/link";
-import ThemeButton from "@/components/main/header/theme_button";
-import SimpleIcon from "@/components/assets/simple-icons/provider";
+import ThemeButton from "@/components/assets/buttons/themer/theme_button.component";
+import AnimatedSimpleIcon from "@/components/assets/icons/simple-icons/provider";
 import KakaoTalkIcon from "@/components/assets/icons/kakaotalk/kakaotalk";
+import ButtonSection from "@/components/assets/sidebar/button_section";
 import styles from "./header.module.css";
 
 export default function Header() {
@@ -18,12 +19,15 @@ export default function Header() {
                     <Link href="/about">사이트 정보</Link>
                 </div>
                 <div className={styles.buttons}>
+                    <div className={styles.only_icons}>
+                        <ButtonSection />
+                    </div>
                     <div className={styles.icons}>
                         <Link href="https://open.kakao.com/me/alphakr93_education">
                             <KakaoTalkIcon />
                         </Link>
                         <Link href="https://www.instagram.com/alphakr93/">
-                            <SimpleIcon
+                            <AnimatedSimpleIcon
                                 id="instagram"
                                 color={{
                                     light: { primary: "6B7280", secondary: "000000" },

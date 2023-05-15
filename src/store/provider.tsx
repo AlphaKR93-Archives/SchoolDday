@@ -3,10 +3,11 @@
 import { Provider } from "react-redux";
 import React from "react";
 import { getCookie } from "cookies-next";
-import { setEnabledDdayTypes } from "@/components/store/reducer/dday/enabled_types.slice";
-import { setEnabledDdayGrades } from "@/components/store/reducer/dday/enabled_grades.slice";
-import { setEnabledDdaySemesters } from "@/components/store/reducer/dday/enabled_semester.slice";
-import { setMillisecondStatus } from "@/components/store/reducer/dday/is_millisecond_enabled.reducer";
+import { setEnabledDdayTypes } from "@/store/reducer/dday/enabled_types.slice";
+import { setEnabledDdayGrades } from "@/store/reducer/dday/enabled_grades.slice";
+import { setEnabledDdaySemesters } from "@/store/reducer/dday/enabled_semester.slice";
+import { setMillisecondStatus } from "@/store/reducer/dday/is_millisecond_enabled.reducer";
+import { ThemeProvider as NextThemeProvider } from "next-themes";
 import store, { useAppDispatch } from "./store";
 
 function LoadCookies() {
@@ -28,9 +29,11 @@ function LoadCookies() {
 
 export default function Providers({ children }: { children: React.ReactNode }) {
     return (
-        <Provider store={store}>
-            <LoadCookies />
-            {children}
-        </Provider>
+        <NextThemeProvider disableTransitionOnChange>
+            <Provider store={store}>
+                <LoadCookies />
+                {children}
+            </Provider>
+        </NextThemeProvider>
     );
 }

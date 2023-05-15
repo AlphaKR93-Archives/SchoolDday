@@ -1,6 +1,6 @@
 "use client";
 
-import { useAppSelector } from "@/components/store/store";
+import { useAppSelector } from "@/store/store";
 import buildDdayList from "@/consts/dday/dday_consts";
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
@@ -20,9 +20,9 @@ export default function AmountSection() {
         setTimeout(() => updateStatus(true), 1000);
     }, []);
 
-    if (!isReady) return <h1 className="!mb-8">로딩중...</h1>;
+    if (!isReady) return <h1 className="!mb-4">로딩중...</h1>;
     return (
-        <h1 className="!mb-8">
+        <h1 className="!mb-4">
             디데이 개수:{" "}
             {
                 buildedDdays.filter(element => {
