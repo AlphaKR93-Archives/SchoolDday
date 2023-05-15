@@ -127,8 +127,8 @@
     }
 }
 
-@media (max-width: 598px) {
-    .header .links {
+@media (max-width: 715px) {
+    .header {
         @apply hidden;
     }
 }

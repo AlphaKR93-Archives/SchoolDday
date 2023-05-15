@@ -4,6 +4,7 @@ import { ChevronUpIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import Sidebar from "@/components/assets/sidebar/sidebar";
 import ButtonSection from "@/components/assets/sidebar/button_section";
+import * as pack from "@/../package.json";
 import Link from "next/link";
 import styles from "./mobile_navbar.module.css";
 
@@ -55,7 +56,7 @@ export default function MobileNavigationBarComponent() {
                     <p />
                     <span>
                         <h1>석동중 디데이</h1>
-                        <p>버전 3.0.0.0</p>
+                        <p>버전 {pack.version}</p>
                     </span>
                     <ChevronUpIcon />
                 </span>

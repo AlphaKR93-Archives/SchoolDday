@@ -51,7 +51,7 @@
 }
 
 .year_remain .content .percentage_slim {
-    @apply hidden;
+    @apply hidden min-w-max;
     color: var(--text-primary);
 }
 
