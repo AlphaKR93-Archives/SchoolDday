@@ -45,33 +45,6 @@
     @apply flex gap-4;
 }
 
-.header .buttons .button a {
-    @apply flex h-9 items-center rounded-md px-4 text-sm font-medium;
-}
-
-.header .buttons .button .default {
-    @apply trans border;
-    border-color: var(--bg-secondary);
-    background: var(--bg-primary);
-    color: var(--text-secondary);
-}
-
-.header .buttons .button .default:hover {
-    border-color: var(--bg-highlight);
-    color: var(--text-primary);
-}
-
-.header .buttons .button .highlight {
-    @apply trans;
-    background: var(--bg-highlight);
-    color: var(--text-highlight);
-}
-
-.header .buttons .button .highlight:hover {
-    @apply trans bg-blue-600;
-    color: var(--text-highlight);
-}
-
 .header .buttons .icons {
     @apply my-auto flex h-min items-center gap-4 border-r pr-3;
     border-color: var(--bg-secondary);

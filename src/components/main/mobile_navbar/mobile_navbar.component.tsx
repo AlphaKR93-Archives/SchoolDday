@@ -16,7 +16,7 @@ export default function MobileNavigationBarComponent() {
     function toggle() {
         if (enabled) {
             setEnabled(false);
-            setTimeout(() => setButtonsEnabled(false), 300);
+            setTimeout(() => setButtonsEnabled(false), 150);
             setTimeout(() => setSidebarEnabled(false), 500);
         } else {
             setEnabled(true);
@@ -46,6 +46,7 @@ export default function MobileNavigationBarComponent() {
                             사이트 정보
                         </Link>
                     </div>
+                    <p className={styles.license}>(C) 2023 AlphaKR93, Licensed under MIT License.</p>
                 </div>
             </div>
             <button className={styles.button} type="button" onClick={() => toggle()}>

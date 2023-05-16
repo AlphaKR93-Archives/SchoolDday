@@ -70,6 +70,10 @@
     @apply hidden;
 }
 
+.navbar .real .touch_section[data-enabled="false"] .license {
+    @apply hidden;
+}
+
 .navbar .real .touch_section .buttons {
     @apply mt-3;
 }
@@ -80,6 +84,11 @@
 
 .navbar .real .touch_section .links a {
     @apply text-center;
+}
+
+.navbar .real .license {
+    @apply text-center text-sm;
+    color: var(--text-secondary);
 }
 
 @media (min-width: 715px) {

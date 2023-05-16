@@ -63,7 +63,7 @@ const ddays: ddayListType = [
         date: fromEnd({ month: 6, day: 3 }, { month: 6, day: 5 })
     },
     {
-        name: "석동중 디데이 1주년 / 베타 릴리스",
+        name: "석동중 디데이 1주년",
         type: DdayType.EVENT,
         date: {
             start: date(false, 6, 7, 18, 0),

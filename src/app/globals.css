@@ -10,6 +10,32 @@
     font-display: swap;
 }
 
+:root {
+    --bg-primary: #fff;
+    --bg-secondary: #9ca3af;
+    --bg-highlight: #000;
+    --text-primary: #000;
+    --text-secondary: #6b7280;
+    --text-highlight: #fff;
+    --box-shadow: 20px 20px 60px #bdbdbd, -20px -20px 60px #fff;
+    --box-shadow-highlight: 24px 24px 50px #999, -24px -24px 50px #fff;
+    --inner-box-shadow: inset 2px 2px 5px #bfbfbf, inset -2px -2px 5px #fff;
+    --highlighted-button-color: #fff;
+    --highlighted-text-color: #fff;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #171717;
+    --bg-secondary: #2c2c2c;
+    --bg-highlight: #e3e3e3;
+    --text-primary: #fff;
+    --text-secondary: #6b7280;
+    --text-highlight: #000;
+    --box-shadow: 20px 20px 60px #141414, -20px -20px 60px #1a1a1a;
+    --box-shadow-highlight: 24px 24px 50px #141414, -24px -24px 50px #1a1a1a;
+    --inner-box-shadow: inset 2px 2px 5px #141414, inset -2px -2px 5px #1a1a1a;
+}
+
 @layer components {
     .bg-secondary {
         background: var(--bg-secondary);
@@ -27,44 +53,56 @@
     .text-highlight {
         color: var(--text-highlight);
     }
-}
 
-:root {
-    --bg-primary: #fff;
-    --bg-secondary: #9ca3af;
-    --bg-highlight: #000;
-    --text-primary: #000;
-    --text-secondary: #6b7280;
-    --text-highlight: #fff;
-    --box-shadow: 20px 20px 60px #bdbdbd, -20px -20px 60px #fff;
-    --box-shadow-highlight: 24px 24px 50px #999, -24px -24px 50px #fff;
-    --inner-box-shadow: inset 2px 2px 5px #bfbfbf, inset -2px -2px 5px #fff;
+    .trans {
+        transition: all 0.25s ease-in-out;
+    }
 }
 
 body {
-    @apply pb-10 pt-24 font-escore;
+    @apply pt-24 font-escore;
 }
 
 @media (width <= 715px) {
     body {
         @apply pt-0;
     }
+
+    footer {
+        @apply hidden;
+    }
 }
 
-[data-theme="dark"] {
-    --bg-primary: #171717;
-    --bg-secondary: #2c2c2c;
-    --bg-highlight: #e3e3e3;
-    --text-primary: #fff;
-    --text-secondary: #6b7280;
-    --text-highlight: #000;
-    --box-shadow: 20px 20px 60px #141414, -20px -20px 60px #1a1a1a;
-    --box-shadow-highlight: 24px 24px 50px #141414, -24px -24px 50px #1a1a1a;
-    --inner-box-shadow: inset 2px 2px 5px #141414, inset -2px -2px 5px #1a1a1a;
+@media (width <= 282px) {
+    .body {
+        @apply hidden;
+    }
 }
 
 main {
     @apply mx-auto min-h-screen w-full max-w-[1340px];
+}
+
+footer {
+    @apply mx-auto w-full;
+    background: var(--bg-secondary);
+}
+
+footer .real {
+    @apply mx-auto flex w-full max-w-[1340px] items-center justify-between py-10;
+}
+
+footer .real h1 {
+    @apply mb-1.5 text-2xl font-bold;
+}
+
+footer .real p {
+    color: var(--text-secondary);
+}
+
+footer .real .button.default {
+    border-color: var(--bg-primary);
+    background: var(--bg-secondary);
 }
 
 hr {
@@ -85,12 +123,6 @@ p {
 
 @media (width > 282px) {
     .unsupported-size {
-        @apply hidden;
-    }
-}
-
-@media (width <= 282px) {
-    .body {
         @apply hidden;
     }
 }
@@ -137,4 +169,32 @@ p {
     background: var(--bg-primary);
     border-color: var(--bg-secondary);
     box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #fff;
+}
+
+.button {
+    @apply flex h-9 items-center rounded-md px-4 text-sm font-medium;
+}
+
+.button.default {
+    @apply trans border;
+    border-color: var(--bg-secondary);
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+}
+
+.button.default:hover {
+    border-color: var(--bg-highlight) !important;
+    color: var(--text-primary);
+}
+
+.button.highlight {
+    @apply trans;
+    background: var(--bg-highlight);
+    color: var(--text-highlight);
+}
+
+.button.highlight:hover {
+    @apply trans;
+    background: var(--highlighted-button-color);
+    color: var(--highlighted-text-color);
 }
