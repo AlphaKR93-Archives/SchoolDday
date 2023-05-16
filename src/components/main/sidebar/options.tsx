@@ -1,6 +1,6 @@
 "use client";
 
-import Slider from "@/components/assets/sidebar/slider/slider.component";
+import Slider from "@/components/assets/slider/slider.component";
 import { useAppSelector } from "@/store/store";
 import { toggleMillisecond } from "@/store/reducer/dday/is_millisecond_enabled.reducer";
 

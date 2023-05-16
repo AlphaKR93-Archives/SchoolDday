@@ -121,13 +121,7 @@
     }
 }
 
-@media (max-width: 789px) {
-    .header .buttons {
-        @apply hidden;
-    }
-}
-
-@media (max-width: 715px) {
+@media (max-width: 714px) {
     .header {
         @apply hidden;
     }

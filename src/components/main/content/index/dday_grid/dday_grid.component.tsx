@@ -3,7 +3,7 @@
 import { useAppSelector } from "@/store/store";
 import buildDdayList from "@/consts/dday/dday_consts";
 import dayjs from "dayjs";
-import DdayBox from "@/components/assets/dday_box/dday_box";
+import DdayBox from "@/components/modules/dday_box/dday_box";
 import { useEffect, useState } from "react";
 import styles from "./dday_grid.module.css";
 

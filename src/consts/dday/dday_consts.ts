@@ -1,4 +1,4 @@
-import { DdayType } from "@/components/assets/dday_box/components/tags/type/type.component";
+import { DdayType } from "@/components/modules/dday_box/components/tags/type/type.component";
 import dayjs from "dayjs";
 import anniversaries from "@/consts/dday/anniversary_consts";
 import birthdays from "@/consts/dday/birthday_consts/birthday_consts";

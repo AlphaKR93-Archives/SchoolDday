@@ -3,7 +3,7 @@ import React from "react";
 import Header from "@/components/main/header/header";
 import { Metadata } from "next";
 import AnalyticsProvider from "@/components/main/provider/analytics_provider";
-import MobileNavigationBarComponent from "@/components/assets/mobile_navbar/mobile_navbar.component";
+import MobileNavigationBarComponent from "@/components/main/mobile_navbar/mobile_navbar.component";
 import Providers from "@/store/provider";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="ko" suppressHydrationWarning>
-            <body className="font-escore">
+            <body>
                 <Providers>
                     <Header />
                     <div className="body">
@@ -28,9 +28,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         <MobileNavigationBarComponent />
                     </div>
                     <div className="unsupported-size">
-                        <p>본 사이트에서</p>
-                        <p>지원하지 않는</p>
-                        <p>화면 크기입니다.</p>
+                        <p>
+                            본 사이트에서
+                            <br />
+                            지원하지 않는
+                            <br />
+                            화면 크기입니다.
+                        </p>
                     </div>
                 </Providers>
                 <AnalyticsProvider />

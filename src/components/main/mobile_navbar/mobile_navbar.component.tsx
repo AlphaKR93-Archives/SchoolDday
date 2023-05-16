@@ -2,10 +2,10 @@
 
 import { ChevronUpIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
-import Sidebar from "@/components/assets/sidebar/sidebar";
-import ButtonSection from "@/components/assets/sidebar/button_section";
-import * as pack from "@/../package.json";
+import Sidebar from "@/components/main/sidebar/sidebar";
+import ButtonSection from "@/components/main/sidebar/button_section";
 import Link from "next/link";
+import * as pack from "../../../../package.json";
 import styles from "./mobile_navbar.module.css";
 
 export default function MobileNavigationBarComponent() {
@@ -41,9 +41,6 @@ export default function MobileNavigationBarComponent() {
                         </Link>
                         <Link href="/links" onClick={() => toggle()}>
                             유용한 링크
-                        </Link>
-                        <Link href="/temp" onClick={() => toggle()}>
-                            물온도 체크
                         </Link>
                         <Link href="/about" onClick={() => toggle()}>
                             사이트 정보

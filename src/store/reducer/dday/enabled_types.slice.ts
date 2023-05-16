@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { setCookie } from "cookies-next";
-import { DdayType } from "@/components/assets/dday_box/components/tags/type/type.component";
+import { DdayType } from "@/components/modules/dday_box/components/tags/type/type.component";
 
 const slice = createSlice({
     name: "enabledDdayTypes",

@@ -2,7 +2,7 @@ import Link from "next/link";
 import ThemeButton from "@/components/assets/buttons/themer/theme_button.component";
 import AnimatedSimpleIcon from "@/components/assets/icons/simple-icons/provider";
 import KakaoTalkIcon from "@/components/assets/icons/kakaotalk/kakaotalk";
-import ButtonSection from "@/components/assets/sidebar/button_section";
+import ButtonSection from "@/components/main/sidebar/button_section";
 import styles from "./header.module.css";
 
 export default function Header() {
@@ -15,7 +15,6 @@ export default function Header() {
                 <div className={styles.links}>
                     <Link href="/">디데이</Link>
                     <Link href="/links">유용한 링크</Link>
-                    <Link href="/temp">물온도 체크</Link>
                     <Link href="/about">사이트 정보</Link>
                 </div>
                 <div className={styles.buttons}>

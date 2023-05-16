@@ -1,9 +1,9 @@
 import dayjs from "dayjs";
 import "dayjs/locale/ko";
-import SemesterComponent from "@/components/assets/dday_box/components/tags/date/semester/semester.component";
-import RemainDateComponent from "@/components/assets/dday_box/components/tags/date/remain/remains.component";
-import CounterComponent from "@/components/assets/dday_box/components/content/counter/counter.component";
-import DateSection from "@/components/assets/dday_box/components/content/date/date.component";
+import SemesterComponent from "@/components/modules/dday_box/components/tags/date/semester/semester.component";
+import RemainDateComponent from "@/components/modules/dday_box/components/tags/date/remain/remains.component";
+import CounterComponent from "@/components/modules/dday_box/components/content/counter/counter.component";
+import DateSection from "@/components/modules/dday_box/components/content/date/date.component";
 import styles from "./dday_box.module.css";
 import GradeSpan from "./components/tags/grades/grades.component";
 import TypeSpan, { DdayType } from "./components/tags/type/type.component";

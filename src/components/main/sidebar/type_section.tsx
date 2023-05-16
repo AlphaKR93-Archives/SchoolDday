@@ -1,9 +1,9 @@
 "use client";
 
-import Slider from "@/components/assets/sidebar/slider/slider.component";
+import Slider from "@/components/assets/slider/slider.component";
 import { useAppSelector } from "@/store/store";
 import { toggleDdayType } from "@/store/reducer/dday/enabled_types.slice";
-import { DdayType } from "@/components/assets/dday_box/components/tags/type/type.component";
+import { DdayType } from "@/components/modules/dday_box/components/tags/type/type.component";
 
 export default function TypeSection() {
     const enabledTypes = useAppSelector(state => state.enabledDdayTypes.enabled);

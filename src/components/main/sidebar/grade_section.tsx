@@ -1,6 +1,6 @@
 "use client";
 
-import Slider from "@/components/assets/sidebar/slider/slider.component";
+import Slider from "@/components/assets/slider/slider.component";
 import { useAppSelector } from "@/store/store";
 import { toggleDdayGrade } from "@/store/reducer/dday/enabled_grades.slice";
 
