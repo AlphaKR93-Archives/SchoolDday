@@ -87,7 +87,7 @@
 }
 
 .navbar .real .license {
-    @apply text-center text-sm;
+    @apply text-center text-sm mt-2;
     color: var(--text-secondary);
 }
 
