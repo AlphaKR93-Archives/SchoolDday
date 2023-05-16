@@ -74,7 +74,7 @@ hr {
 }
 
 p {
-	@apply min-w-max;
+    @apply min-w-max;
 }
 
 .unsupported-size {
@@ -116,7 +116,7 @@ p {
 }
 
 .progress {
-    @apply h-5 rounded-full w-full;
+    @apply h-5 w-full rounded-full;
     background: var(--bg-primary);
     box-shadow: var(--inner-box-shadow);
 }
@@ -128,7 +128,7 @@ p {
 }
 
 .box_section .content .inner_section {
-    @apply flex items-center rounded-xl border p-1.5 gap-4;
+    @apply flex items-center gap-4 rounded-xl border p-1.5;
     background: var(--bg-primary);
     border-color: var(--bg-secondary);
     box-shadow: 5px 5px 10px #cccccc, -5px -5px 10px #ffffff;
