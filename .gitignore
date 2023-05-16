@@ -1,9 +1,6 @@
 # Created by https://www.toptal.com/developers/gitignore/api/webstorm+all,visualstudiocode,nextjs,react
 # Edit at https://www.toptal.com/developers/gitignore?templates=webstorm+all,visualstudiocode,nextjs,react
 
-# GroomIDE
-goorm.manifest
-
 ### NextJS ###
 # dependencies
 /node_modules
@@ -12,6 +9,7 @@ goorm.manifest
 
 package-lock.json
 pnpm-lock.yaml
+yarn.lock
 
 # testing
 /coverage
