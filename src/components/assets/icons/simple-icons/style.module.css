@@ -7,6 +7,7 @@
 
 .icon {
     @apply h-[22px] w-[22px];
+
     background: var(--primary-light) no-repeat;
     transition: all 0.25s ease-in-out;
 }

@@ -16,6 +16,7 @@
 
 .header .logo {
     @apply min-w-max text-2xl font-bold;
+
     color: var(--text-primary);
 }
 
@@ -25,11 +26,13 @@
 
 .header .links a {
     @apply trans;
+
     color: var(--text-secondary);
 }
 
 .header .links a:hover {
     @apply trans;
+
     color: var(--text-primary);
 }
 
@@ -47,11 +50,13 @@
 
 .header .buttons .icons {
     @apply my-auto flex h-min items-center gap-4 border-r pr-3;
+
     border-color: var(--bg-secondary);
 }
 
 .header .buttons .icons .icon {
     @apply trans h-6 w-6;
+
     color: var(--text-secondary);
 }
 
@@ -65,6 +70,7 @@
 
 .header .buttons .icons .loading svg {
     @apply h-[20px] w-[20px];
+
     animation: spin 0.7s linear infinite;
     color: var(--text-secondary);
     fill: var(--text-primary);
@@ -76,7 +82,7 @@
     }
 }
 
-@media (max-width: 962px) {
+@media (width <= 962px) {
     .header nav {
         @apply w-full justify-center;
     }
@@ -94,7 +100,7 @@
     }
 }
 
-@media (max-width: 714px) {
+@media (width <= 714px) {
     .header {
         @apply hidden;
     }

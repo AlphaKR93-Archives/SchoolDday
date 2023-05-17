@@ -1,5 +1,6 @@
 .not_found {
     @apply rounded-3xl border p-7;
+
     border-color: var(--bg-secondary);
     box-shadow: var(--box-shadow-highlight);
 }

@@ -1,5 +1,6 @@
 .about section {
     @apply mb-16 rounded-3xl border p-6;
+
     border-color: var(--bg-secondary);
     background: var(--bg-primary);
     box-shadow: var(--box-shadow-highlight);
@@ -7,6 +8,7 @@
 
 .about hr {
     @apply w-full;
+
     background: var(--bg-secondary);
 }
 
@@ -16,6 +18,7 @@
 
 .about .title h1 {
     @apply min-w-max text-2xl font-bold;
+
     color: var(--text-primary);
 }
 
@@ -37,11 +40,13 @@
 
 .about .content .profile .me .pronoun {
     @apply text-2xl;
+
     color: var(--text-secondary);
 }
 
 .about .content .profile .desc {
     @apply text-center text-xl;
+
     color: var(--text-secondary);
 }
 
@@ -69,7 +74,7 @@
     @apply mt-3 flex justify-center gap-3;
 }
 
-@media (max-width: 758px) {
+@media (width <= 758px) {
     .about .content {
         display: block;
     }
@@ -91,13 +96,13 @@
     }
 }
 
-@media (max-width: 633px) {
+@media (width <= 633px) {
     .about .content .links .social p {
         @apply hidden;
     }
 }
 
-@media (max-width: 533px) {
+@media (width <= 533px) {
     .about .content .profile .me .name {
         @apply text-2xl;
     }
@@ -111,7 +116,7 @@
     }
 }
 
-@media (max-width: 457px) {
+@media (width <= 457px) {
     .about .content .profile img {
         @apply hidden;
     }
@@ -121,7 +126,7 @@
     }
 }
 
-@media (max-width: 345px) {
+@media (width <= 345px) {
     .about .content .profile .me .name {
         @apply text-xl;
     }
@@ -131,7 +136,7 @@
     }
 }
 
-@media (max-width: 318px) {
+@media (width <= 318px) {
     .about .content .profile .me {
         @apply justify-center;
     }

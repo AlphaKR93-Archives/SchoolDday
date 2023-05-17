@@ -179,6 +179,11 @@ const changelog: {
         version: "3.0.2.0",
         date: "2023. 05. 17 PM 12:56",
         content: ["진행중인 디데이가 올바르게 표시되지 않는 문제 해결", "디데이 표시 코드 개선"]
+    },
+    {
+        version: "3.0.2.1",
+        date: "2023. 05. 17 PM 08:50",
+        content: ["코드 최적화"]
     }
 ].reverse();
 export default changelog;
