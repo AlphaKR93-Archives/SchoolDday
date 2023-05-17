@@ -20,32 +20,37 @@ export default function AmountSection() {
         setTimeout(() => updateStatus(true), 1000);
     }, []);
 
-    if (!isReady) return <h1 className="!mb-4">로딩중...</h1>;
     return (
         <h1 className="!mb-4">
-            디데이 개수:{" "}
-            {
-                buildedDdays.filter(element => {
-                    if (!enabledDdayTypes.includes(element.type)) return false;
-                    if (element.date.end < now) return false;
+            {isReady ? (
+                <>
+                    디데이 개수:{" "}
+                    {
+                        buildedDdays.filter(element => {
+                            if (!enabledDdayTypes.includes(element.type)) return false;
+                            if (element.date.end < now) return false;
 
-                    if (
-                        element.grades !== undefined &&
-                        !element.grades.some(grade => enabledDdayGrades.includes(grade))
-                    )
-                        return false;
+                            if (
+                                element.grades !== undefined &&
+                                !element.grades.some(grade => enabledDdayGrades.includes(grade))
+                            )
+                                return false;
 
-                    if (!enabledDdaySemesters.includes("2023-1") && element.date.start < first) return false;
-                    if (
-                        !enabledDdaySemesters.includes("2023-2") &&
-                        element.date.start > first &&
-                        element.date.start < second
-                    )
-                        return false;
-                    return !(!enabledDdaySemesters.includes("2024") && element.date.start > second);
-                }).length
-            }
-            개
+                            if (!enabledDdaySemesters.includes("2023-1") && element.date.start < first) return false;
+                            if (
+                                !enabledDdaySemesters.includes("2023-2") &&
+                                element.date.start > first &&
+                                element.date.start < second
+                            )
+                                return false;
+                            return !(!enabledDdaySemesters.includes("2024") && element.date.start > second);
+                        }).length
+                    }
+                    개
+                </>
+            ) : (
+                "Loading..."
+            )}
         </h1>
     );
 }

@@ -102,28 +102,27 @@ export default function CounterComponent(props: { start: number; end: number }) 
         return () => clearInterval(interval);
     });
 
-    if (isEnded)
-        return (
-            <section className={styles.counter}>
-                <span className={styles.counter}>Ended!</span>
-            </section>
-        );
-    if (isReady)
-        return (
-            <section className={styles.counter}>
-                <span className={styles.counter}>
-                    <p>{data.days.value.toString().padStart(2, "0")}</p>:
-                    <p>{data.hrs.value.toString().padStart(2, "0")}</p>:
-                    <p>{data.mins.value.toString().padStart(2, "0")}</p>:
-                    <p>{data.secs.value.toString().padStart(2, "0")}</p>
-                </span>
-                {milli ? <p className={styles.milli}>.{data.milli.toString().padStart(3, "0")}</p> : null}
-            </section>
-        );
-
     return (
         <section className={styles.counter}>
-            <span className={styles.counter}>Loading...</span>
+            <span className={styles.counter}>
+                {isReady ? (
+                    isEnded ? (
+                        "Ended!"
+                    ) : (
+                        <>
+                            <p>{data.days.value.toString().padStart(2, "0")}</p>:
+                            <p>{data.hrs.value.toString().padStart(2, "0")}</p>:
+                            <p>{data.mins.value.toString().padStart(2, "0")}</p>:
+                            <p>{data.secs.value.toString().padStart(2, "0")}</p>
+                        </>
+                    )
+                ) : (
+                    "Loading..."
+                )}
+            </span>
+            {isReady && !isEnded && milli ? (
+                <p className={styles.milli}>.{data.milli.toString().padStart(3, "0")}</p>
+            ) : null}
         </section>
     );
 }
