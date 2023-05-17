@@ -1,12 +1,11 @@
 import "./globals.css";
 import React from "react";
-import Header from "@/components/main/header/header";
+import Header from "@/components/main/header/header.component";
+import Footer from "@/components/main/footer/footer.component";
 import { Metadata } from "next";
 import AnalyticsProvider from "@/components/main/provider/analytics_provider";
 import MobileNavigationBarComponent from "@/components/main/mobile_navbar/mobile_navbar.component";
 import Providers from "@/store/provider";
-import dayjs from "dayjs";
-import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "석동중 디데이",
@@ -28,20 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         <Header />
                         {children}
                         <MobileNavigationBarComponent />
-                        <footer>
-                            <div className="real">
-                                <div>
-                                    <span className="flex items-end gap-4">
-                                        <h1>석동중학교 디데이 카운터</h1>
-                                        <p className="mb-1">버전 1.2.3.4</p>
-                                    </span>
-                                    <p>Copyright (C) 2022-{dayjs().year()} AlphaKR93, Licenced under MIT License.</p>
-                                </div>
-                                <Link href="https://status.alpha93.kr/" className="button default">
-                                    사이트 상태
-                                </Link>
-                            </div>
-                        </footer>
+                        <Footer />
                     </div>
                     <div className="unsupported-size">
                         <p>

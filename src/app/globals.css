@@ -12,7 +12,7 @@
 
 :root {
     --bg-primary: #fff;
-    --bg-secondary: #9ca3af;
+    --bg-secondary: #f0f0f0;
     --bg-highlight: #000;
     --text-primary: #000;
     --text-secondary: #6b7280;
@@ -81,28 +81,6 @@ body {
 
 main {
     @apply mx-auto min-h-screen w-full max-w-[1340px];
-}
-
-footer {
-    @apply mx-auto w-full;
-    background: var(--bg-secondary);
-}
-
-footer .real {
-    @apply mx-auto flex w-full max-w-[1340px] items-center justify-between py-10;
-}
-
-footer .real h1 {
-    @apply mb-1.5 text-2xl font-bold;
-}
-
-footer .real p {
-    color: var(--text-secondary);
-}
-
-footer .real .button.default {
-    border-color: var(--bg-primary);
-    background: var(--bg-secondary);
 }
 
 hr {

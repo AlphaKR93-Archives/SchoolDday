@@ -169,6 +169,11 @@ const changelog: {
         version: "3.0.0.0",
         date: "2023. 05. 17 AM 12:07",
         content: ["라이선스 추가", "정식 릴리스"]
+    },
+    {
+        version: "3.0.1.0",
+        date: "2023. 05. 17 AM 10:28",
+        content: ["라이트 모드에서 Footer가 너무 진하게 표시되는 문제 해결", "Footer 코드 분리", "코드 최적화"]
     }
 ].reverse();
 export default changelog;

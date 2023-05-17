@@ -6,6 +6,8 @@
 .prettierignore
 *.ico
 *.sh
+*.txt
+*.xml
 
 ### NextJS ###
 # dependencies
