@@ -1,0 +1,41 @@
+.sidebar {
+    @apply h-full min-w-[18rem] p-7;
+}
+
+.sidebar li {
+    @apply mb-5;
+}
+
+.sidebar h1 {
+    @apply mb-2 font-bold;
+    color: var(--text-primary);
+}
+
+.sidebar ul {
+    @apply flex items-center justify-between border-l py-1 pl-4;
+    border-color: var(--bg-secondary);
+}
+
+.sidebar .button {
+    @apply !mb-8 !hidden;
+}
+
+.button {
+    @apply flex items-center justify-center gap-3;
+}
+
+.button svg {
+    @apply h-6 w-6;
+    color: var(--text-secondary);
+    transition: all 0.25s ease-in-out;
+}
+
+.button svg:hover {
+    color: var(--text-primary);
+}
+
+@media (max-width: 789px) {
+    .sidebar .button {
+        @apply !flex;
+    }
+}

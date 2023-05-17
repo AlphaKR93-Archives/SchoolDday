@@ -1,0 +1,142 @@
+.about section {
+    @apply mb-16 rounded-3xl border p-6;
+    border-color: var(--bg-secondary);
+    background: var(--bg-primary);
+    box-shadow: var(--box-shadow-highlight);
+}
+
+.about hr {
+    @apply w-full;
+    background: var(--bg-secondary);
+}
+
+.about .title {
+    @apply flex items-center gap-7;
+}
+
+.about .title h1 {
+    @apply min-w-max text-2xl font-bold;
+    color: var(--text-primary);
+}
+
+.about .content {
+    @apply m-6 flex items-center justify-between;
+}
+
+.about .content .profile {
+    @apply flex items-center gap-6;
+}
+
+.about .content .profile .me {
+    @apply flex items-end justify-between gap-3;
+}
+
+.about .content .profile .me .name {
+    @apply text-3xl;
+}
+
+.about .content .profile .me .pronoun {
+    @apply text-2xl;
+    color: var(--text-secondary);
+}
+
+.about .content .profile .desc {
+    @apply text-center text-xl;
+    color: var(--text-secondary);
+}
+
+.about .content .links {
+    color: var(--text-secondary);
+}
+
+.about .content .links .social {
+    @apply grid gap-y-3 text-xl;
+}
+
+.about .content .links svg {
+    @apply h-6 w-6;
+}
+
+.about .content .links .social a {
+    @apply flex items-center gap-1.5;
+}
+
+.about .content .links .social div {
+    @apply mb-1 ml-0.5 h-5 w-5;
+}
+
+.about .content .links .icons {
+    @apply mt-3 flex justify-center gap-3;
+}
+
+@media (max-width: 758px) {
+    .about .content {
+        display: block;
+    }
+
+    .about .content .profile {
+        @apply justify-center;
+    }
+
+    .about .content .links .social {
+        @apply mt-7 grid grid-cols-3;
+    }
+
+    .about .content .links .social a {
+        @apply justify-center;
+    }
+
+    .about .content .links .icons a {
+        @apply flex w-full justify-center;
+    }
+}
+
+@media (max-width: 633px) {
+    .about .content .links .social p {
+        @apply hidden;
+    }
+}
+
+@media (max-width: 533px) {
+    .about .content .profile .me .name {
+        @apply text-2xl;
+    }
+
+    .about .content .profile .me .pronoun {
+        @apply text-xl;
+    }
+
+    .about .content .profile .desc {
+        @apply text-base;
+    }
+}
+
+@media (max-width: 457px) {
+    .about .content .profile img {
+        @apply hidden;
+    }
+
+    .about .content .profile .me img {
+        display: unset;
+    }
+}
+
+@media (max-width: 345px) {
+    .about .content .profile .me .name {
+        @apply text-xl;
+    }
+
+    .about .content .profile .me .pronoun {
+        @apply text-base;
+    }
+}
+
+@media (max-width: 318px) {
+    .about .content .profile .me {
+        @apply justify-center;
+    }
+
+    .about .content .profile .me .pronoun {
+        @apply hidden;
+    }
+}

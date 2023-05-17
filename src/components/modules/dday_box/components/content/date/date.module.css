@@ -1,0 +1,26 @@
+.date_section {
+    @apply w-full;
+    color: var(--text-primary);
+}
+
+.date_section span {
+    @apply mt-3 w-full justify-center gap-2;
+}
+
+.date_section .date {
+    @apply flex;
+}
+
+.date_section .date_lite {
+    @apply hidden;
+}
+
+@media (max-width: 340px) {
+    .date_section .date {
+        @apply hidden;
+    }
+
+    .date_section .date_lite {
+        @apply flex;
+    }
+}

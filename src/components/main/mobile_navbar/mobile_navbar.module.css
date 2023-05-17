@@ -1,0 +1,98 @@
+.navbar {
+    @apply fixed bottom-0 h-20 w-full border-l border-r border-t backdrop-blur;
+    border-color: var(--bg-secondary);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: height 0.5s ease-in-out;
+}
+
+.navbar[data-enabled="true"] {
+    @apply h-full;
+    transition: height 0.5s ease-in-out;
+}
+
+.navbar[data-enabled="true"] .button .title svg {
+    @apply rotate-180 transform;
+}
+
+.navbar .button {
+    @apply fixed bottom-0 h-20 w-full px-8 py-5;
+}
+
+.navbar .button .title {
+    @apply flex items-center justify-center;
+}
+
+.navbar .button .title p {
+    @apply w-full;
+    flex: 1 0 10%;
+}
+
+.navbar .button .title span {
+    @apply text-center;
+    flex: 1 0 80%;
+}
+
+.navbar .button .title h1 {
+    @apply text-xl font-bold;
+}
+
+.navbar .button .title p {
+    @apply text-sm;
+    color: var(--text-secondary);
+}
+
+.navbar .button .title svg {
+    @apply h-7 w-7;
+    flex: 1 0 10%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.navbar .real {
+    @apply hidden w-full;
+    height: calc(100% - 5rem);
+}
+
+.navbar .real[data-enabled="true"] {
+    display: block;
+}
+
+.navbar .real .sidebar {
+    @apply overflow-auto;
+    height: calc(100% - 6.5rem);
+}
+
+.navbar .real .touch_section[data-enabled="false"] .buttons {
+    @apply hidden;
+}
+
+.navbar .real .touch_section[data-enabled="false"] .links {
+    @apply hidden;
+}
+
+.navbar .real .touch_section[data-enabled="false"] .license {
+    @apply hidden;
+}
+
+.navbar .real .touch_section .buttons {
+    @apply mt-3;
+}
+
+.navbar .real .touch_section .links {
+    @apply mt-3 grid grid-cols-3 gap-y-2;
+}
+
+.navbar .real .touch_section .links a {
+    @apply text-center;
+}
+
+.navbar .real .license {
+    @apply mt-2 text-center text-sm;
+    color: var(--text-secondary);
+}
+
+@media (min-width: 715px) {
+    .navbar {
+        @apply hidden;
+    }
+}

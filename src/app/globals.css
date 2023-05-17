@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "S-CoreDream-3Light";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --bg-primary: #fff;
+    --bg-secondary: #f0f0f0;
+    --bg-highlight: #000;
+    --text-primary: #000;
+    --text-secondary: #6b7280;
+    --text-highlight: #fff;
+    --box-shadow: 20px 20px 60px #bdbdbd, -20px -20px 60px #fff;
+    --box-shadow-highlight: 24px 24px 50px #999, -24px -24px 50px #fff;
+    --inner-box-shadow: inset 2px 2px 5px #bfbfbf, inset -2px -2px 5px #fff;
+    --highlighted-button-color: #fff;
+    --highlighted-text-color: #fff;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #171717;
+    --bg-secondary: #2c2c2c;
+    --bg-highlight: #e3e3e3;
+    --text-primary: #fff;
+    --text-secondary: #6b7280;
+    --text-highlight: #000;
+    --box-shadow: 20px 20px 60px #141414, -20px -20px 60px #1a1a1a;
+    --box-shadow-highlight: 24px 24px 50px #141414, -24px -24px 50px #1a1a1a;
+    --inner-box-shadow: inset 2px 2px 5px #141414, inset -2px -2px 5px #1a1a1a;
+}
+
+@layer components {
+    .bg-secondary {
+        background: var(--bg-secondary);
+        border-color: var(--bg-secondary);
+    }
+
+    .bg-highlight {
+        background: var(--bg-highlight);
+    }
+
+    .text-primary {
+        color: var(--text-primary);
+    }
+
+    .text-highlight {
+        color: var(--text-highlight);
+    }
+
+    .trans {
+        transition: all 0.25s ease-in-out;
+    }
+}
+
+body {
+    @apply pt-24 font-escore;
+}
+
+@media (width <= 715px) {
+    body {
+        @apply pt-0;
+    }
+
+    footer {
+        @apply hidden;
+    }
+}
+
+@media (width <= 282px) {
+    .body {
+        @apply hidden;
+    }
+}
+
+main {
+    @apply mx-auto min-h-screen w-full max-w-[1340px];
+}
+
+hr {
+    @apply h-px border-0;
+}
+
+p {
+    @apply min-w-max;
+}
+
+.unsupported-size {
+    @apply flex h-screen w-full items-center;
+}
+
+.unsupported-size p {
+    @apply w-screen text-center;
+}
+
+@media (width > 282px) {
+    .unsupported-size {
+        @apply hidden;
+    }
+}
+
+.box_section {
+    @apply rounded-3xl border p-7;
+
+    border-color: var(--bg-secondary);
+    background: var(--bg-primary);
+    box-shadow: var(--box-shadow-highlight);
+}
+
+.box_section .title {
+    @apply flex items-center gap-7;
+}
+
+.box_section .title h1 {
+    @apply min-w-max text-2xl font-bold;
+
+    color: var(--text-primary);
+}
+
+.box_section .content {
+    @apply mt-7;
+}
+
+.progress {
+    @apply h-5 w-full rounded-full;
+
+    background: var(--bg-primary);
+    box-shadow: var(--inner-box-shadow);
+}
+
+.progress .passed {
+    @apply h-full rounded-full;
+
+    background: linear-gradient(145deg, #3cac70, #32915f);
+    transition: width 1.5s ease-in-out;
+}
+
+.box_section .content .inner_section {
+    @apply flex items-center gap-4 rounded-xl border p-1.5;
+
+    background: var(--bg-primary);
+    border-color: var(--bg-secondary);
+    box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #fff;
+}
+
+.button {
+    @apply flex h-9 items-center rounded-md px-4 text-sm font-medium;
+}
+
+.button.default {
+    @apply trans border;
+    border-color: var(--bg-secondary);
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+}
+
+.button.default:hover {
+    border-color: var(--bg-highlight) !important;
+    color: var(--text-primary);
+}
+
+.button.highlight {
+    @apply trans;
+    background: var(--bg-highlight);
+    color: var(--text-highlight);
+}
+
+.button.highlight:hover {
+    @apply trans;
+    background: var(--highlighted-button-color);
+    color: var(--highlighted-text-color);
+}

@@ -1,0 +1,19 @@
+.miscellaneous {
+    background: linear-gradient(145deg, #898989, #737373);
+}
+
+.examination {
+    background: linear-gradient(145deg, #f75050, #d04444);
+}
+
+.holiday {
+    background: linear-gradient(145deg, #4fbc52, #439e45);
+}
+
+.event {
+    background: linear-gradient(145deg, #3980df, #306cbb);
+}
+
+.birthday {
+    background: linear-gradient(145deg, #fbb800, #d49b00);
+}

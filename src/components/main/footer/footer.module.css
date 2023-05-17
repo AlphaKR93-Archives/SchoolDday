@@ -1,0 +1,25 @@
+.footer {
+    @apply mx-auto w-full;
+    background: var(--bg-secondary);
+}
+
+.footer .body {
+    @apply mx-auto flex w-full max-w-[1340px] items-center justify-between py-10;
+}
+
+.footer .body span {
+    @apply flex items-end gap-4;
+}
+
+.footer .body h1 {
+    @apply text-2xl font-bold;
+}
+
+.footer .body p {
+    color: var(--text-secondary);
+}
+
+.footer .body .button.default {
+    border-color: var(--text-secondary);
+    background: var(--bg-secondary);
+}
