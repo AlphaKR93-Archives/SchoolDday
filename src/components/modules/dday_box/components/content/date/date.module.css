@@ -1,5 +1,6 @@
 .date_section {
     @apply w-full;
+
     color: var(--text-primary);
 }
 
@@ -15,7 +16,7 @@
     @apply hidden;
 }
 
-@media (max-width: 340px) {
+@media (width <= 340px) {
     .date_section .date {
         @apply hidden;
     }

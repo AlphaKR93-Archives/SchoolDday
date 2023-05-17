@@ -4,6 +4,7 @@
 
 .support svg {
     @apply h-[22px] w-[22px];
+
     min-width: 22px;
     min-height: 22px;
 }
@@ -16,7 +17,7 @@
     @apply mt-4 flex h-full min-w-full;
 }
 
-@media (max-width: 714px) {
+@media (width <= 714px) {
     .main ul {
         @apply hidden;
     }

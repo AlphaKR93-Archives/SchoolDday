@@ -4,11 +4,13 @@
 
 .dday_box .title {
     @apply flex w-full justify-center gap-2 text-xl;
+
     color: var(--text-primary);
 }
 
 .dday_box .content_box {
     @apply mt-2 w-[427px] rounded-xl border p-1.5;
+
     background: var(--bg-primary);
     border-color: var(--bg-secondary);
     box-shadow: var(--box-shadow);
@@ -16,9 +18,10 @@
 
 .dday_box .content_box .tags {
     @apply flex justify-between rounded-xl border p-1.5 text-sm;
+
     background: var(--bg-primary);
     border-color: var(--bg-secondary);
-    box-shadow: 5px 5px 10px #cccccc, -5px -5px 10px #ffffff;
+    box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #fff;
 }
 
 [data-theme="dark"] .dday_box .content_box .tags {
@@ -33,7 +36,7 @@
     @apply flex gap-1.5;
 }
 
-@media (max-width: 428px) {
+@media (width <= 428px) {
     .dday_box .content_box {
         @apply w-screen;
     }

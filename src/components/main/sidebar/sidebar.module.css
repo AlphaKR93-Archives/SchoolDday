@@ -8,11 +8,13 @@
 
 .sidebar h1 {
     @apply mb-2 font-bold;
+
     color: var(--text-primary);
 }
 
 .sidebar ul {
     @apply flex items-center justify-between border-l py-1 pl-4;
+
     border-color: var(--bg-secondary);
 }
 
@@ -26,6 +28,7 @@
 
 .button svg {
     @apply h-6 w-6;
+
     color: var(--text-secondary);
     transition: all 0.25s ease-in-out;
 }
@@ -34,7 +37,7 @@
     color: var(--text-primary);
 }
 
-@media (max-width: 789px) {
+@media (width <= 789px) {
     .sidebar .button {
         @apply !flex;
     }

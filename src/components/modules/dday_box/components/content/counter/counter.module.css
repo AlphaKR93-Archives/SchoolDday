@@ -1,5 +1,6 @@
 .counter {
     @apply mt-3 flex min-w-max items-end justify-center;
+
     color: var(--text-primary);
 }
 
@@ -11,13 +12,13 @@
     @apply text-2xl;
 }
 
-@media (max-width: 428px) {
+@media (width <= 428px) {
     .counter .milli {
         @apply hidden;
     }
 }
 
-@media (max-width: 345px) {
+@media (width <= 345px) {
     .counter span {
         @apply text-4xl;
     }

@@ -1,5 +1,6 @@
 .navbar {
     @apply fixed bottom-0 h-20 w-full border-l border-r border-t backdrop-blur;
+
     border-color: var(--bg-secondary);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -8,6 +9,7 @@
 
 .navbar[data-enabled="true"] {
     @apply h-full;
+
     transition: height 0.5s ease-in-out;
 }
 
@@ -25,11 +27,13 @@
 
 .navbar .button .title p {
     @apply w-full;
+
     flex: 1 0 10%;
 }
 
 .navbar .button .title span {
     @apply text-center;
+
     flex: 1 0 80%;
 }
 
@@ -39,17 +43,20 @@
 
 .navbar .button .title p {
     @apply text-sm;
+
     color: var(--text-secondary);
 }
 
 .navbar .button .title svg {
     @apply h-7 w-7;
+
     flex: 1 0 10%;
     transition: transform 0.5s ease-in-out;
 }
 
 .navbar .real {
     @apply hidden w-full;
+
     height: calc(100% - 5rem);
 }
 
@@ -59,6 +66,7 @@
 
 .navbar .real .sidebar {
     @apply overflow-auto;
+
     height: calc(100% - 6.5rem);
 }
 
@@ -88,10 +96,11 @@
 
 .navbar .real .license {
     @apply mt-2 text-center text-sm;
+
     color: var(--text-secondary);
 }
 
-@media (min-width: 715px) {
+@media (width >= 715px) {
     .navbar {
         @apply hidden;
     }

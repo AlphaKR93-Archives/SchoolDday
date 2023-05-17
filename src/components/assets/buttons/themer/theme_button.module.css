@@ -8,6 +8,7 @@
 
 .icon {
     @apply trans h-6 w-6;
+
     color: var(--text-secondary);
 }
 
@@ -21,6 +22,7 @@
 
 .loading svg {
     @apply h-[20px] w-[20px];
+
     animation: spin 0.7s linear infinite;
     color: var(--text-secondary);
     fill: var(--text-primary);

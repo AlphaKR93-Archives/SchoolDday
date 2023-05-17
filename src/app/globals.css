@@ -155,6 +155,7 @@ p {
 
 .button.default {
     @apply trans border;
+
     border-color: var(--bg-secondary);
     background: var(--bg-primary);
     color: var(--text-secondary);
@@ -167,12 +168,14 @@ p {
 
 .button.highlight {
     @apply trans;
+
     background: var(--bg-highlight);
     color: var(--text-highlight);
 }
 
 .button.highlight:hover {
     @apply trans;
+
     background: var(--highlighted-button-color);
     color: var(--highlighted-text-color);
 }

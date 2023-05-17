@@ -2,7 +2,7 @@
     @apply grid h-full w-full grid-cols-2 gap-x-10 gap-y-4 p-7;
 }
 
-@media (max-width: 1250px) {
+@media (width <= 1250px) {
     .content {
         @apply grid-cols-1;
     }
@@ -14,6 +14,7 @@
 
 .loading span {
     @apply mt-2 flex w-[427px] items-center justify-center rounded-xl border p-7 text-4xl;
+
     color: var(--text-primary);
     background: var(--bg-primary);
     border-color: var(--bg-secondary);
