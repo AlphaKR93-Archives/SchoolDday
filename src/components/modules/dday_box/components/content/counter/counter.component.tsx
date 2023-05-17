@@ -88,42 +88,41 @@ export default function CounterComponent(props: { start: number; end: number }) 
         setTimeout(() => updateStatus(true), 1000);
         const interval = setInterval(() => {
             const now = dayjs();
-            if (dateStart < now) {
+            if (!passed) {
+                if (dateStart < now) updatePassed(true);
+                setData(process(data, dateStart.diff(now, "milliseconds")));
+            } else if (!isEnded) {
                 if (dateEnd < now) {
                     endDday(true);
                     return;
                 }
-                updatePassed(true);
-            } else if (!passed) {
-                setData(process(data, dateStart.diff(now, "milliseconds")));
-            } else if (dateEnd < now) endDday(true);
-            else setData(process(data, dateEnd.diff(now, "milliseconds")));
+                setData(process(data, dateEnd.diff(now, "milliseconds")));
+            }
         });
         return () => clearInterval(interval);
     });
 
-    if (isReady && !isEnded)
-        return (
-            <section className={styles.counter}>
-                <span className={styles.counter}>
-                    <p>{data.days.value.toString().padStart(2, "0")}</p>:
-                    <p>{data.hrs.value.toString().padStart(2, "0")}</p>:
-                    <p>{data.mins.value.toString().padStart(2, "0")}</p>:
-                    <p>{data.secs.value.toString().padStart(2, "0")}</p>
-                </span>
-                {milli ? <p className={styles.milli}>.{data.milli.toString().padStart(3, "0")}</p> : null}
-            </section>
-        );
-    if (isEnded)
-        return (
-            <section className={styles.counter}>
-                <span className={styles.counter}>Ended!</span>
-            </section>
-        );
-
     return (
         <section className={styles.counter}>
-            <span className={styles.counter}>Loading...</span>
+            <span className={styles.counter}>
+                {isReady ? (
+                    isEnded ? (
+                        "Ended!"
+                    ) : (
+                        <>
+                            <p>{data.days.value.toString().padStart(2, "0")}</p>:
+                            <p>{data.hrs.value.toString().padStart(2, "0")}</p>:
+                            <p>{data.mins.value.toString().padStart(2, "0")}</p>:
+                            <p>{data.secs.value.toString().padStart(2, "0")}</p>
+                        </>
+                    )
+                ) : (
+                    "Loading..."
+                )}
+            </span>
+            {isReady && !isEnded && milli ? (
+                <p className={styles.milli}>.{data.milli.toString().padStart(3, "0")}</p>
+            ) : null}
         </section>
     );
 }

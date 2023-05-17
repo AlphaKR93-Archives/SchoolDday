@@ -11,8 +11,12 @@ export default function Sidebar(props: { button: boolean }) {
 
     return (
         <ul className={styles.sidebar}>
-            {button ? <ButtonSection /> : null}
-            <AmountSection />
+            {button ? (
+                <>
+                    <ButtonSection />
+                    <AmountSection />
+                </>
+            ) : null}
             <OptionsSection />
             <TypeSection />
             <GradeSection />

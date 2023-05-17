@@ -27,6 +27,7 @@ module.exports = {
         "import/no-extraneous-dependencies": ["off"],
         "global-require": ["off"],
         "lines-between-class-members": ["off"],
-        "no-param-reassign": ["off"]
+        "no-param-reassign": ["off"],
+        "no-nested-ternary": ["off"]
     }
 };
