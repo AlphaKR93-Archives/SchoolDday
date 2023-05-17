@@ -88,21 +88,27 @@ export default function CounterComponent(props: { start: number; end: number }) 
         setTimeout(() => updateStatus(true), 1000);
         const interval = setInterval(() => {
             const now = dayjs();
-            if (dateStart < now) {
+            if (!passed) {
+                if (dateStart < now) updatePassed(true);
+                setData(process(data, dateStart.diff(now, "milliseconds")));
+            } else if (!isEnded) {
                 if (dateEnd < now) {
                     endDday(true);
                     return;
                 }
-                updatePassed(true);
-            } else if (!passed) {
-                setData(process(data, dateStart.diff(now, "milliseconds")));
-            } else if (dateEnd < now) endDday(true);
-            else setData(process(data, dateEnd.diff(now, "milliseconds")));
+                setData(process(data, dateEnd.diff(now, "milliseconds")));
+            }
         });
         return () => clearInterval(interval);
     });
 
-    if (isReady && !isEnded)
+    if (isEnded)
+        return (
+            <section className={styles.counter}>
+                <span className={styles.counter}>Ended!</span>
+            </section>
+        );
+    if (isReady)
         return (
             <section className={styles.counter}>
                 <span className={styles.counter}>
@@ -112,12 +118,6 @@ export default function CounterComponent(props: { start: number; end: number }) 
                     <p>{data.secs.value.toString().padStart(2, "0")}</p>
                 </span>
                 {milli ? <p className={styles.milli}>.{data.milli.toString().padStart(3, "0")}</p> : null}
-            </section>
-        );
-    if (isEnded)
-        return (
-            <section className={styles.counter}>
-                <span className={styles.counter}>Ended!</span>
             </section>
         );
 
