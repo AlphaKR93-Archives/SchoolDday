@@ -174,6 +174,11 @@ const changelog: {
         version: "3.0.1.0",
         date: "2023. 05. 17 AM 10:28",
         content: ["라이트 모드에서 Footer가 너무 진하게 표시되는 문제 해결", "Footer 코드 분리", "코드 최적화"]
+    },
+    {
+        version: "3.0.2.0",
+        date: "2023. 05. 17 PM 12:56",
+        content: ["진행중인 디데이가 올바르게 표시되지 않는 문제 해결", "디데이 표시 코드 개선"]
     }
 ].reverse();
 export default changelog;
