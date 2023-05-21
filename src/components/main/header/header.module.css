@@ -1,107 +1,69 @@
-@tailwind components;
-
-@layer components {
-    .trans {
-        transition: all 0.25s ease-in-out;
-    }
-}
-
 .header {
     @apply fixed left-0 right-0 top-0 h-20 w-full backdrop-blur;
-}
 
-.header nav {
-    @apply mx-auto flex h-full w-full max-w-screen-xl items-center px-4;
-}
-
-.header .logo {
-    @apply min-w-max text-2xl font-bold;
-
-    color: var(--text-primary);
-}
-
-.header .links {
-    @apply ml-11 flex min-w-max items-center gap-6;
-}
-
-.header .links a {
-    @apply trans;
-
-    color: var(--text-secondary);
-}
-
-.header .links a:hover {
-    @apply trans;
-
-    color: var(--text-primary);
-}
-
-.header .buttons {
-    @apply ml-11 flex w-full justify-end gap-4;
-}
-
-.header .buttons .only_icons {
-    @apply my-auto hidden;
-}
-
-.header .buttons .button {
-    @apply flex gap-4;
-}
-
-.header .buttons .icons {
-    @apply my-auto flex h-min items-center gap-4 border-r pr-3;
-
-    border-color: var(--bg-secondary);
-}
-
-.header .buttons .icons .icon {
-    @apply trans h-6 w-6;
-
-    color: var(--text-secondary);
-}
-
-.header .buttons .icons .icon:hover {
-    color: var(--text-primary);
-}
-
-.header .buttons .icons .loading {
-    @apply flex h-6 w-6 items-center justify-center;
-}
-
-.header .buttons .icons .loading svg {
-    @apply h-[20px] w-[20px];
-
-    animation: spin 0.7s linear infinite;
-    color: var(--text-secondary);
-    fill: var(--text-primary);
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@media (width <= 962px) {
-    .header nav {
-        @apply w-full justify-center;
-    }
-
-    .header .buttons .only_icons {
-        @apply flex;
-    }
-
-    .header .buttons .icons {
+    @media (width <= 714px) {
         @apply hidden;
     }
 
-    .header .buttons .button {
-        @apply hidden;
-    }
-}
+    nav {
+        @apply mx-auto flex h-full w-full max-w-screen-xl items-center px-4;
 
-@media (width <= 714px) {
-    .header {
-        @apply hidden;
+        @media (width <= 962px) {
+            @apply w-full justify-center;
+        }
+    }
+
+    .logo {
+        @apply text-pri min-w-max text-2xl font-bold;
+    }
+
+    .links {
+        @apply ml-11 flex min-w-max items-center gap-6;
+
+        a {
+            @apply text-sec trans hover:text-pri;
+        }
+    }
+
+    .buttons {
+        @apply ml-11 flex w-full justify-end gap-4;
+
+        .only_icons {
+            @apply my-auto hidden;
+        }
+
+        .button {
+            @apply flex gap-4;
+        }
+
+        .icons {
+            @apply border-sec my-auto flex h-min items-center gap-4 border-r pr-3;
+
+            .icon {
+                @apply text-sec trans h-6 w-6 hover:text-pri;
+            }
+
+            .loading {
+                @apply flex h-6 w-6 items-center justify-center;
+
+                svg {
+                    @apply text-sec fill-pri h-[20px] w-[20px] animate-loading;
+                }
+            }
+        }
+
+        @media (width <= 962px) {
+            .button {
+                @apply hidden;
+            }
+
+            .icons {
+                @apply hidden;
+            }
+
+            .only_icons {
+                @apply flex;
+            }
+        }
     }
 }

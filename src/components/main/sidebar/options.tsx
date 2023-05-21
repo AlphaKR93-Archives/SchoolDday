@@ -12,9 +12,9 @@ export default function OptionsSection() {
             <h1>표시 옵션</h1>
             <Slider
                 name="밀리초 표시"
-                enabled={enabled}
-                onValue={{ background: "7a7a7a", shadowPrimary: "686868", shadowSecondary: "8c8c8c" }}
-                offValue={{ bgPrimary: "c5c5c5", bgSecondary: "a6a6a6" }}
+                enabled={enabled !== undefined ? enabled : false}
+                onValue={{ background: "#7a7a7a", shadowPrimary: "#686868", shadowSecondary: "#8c8c8c" }}
+                offValue={{ bgPrimary: "#c5c5c5", bgSecondary: "#a6a6a6" }}
                 dispatcher={toggleMillisecond()}
             />
         </li>

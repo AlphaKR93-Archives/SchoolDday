@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import AnalyticsProvider from "@/components/main/provider/analytics_provider";
 import MobileNavigationBarComponent from "@/components/main/mobile_navbar/mobile_navbar.component";
 import Providers from "@/store/provider";
+import styles from "./layout.module.css";
 
 export const metadata: Metadata = {
     title: "석동중 디데이",
@@ -23,13 +24,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="ko" suppressHydrationWarning>
             <body>
                 <Providers>
-                    <div className="body">
+                    <div className={styles.body}>
                         <Header />
                         {children}
                         <MobileNavigationBarComponent />
                         <Footer />
                     </div>
-                    <div className="unsupported-size">
+                    <div className={styles.unsupportedSize}>
                         <p>
                             본 사이트에서
                             <br />

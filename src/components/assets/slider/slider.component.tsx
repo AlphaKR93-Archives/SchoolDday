@@ -1,7 +1,7 @@
 "use client";
 
 import { useAppDispatch } from "@/store/store";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./slider.module.css";
 
 type SliderProps = {
@@ -36,27 +36,22 @@ export default function Slider(props: SliderProps) {
     return (
         <ul>
             <p className="text-primary">{name}</p>
-            <button type="button" onClick={() => dispatch(dispatcher)}>
-                {enabled && isReady ? (
-                    <div
-                        className={styles.button_on}
-                        style={{
-                            background: `#${onValue.background}`,
-                            boxShadow: `inset 5px 5px 5px #${onValue.shadowPrimary}, inset -5px -5px 5px #${onValue.shadowSecondary}`
-                        }}
-                    >
-                        <div className={styles.inner} />
-                    </div>
-                ) : (
-                    <div className={styles.button}>
-                        <div
-                            className={styles.inner}
-                            style={{
-                                background: `linear-gradient(145deg, #${offValue.bgPrimary}, #${offValue.bgSecondary})`
-                            }}
-                        />
-                    </div>
-                )}
+            <button
+                type="button"
+                onClick={() => dispatch(dispatcher)}
+                className={styles.btn}
+                data-enabled={enabled && isReady}
+                style={
+                    {
+                        "--on-bg": onValue.background,
+                        "--on-shadow-pri": onValue.shadowPrimary,
+                        "--on-shadow-sec": onValue.shadowSecondary,
+                        "--off-bg-pri": offValue.bgPrimary,
+                        "--off-bg-sec": offValue.bgSecondary
+                    } as React.CSSProperties
+                }
+            >
+                <div className={styles.inner} />
             </button>
         </ul>
     );

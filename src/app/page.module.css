@@ -1,24 +1,24 @@
 .support {
     @apply mt-10 flex gap-2.5 rounded-2xl border border-blue-500 bg-blue-500 bg-opacity-20 p-6;
-}
 
-.support svg {
-    @apply h-[22px] w-[22px];
+    a {
+        @apply underline;
+    }
 
-    min-width: 22px;
-    min-height: 22px;
-}
+    svg {
+        @apply h-[22px] w-[22px];
 
-.support a {
-    @apply underline;
+        min-width: 22px;
+        min-height: 22px;
+    }
 }
 
 .main {
     @apply mt-4 flex h-full min-w-full;
-}
 
-@media (width <= 714px) {
-    .main ul {
-        @apply hidden;
+    ul {
+        @media (width <= 714px) {
+            @apply hidden;
+        }
     }
 }

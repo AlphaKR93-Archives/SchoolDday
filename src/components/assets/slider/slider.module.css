@@ -1,41 +1,45 @@
-@tailwind components;
+@import "tailwindcss/components";
 
-.button {
-    @apply button_main;
-
-    background: var(--bg-primary);
-    border-color: var(--bg-secondary);
-    box-shadow: var(--inner-box-shadow);
+.null {
+    --on-bg: #fff;
+    --on-shadow-pri: #fff;
+    --on-shadow-sec: #fff;
+    --off-bg-pri: #fff;
+    --off-bg-sec: #fff;
 }
 
-.inner {
-    @apply inner_main ml-1;
+.btn {
+    @apply trans flex h-6 w-12 items-center rounded-full border;
 
-    animation-name: button_off;
-}
-
-.button_on {
-    @apply button_main border-white;
-}
-
-.button_on .inner {
-    @apply inner_main ml-auto mr-1;
-
-    background: linear-gradient(145deg, #fff, #e6e6e6);
-    animation-name: button_on;
-}
-
-@layer components {
-    .button_main {
-        @apply flex h-6 w-12 items-center rounded-full border;
-
-        transition: all 0.5s ease-in-out;
-    }
-
-    .inner_main {
+    .inner {
         @apply h-4 w-4 rounded-full;
 
         animation-duration: 0.5s;
+    }
+}
+
+.btn[data-enabled="true"] {
+    @apply border-white;
+
+    background: var(--on-bg);
+    box-shadow: inset 5px 5px 5px var(--on-shadow-pri), inset -5px -5px 5px var(--on-shadow-sec);
+
+    .inner {
+        @apply ml-auto mr-1;
+
+        background: linear-gradient(145deg, #fff, #e6e6e6);
+        animation-name: button_on;
+    }
+}
+
+.btn[data-enabled="false"] {
+    @apply bg-pri border-sec shadow-in;
+
+    .inner {
+        @apply ml-1;
+
+        background: linear-gradient(145deg, var(--off-bg-pri), var(--off-bg-sec));
+        animation-name: button_off;
     }
 }
 

@@ -11,16 +11,16 @@
 .dday_box .content_box {
     @apply mt-2 w-[427px] rounded-xl border p-1.5;
 
-    background: var(--bg-primary);
-    border-color: var(--bg-secondary);
-    box-shadow: var(--box-shadow);
+    background: var(--primary);
+    border-color: var(--secondary);
+    box-shadow: var(--shadow);
 }
 
 .dday_box .content_box .tags {
     @apply flex justify-between rounded-xl border p-1.5 text-sm;
 
-    background: var(--bg-primary);
-    border-color: var(--bg-secondary);
+    background: var(--primary);
+    border-color: var(--secondary);
     box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #fff;
 }
 

@@ -1,115 +1,79 @@
 .changelog {
-    @apply mb-16 rounded-3xl border p-6;
+    @apply bg-pri border-sec shadow-hg mb-16 rounded-3xl border p-6;
 
-    border-color: var(--bg-secondary);
-    background: var(--bg-primary);
-    box-shadow: var(--box-shadow-highlight);
-}
+    .title_section {
+        @apply mb-8;
 
-.changelog hr {
-    @apply w-full;
+        .title {
+            @apply flex items-center gap-7;
 
-    background: var(--bg-secondary);
-}
+            h1 {
+                @apply text-pri min-w-max text-2xl font-bold;
+            }
 
-.changelog .title_section {
-    @apply mb-8;
-}
+            p {
+                @apply text-sec min-w-max text-xl;
 
-.changelog .title_section .title {
-    @apply flex items-center gap-7;
-}
+                @media (width <= 402px) {
+                    @apply text-base;
+                }
 
-.changelog .title_section .title h1 {
-    @apply min-w-max text-2xl font-bold;
+                @media (width <= 382px) {
+                    @apply hidden;
+                }
+            }
+        }
 
-    color: var(--text-primary);
-}
+        .date {
+            @apply text-sec mt-1 w-full text-center text-lg;
 
-.changelog .title_section .title p {
-    @apply min-w-max text-xl;
+            @media (width <= 382px) {
+                @apply text-base;
+            }
+        }
 
-    color: var(--text-secondary);
-}
+        .vlite {
+            @apply text-sec mt-2.5 w-full text-center;
 
-.changelog .title_section .vlite {
-    @apply mt-2.5 hidden w-full text-center;
-
-    color: var(--text-secondary);
-}
-
-.changelog .title_section .date {
-    @apply mt-1 w-full text-center text-lg;
-
-    color: var(--text-secondary);
-}
-
-.changelog .content {
-    @apply m-4 grid grid-cols-3 gap-8;
-}
-
-.changelog .content .vcontent {
-    @apply rounded-xl border p-5;
-
-    border-color: var(--bg-secondary);
-    background: var(--bg-primary);
-    box-shadow: var(--box-shadow);
-}
-
-.changelog .content .vcontent ul {
-    @apply ml-3;
-
-    list-style-type: "- ";
-}
-
-.changelog .content .vcontent li {
-    @apply mt-2;
-
-    list-style-type: "- ";
-}
-
-.changelog .content .vcontent h1 {
-    @apply min-w-max text-xl font-bold;
-
-    color: var(--text-primary);
-}
-
-.changelog .content .vcontent .date {
-    color: var(--text-secondary);
-}
-
-.changelog .content .vcontent .vname {
-    @apply mb-3 flex items-center gap-5;
-}
-
-@media (width <= 1056px) {
-    .changelog .content {
-        @apply grid-cols-2;
-    }
-}
-
-@media (width <= 712px) {
-    .changelog .content {
-        @apply grid-cols-1;
-    }
-}
-
-@media (width <= 402px) {
-    .changelog .title_section .title p {
-        @apply text-base;
-    }
-}
-
-@media (width <= 382px) {
-    .changelog .title_section .title p {
-        @apply hidden;
+            @media (width >= 382px) {
+                @apply hidden;
+            }
+        }
     }
 
-    .changelog .title_section .vlite {
-        display: block;
-    }
+    .content {
+        @apply m-4 grid grid-cols-3 gap-8;
 
-    .changelog .title_section .date {
-        @apply text-base;
+        @media (width <= 1056px) {
+            @apply grid-cols-2;
+        }
+
+        @media (width <= 712px) {
+            @apply grid-cols-1;
+        }
+
+        .vcontent {
+            @apply bg-pri border-sec shadow-pri rounded-xl border p-5;
+
+            ul {
+                @apply style-list pl-3.5;
+            }
+
+            li {
+                @apply style-list mt-2;
+            }
+
+            h1 {
+                @apply text-pri min-w-max text-xl font-bold;
+            }
+
+            .date {
+                @apply text-sec;
+            }
+
+            .vname {
+                @apply mb-3 flex items-center gap-5;
+            }
+        }
     }
 }

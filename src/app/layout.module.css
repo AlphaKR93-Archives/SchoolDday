@@ -1,0 +1,29 @@
+.unsupportedSize {
+    @apply flex h-screen w-full items-center;
+
+    @media (width >= 282px) {
+        @apply hidden;
+    }
+
+    p {
+        @apply w-screen text-center;
+    }
+}
+
+.body {
+    @media (width <= 282px) {
+        @apply hidden;
+    }
+
+    main {
+        @apply mx-auto min-h-screen w-full max-w-[1340px];
+
+        hr {
+            @apply bg-sec h-px w-full border-0;
+        }
+
+        p {
+            @apply min-w-max;
+        }
+    }
+}

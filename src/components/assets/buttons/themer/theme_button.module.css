@@ -1,35 +1,15 @@
-@tailwind components;
-
-@layer components {
-    .trans {
-        transition: all 0.25s ease-in-out;
-    }
-}
-
 .icon {
-    @apply trans h-6 w-6;
+    @apply text-sec trans h-6 w-6;
 
-    color: var(--text-secondary);
-}
-
-.icon:hover {
-    color: var(--text-primary);
+    &:hover {
+        @apply text-pri;
+    }
 }
 
 .loading {
     @apply flex h-6 w-6 items-center justify-center;
-}
 
-.loading svg {
-    @apply h-[20px] w-[20px];
-
-    animation: spin 0.7s linear infinite;
-    color: var(--text-secondary);
-    fill: var(--text-primary);
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
+    svg {
+        @apply text-sec fill-pri h-[20px] w-[20px] animate-loading;
     }
 }

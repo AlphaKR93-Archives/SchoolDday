@@ -1,102 +1,92 @@
-.navbar {
-    @apply fixed bottom-0 h-20 w-full border-l border-r border-t backdrop-blur;
+.navbar[data-enabled] {
+    @apply border-sec fixed bottom-0 h-20 w-full border-l border-r border-t backdrop-blur data-[enabled=true]:h-full;
 
-    border-color: var(--bg-secondary);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     transition: height 0.5s ease-in-out;
-}
 
-.navbar[data-enabled="true"] {
-    @apply h-full;
+    .button {
+        @apply fixed bottom-0 h-20 w-full px-8 py-5;
 
-    transition: height 0.5s ease-in-out;
-}
+        .title {
+            @apply flex items-center justify-center;
 
-.navbar .button {
-    @apply fixed bottom-0 h-20 w-full px-8 py-5;
-}
+            span {
+                @apply text-center;
 
-.navbar .button .title {
-    @apply flex items-center justify-center;
-}
+                flex: 1 0 80%;
+            }
 
-.navbar .button .title p {
-    @apply w-full text-sm;
+            h1 {
+                @apply text-xl font-bold;
+            }
 
-    flex: 1 0 10%;
-    color: var(--text-secondary);
-}
+            p {
+                @apply text-sec w-full text-sm;
 
-.navbar .button .title span {
-    @apply text-center;
+                flex: 1 0 10%;
+            }
 
-    flex: 1 0 80%;
-}
+            svg {
+                @apply h-7 w-7;
 
-.navbar .button .title h1 {
-    @apply text-xl font-bold;
-}
+                flex: 1 0 10%;
+                transition: transform 0.5s ease-in-out;
+            }
+        }
+    }
 
-.navbar .button .title svg {
-    @apply h-7 w-7;
+    .real {
+        @apply w-full;
 
-    flex: 1 0 10%;
-    transition: transform 0.5s ease-in-out;
+        height: calc(100% - 5rem);
+
+        .sidebar {
+            @apply overflow-auto;
+
+            height: calc(100% - 6.5rem);
+        }
+
+        .touch_section[data-enabled] {
+            .buttons {
+                @apply mt-3;
+
+                @include append-attr("false") {
+                    display: none;
+                }
+            }
+
+            .links {
+                @apply mt-3 grid grid-cols-3 gap-y-2;
+
+                @include append-attr("false") {
+                    display: none;
+                }
+
+                a {
+                    @apply text-center;
+                }
+            }
+        }
+
+        .license {
+            @apply text-sec mt-2 text-center text-sm;
+
+            @include append-attr("false") {
+                display: none;
+            }
+        }
+    }
+
+    @media (width >= 715px) {
+        @apply hidden;
+    }
 }
 
 .navbar[data-enabled="true"] .button .title svg {
     @apply rotate-180 transform;
 }
 
-.navbar .real {
-    @apply hidden w-full;
-
-    height: calc(100% - 5rem);
-}
-
-.navbar .real[data-enabled="true"] {
-    display: block;
-}
-
-.navbar .real .sidebar {
-    @apply overflow-auto;
-
-    height: calc(100% - 6.5rem);
-}
-
-.navbar .real .touch_section .buttons {
-    @apply mt-3;
-}
-
-.navbar .real .touch_section[data-enabled="false"] .buttons {
+.navbar[data-enabled="false"] .real {
     @apply hidden;
-}
-
-.navbar .real .touch_section .links {
-    @apply mt-3 grid grid-cols-3 gap-y-2;
-}
-
-.navbar .real .touch_section .links a {
-    @apply text-center;
-}
-
-.navbar .real .touch_section[data-enabled="false"] .links {
-    @apply hidden;
-}
-
-.navbar .real .license {
-    @apply mt-2 text-center text-sm;
-
-    color: var(--text-secondary);
-}
-
-.navbar .real .touch_section[data-enabled="false"] .license {
-    @apply hidden;
-}
-
-@media (width >= 715px) {
-    .navbar {
-        @apply hidden;
-    }
 }

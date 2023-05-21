@@ -10,7 +10,8 @@
         "lint": "next lint",
         "prepare": "husky install",
         "format": "prettier --write \"**/*.*\"",
-        "lintCss": "stylelint \"**/*.css\""
+        "lintCss": "stylelint \"**/*.css\"",
+        "formatCss": "stylelint --fix \"**/*.css\""
     },
     "lint-staged": {
         "**/*": "prettier --write --ignore-unknown"
