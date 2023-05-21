@@ -5,7 +5,7 @@ import styles from "./changelog.module.css";
 export default function ChangelogSection() {
     return (
         <section className={styles.changelog}>
-            <div className={styles.title_section}>
+            <div className={styles.titleSection}>
                 <span className={styles.title}>
                     <h1>패치노트</h1>
                     <hr />

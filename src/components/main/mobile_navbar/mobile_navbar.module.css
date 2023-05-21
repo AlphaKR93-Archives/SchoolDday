@@ -47,7 +47,7 @@
             height: calc(100% - 6.5rem);
         }
 
-        .touch_section[data-enabled] {
+        .touchSection[data-enabled] {
             .buttons {
                 @apply mt-3;
 

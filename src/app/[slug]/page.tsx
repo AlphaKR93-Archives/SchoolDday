@@ -33,7 +33,7 @@ export default function DynamicPage({ params }: { params: { slug: string } }) {
 
     return (
         <main>
-            <div className={styles.not_found}>
+            <div className={styles.notFound}>
                 <span className="text-5xl font-bold italic">Oops!</span>
                 <span className="mt-4 text-xl">404 | Page not found</span>
                 <hr className="bg-sec mt-6 w-full" />

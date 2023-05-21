@@ -1,7 +1,7 @@
 .changelog {
     @apply bg-pri border-sec shadow-hg mb-16 rounded-3xl border p-6;
 
-    .title_section {
+    .titleSection {
         @apply mb-8;
 
         .title {

@@ -28,7 +28,7 @@
     .buttons {
         @apply ml-11 flex w-full justify-end gap-4;
 
-        .only_icons {
+        .iconsOnly {
             @apply my-auto hidden;
         }
 
@@ -61,7 +61,7 @@
                 @apply hidden;
             }
 
-            .only_icons {
+            .iconsOnly {
                 @apply flex;
             }
         }

@@ -1,4 +1,4 @@
-.not_found {
+.notFound {
     @apply border-sec shadow-hg rounded-3xl border p-7;
 
     span {

@@ -1,47 +1,36 @@
-.dday_box {
+[data-theme] .dday_box {
     @apply flex w-full justify-center pb-7;
-}
 
-.dday_box .title {
-    @apply flex w-full justify-center gap-2 text-xl;
-
-    color: var(--text-primary);
-}
-
-.dday_box .content_box {
-    @apply mt-2 w-[427px] rounded-xl border p-1.5;
-
-    background: var(--primary);
-    border-color: var(--secondary);
-    box-shadow: var(--shadow);
-}
-
-.dday_box .content_box .tags {
-    @apply flex justify-between rounded-xl border p-1.5 text-sm;
-
-    background: var(--primary);
-    border-color: var(--secondary);
-    box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #fff;
-}
-
-[data-theme="dark"] .dday_box .content_box .tags {
-    box-shadow: 5px 5px 10px #141414, -5px -5px 10px #1a1a1a;
-}
-
-.dday_box .content_box .tags p {
-    @apply rounded-[.4rem] px-1.5 py-1 font-bold text-white;
-}
-
-.dday_box .content_box .tags .date_informations {
-    @apply flex gap-1.5;
-}
-
-@media (width <= 428px) {
-    .dday_box .content_box {
-        @apply w-screen;
+    .title {
+        @apply text-pri flex w-full justify-center gap-2 text-xl;
     }
 
-    .dday_box .content_box .tags .date_informations {
-        @apply hidden;
+    .content_box {
+        @apply bg-pri border-sec shadow-pri mt-2 w-[427px] rounded-xl border p-1.5;
+
+        @media (width <= 428px) {
+            @apply w-screen;
+        }
+
+        .tags {
+            @apply bg-pri border-sec flex justify-between rounded-xl border p-1.5 text-sm;
+            box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #fff;
+
+            @include append-attr("dark") {
+                box-shadow: 5px 5px 10px #141414, -5px -5px 10px #1a1a1a;
+            }
+
+            p {
+                @apply rounded-[.4rem] px-1.5 py-1 font-bold text-white;
+            }
+
+            .date_informations {
+                @apply flex gap-1.5;
+
+                @media (width <= 428px) {
+                    @apply hidden;
+                }
+            }
+        }
     }
 }

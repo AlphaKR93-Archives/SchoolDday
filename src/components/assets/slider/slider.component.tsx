@@ -39,7 +39,7 @@ export default function Slider(props: SliderProps) {
             <button
                 type="button"
                 onClick={() => dispatch(dispatcher)}
-                className={styles.btn}
+                className={styles.button}
                 data-enabled={enabled && isReady}
                 style={
                     {

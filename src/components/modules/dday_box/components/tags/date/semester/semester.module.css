@@ -1,11 +1,11 @@
-.semester_first {
+.semFirst {
     background: linear-gradient(145deg, #d671d3, #b45fb1);
 }
 
-.semester_second {
+.semSec {
     background: linear-gradient(145deg, #dc8e5b, #b9784d);
 }
 
-.semester_third {
+.semThird {
     background: linear-gradient(145deg, #4cd09d, #40af84);
 }
