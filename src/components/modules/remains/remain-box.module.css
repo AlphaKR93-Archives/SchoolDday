@@ -1,7 +1,7 @@
-.year_remain {
+.remainYear {
     @apply bg-pri border-sec shadow-hg rounded-3xl border p-7;
 
-    .mobile_days {
+    .daysLite {
         @apply text-sec mt-4 hidden w-full justify-center gap-3;
 
         @media (width <= 375px) {
@@ -77,7 +77,7 @@
             @apply text-pri min-w-max text-xl;
         }
 
-        .percentage_slim {
+        .perLite {
             @apply text-pri min-w-max;
 
             @media (width >= 375px) {

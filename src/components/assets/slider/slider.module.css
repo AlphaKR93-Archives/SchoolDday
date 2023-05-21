@@ -28,7 +28,7 @@
         @apply ml-auto mr-1;
 
         background: linear-gradient(145deg, #fff, #e6e6e6);
-        animation-name: button_on;
+        animation-name: button-on;
     }
 }
 
@@ -39,11 +39,11 @@
         @apply ml-1;
 
         background: linear-gradient(145deg, var(--off-bg-pri), var(--off-bg-sec));
-        animation-name: button_off;
+        animation-name: button-off;
     }
 }
 
-@keyframes button_off {
+@keyframes button-off {
     0% {
         @apply ml-auto mr-1 w-4;
     }
@@ -65,7 +65,7 @@
     }
 }
 
-@keyframes button_on {
+@keyframes button-on {
     0% {
         @apply ml-1 w-4;
     }

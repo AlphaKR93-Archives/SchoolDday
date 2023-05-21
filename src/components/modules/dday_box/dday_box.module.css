@@ -1,11 +1,11 @@
-[data-theme] .dday_box {
+[data-theme] .ddayBox {
     @apply flex w-full justify-center pb-7;
 
     .title {
         @apply text-pri flex w-full justify-center gap-2 text-xl;
     }
 
-    .content_box {
+    .contentBox {
         @apply bg-pri border-sec shadow-pri mt-2 w-[427px] rounded-xl border p-1.5;
 
         @media (width <= 428px) {
@@ -24,7 +24,7 @@
                 @apply rounded-[.4rem] px-1.5 py-1 font-bold text-white;
             }
 
-            .date_informations {
+            .dateInformations {
                 @apply flex gap-1.5;
 
                 @media (width <= 428px) {

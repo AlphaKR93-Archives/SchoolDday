@@ -39,7 +39,7 @@
         }
     }
 
-    .text_elements {
+    .textElements {
         li {
             @apply bg-pri border-sec shadow-pri mt-2 w-full rounded-xl border px-6 py-6 text-xl;
         }
