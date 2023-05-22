@@ -184,6 +184,11 @@ const changelog: {
         version: "3.0.2.1",
         date: "2023. 05. 17 PM 08:50",
         content: ["코드 최적화"]
+    },
+    {
+        version: "3.1.0.0",
+        date: "2023. 05. 23 PM 05:23",
+        content: ["사이트 스타일 코드 개선", "라이브러리 업데이트"]
     }
 ].reverse();
 export default changelog;

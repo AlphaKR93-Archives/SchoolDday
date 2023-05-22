@@ -1,19 +1,19 @@
 .grades {
     @apply flex gap-1.5;
-}
 
-.grades .all {
-    background: linear-gradient(145deg, #898989, #737373);
-}
+    .all {
+        background: linear-gradient(145deg, #898989, #737373);
+    }
 
-.grades .first {
-    background: linear-gradient(145deg, #f75050, #d04444);
-}
+    .first {
+        background: linear-gradient(145deg, #f75050, #d04444);
+    }
 
-.grades .second {
-    background: linear-gradient(145deg, #3980df, #306cbb);
-}
+    .second {
+        background: linear-gradient(145deg, #3980df, #306cbb);
+    }
 
-.grades .third {
-    background: linear-gradient(145deg, #fbb800, #d49b00);
+    .third {
+        background: linear-gradient(145deg, #fbb800, #d49b00);
+    }
 }

@@ -38,7 +38,7 @@ export default function RemainBox() {
     }, [currentYear, currentDay, endOfYear, lengthOfYear]);
 
     return (
-        <section className={styles.year_remain}>
+        <section className={styles.remainYear}>
             <div className={styles.title}>
                 <span className={styles.year}>{currentYear.year()}년은 지금</span>
                 <hr className={styles.line} />
@@ -56,15 +56,15 @@ export default function RemainBox() {
                     <div className={styles.passed} style={{ width: isReady ? `${progress}%` : "0%" }} />
                 </div>
                 <p className={styles.percentage}>{isReady ? `${Math.round(progress)}% 진행되었어요!` : "로딩중..."}</p>
-                <p className={styles.percentage_slim}>{isReady ? `${Math.round(progress)}%` : "로딩중"}</p>
+                <p className={styles.perLite}>{isReady ? `${Math.round(progress)}%` : "로딩중"}</p>
             </div>
             {isReady ? (
-                <div className={styles.mobile_days}>
+                <div className={styles.daysLite}>
                     <p className={styles.passed}>{passedDay}일 지남</p>
                     <p>{lengthOfYear - passedDay}일 남음</p>
                 </div>
             ) : (
-                <span className={styles.mobile_days}>로딩중...</span>
+                <span className={styles.daysLite}>로딩중...</span>
             )}
         </section>
     );

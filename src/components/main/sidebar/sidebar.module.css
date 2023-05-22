@@ -1,44 +1,31 @@
-.sidebar {
-    @apply h-full min-w-[18rem] p-7;
-}
-
-.sidebar li {
-    @apply mb-5;
-}
-
-.sidebar h1 {
-    @apply mb-2 font-bold;
-
-    color: var(--text-primary);
-}
-
-.sidebar ul {
-    @apply flex items-center justify-between border-l py-1 pl-4;
-
-    border-color: var(--bg-secondary);
-}
-
 .button {
     @apply flex items-center justify-center gap-3;
+
+    svg {
+        @apply text-sec trans h-6 w-6 hover:text-pri;
+    }
 }
 
-.button svg {
-    @apply h-6 w-6;
+.sidebar {
+    @apply h-full min-w-[18rem] p-7;
 
-    color: var(--text-secondary);
-    transition: all 0.25s ease-in-out;
-}
+    li {
+        @apply mb-5;
+    }
 
-.button svg:hover {
-    color: var(--text-primary);
-}
+    ul {
+        @apply border-sec flex items-center justify-between border-l py-1 pl-4;
+    }
 
-.sidebar .button {
-    @apply !mb-8 !hidden;
-}
+    h1 {
+        @apply text-pri mb-2 font-bold;
+    }
 
-@media (width <= 789px) {
-    .sidebar .button {
-        @apply !flex;
+    .button {
+        @apply !mb-8 !hidden;
+
+        @media (width <= 789px) {
+            @apply !flex;
+        }
     }
 }

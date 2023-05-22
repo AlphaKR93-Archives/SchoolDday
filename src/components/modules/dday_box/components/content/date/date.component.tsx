@@ -9,35 +9,35 @@ export default function DateSection(props: { start: dayjs.Dayjs; end: dayjs.Dayj
             (start.hour() === end.hour() && start.minute() === end.minute())
         )
             return (
-                <section className={styles.date_section}>
+                <section className={styles.dateSection}>
                     <span className={styles.date}>
                         <p>{start.locale("ko").format("YYYY. MM. DD ddd")}</p>
                     </span>
-                    <span className={styles.date_lite}>
+                    <span className={styles.dLite}>
                         <p>{start.locale("ko").format("MM. DD ddd")}</p>
                     </span>
                 </section>
             );
 
         return (
-            <section className={styles.date_section}>
+            <section className={styles.dateSection}>
                 <span className={styles.date}>
                     <p>{start.locale("ko").format("YYYY. MM. DD ddd (A hh:mm")}</p>~
                     <p>{end.locale("ko").format("A hh:mm)")}</p>
                 </span>
-                <span className={styles.date_lite}>
+                <span className={styles.dLite}>
                     <p>{start.locale("ko").format("MM. DD ddd (HH:mm")}</p>~<p>{end.locale("ko").format("HH:mm)")}</p>
                 </span>
             </section>
         );
     }
     return (
-        <section className={styles.date_section}>
+        <section className={styles.dateSection}>
             <span className={styles.date}>
                 <p>{start.locale("ko").format("YYYY. MM. DD ddd")}</p>~
                 <p>{end.locale("ko").format("YYYY. MM. DD ddd")}</p>({Math.ceil(end.diff(start, "day", true))}일)
             </span>
-            <span className={styles.date_lite}>
+            <span className={styles.dLite}>
                 <p>{start.locale("ko").format("MM. DD ddd")}</p>~<p>{end.locale("ko").format("MM. DD ddd")}</p>(
                 {Math.ceil(end.diff(start, "day", true))}일)
             </span>

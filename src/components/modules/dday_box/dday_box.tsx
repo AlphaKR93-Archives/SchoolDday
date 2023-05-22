@@ -20,12 +20,12 @@ export default function DdayBox(props: {
     const { name, type, date, grades } = props;
 
     return (
-        <div className={styles.dday_box}>
+        <div className={styles.ddayBox}>
             <div>
                 <span className={styles.title}>{name}</span>
-                <div className={styles.content_box}>
+                <div className={styles.contentBox}>
                     <section className={styles.tags}>
-                        <span className={styles.date_informations}>
+                        <span className={styles.dateInformations}>
                             <SemesterComponent date={date} />
                             <RemainDateComponent start={date.start.valueOf()} end={date.end.valueOf()} />
                         </span>

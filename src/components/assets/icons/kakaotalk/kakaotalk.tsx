@@ -1,8 +1,10 @@
-import styles from "./kakaotalk.module.css";
-
 export default function KakaoTalkIcon() {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 191.94" className={styles.kakaotalk}>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 208 191.94"
+            className="fill-sec trans h-[22px] w-[22px] hover:fill-pri"
+        >
             <g>
                 <polygon className="cls-1" points="76.01 89.49 87.99 89.49 87.99 89.49 82 72.47 76.01 89.49" />
                 <path

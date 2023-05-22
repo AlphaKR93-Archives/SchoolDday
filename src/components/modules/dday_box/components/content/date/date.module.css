@@ -1,27 +1,25 @@
-.date_section {
-    @apply w-full;
+.dateSection {
+    @apply text-pri w-full;
 
-    color: var(--text-primary);
-}
+    span {
+        @apply mt-3 w-full justify-center gap-2;
+    }
 
-.date_section span {
-    @apply mt-3 w-full justify-center gap-2;
-}
+    .date {
+        @apply flex;
+    }
 
-.date_section .date {
-    @apply flex;
-}
-
-.date_section .date_lite {
-    @apply hidden;
-}
-
-@media (width <= 340px) {
-    .date_section .date {
+    .dLite {
         @apply hidden;
     }
 
-    .date_section .date_lite {
-        @apply flex;
+    @media (width <= 340px) {
+        .date {
+            @apply hidden;
+        }
+
+        .dLite {
+            @apply flex;
+        }
     }
 }

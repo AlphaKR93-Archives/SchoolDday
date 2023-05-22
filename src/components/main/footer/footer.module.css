@@ -1,26 +1,24 @@
 .footer {
-    @apply mx-auto w-full;
+    @apply bg-sec mx-auto w-full;
 
-    background: var(--bg-secondary);
-}
+    .body {
+        @apply mx-auto flex w-full max-w-[1340px] items-center justify-between py-10;
 
-.footer .body {
-    @apply mx-auto flex w-full max-w-[1340px] items-center justify-between py-10;
-}
+        span {
+            @apply flex items-end gap-4;
+        }
 
-.footer .body span {
-    @apply flex items-end gap-4;
-}
+        h1 {
+            @apply text-2xl font-bold;
+        }
 
-.footer .body h1 {
-    @apply text-2xl font-bold;
-}
+        p {
+            @apply text-sec;
+        }
 
-.footer .body p {
-    color: var(--text-secondary);
-}
-
-.footer .body .button.default {
-    border-color: var(--text-secondary);
-    background: var(--bg-secondary);
+        .button.default {
+            @apply bg-sec;
+            border-color: var(--text-secondary);
+        }
+    }
 }

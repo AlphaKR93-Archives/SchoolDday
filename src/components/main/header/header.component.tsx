@@ -19,7 +19,7 @@ export default function Header() {
                     <Link href="/about">사이트 정보</Link>
                 </div>
                 <div className={styles.buttons}>
-                    <div className={styles.only_icons}>
+                    <div className={styles.iconsOnly}>
                         <ButtonSection />
                     </div>
                     <div className={styles.icons}>

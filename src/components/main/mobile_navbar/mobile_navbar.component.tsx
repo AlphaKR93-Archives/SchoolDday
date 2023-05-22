@@ -31,7 +31,7 @@ export default function MobileNavigationBarComponent() {
                 <div className={styles.sidebar}>
                     <Sidebar button={false} />
                 </div>
-                <div className={styles.touch_section} data-enabled={buttonsEnabled}>
+                <div className={styles.touchSection} data-enabled={buttonsEnabled}>
                     <div className={styles.buttons}>
                         <ButtonSection />
                     </div>

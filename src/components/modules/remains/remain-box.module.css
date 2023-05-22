@@ -1,115 +1,88 @@
-.year_remain {
-    @apply rounded-3xl border p-7;
+.remainYear {
+    @apply bg-pri border-sec shadow-hg rounded-3xl border p-7;
 
-    border-color: var(--bg-secondary);
-    background: var(--bg-primary);
-    box-shadow: var(--box-shadow-highlight);
-}
+    .daysLite {
+        @apply text-sec mt-4 hidden w-full justify-center gap-3;
 
-.year_remain .mobile_days {
-    @apply mt-4 hidden w-full justify-center gap-3;
+        @media (width <= 375px) {
+            @apply flex;
+        }
 
-    color: var(--text-secondary);
-}
-
-.year_remain .mobile_days .passed {
-    @apply border-r pr-3;
-
-    border-color: var(--bg-secondary);
-}
-
-.year_remain .title {
-    @apply inline-flex w-full items-center;
-}
-
-.year_remain .title .year {
-    @apply min-w-max pl-1 pr-8 text-2xl;
-
-    color: var(--text-primary);
-}
-
-.year_remain .title .line {
-    @apply w-full;
-
-    background: var(--bg-secondary);
-}
-
-.year_remain .title .days {
-    @apply flex min-w-max items-center gap-3 pl-6 text-xl;
-
-    color: var(--text-secondary);
-}
-
-.year_remain .title .days .passed {
-    @apply border-r pr-3;
-
-    border-color: var(--bg-secondary);
-}
-
-.year_remain .content {
-    @apply mt-7 flex items-center gap-6;
-}
-
-.year_remain .content .progress {
-    @apply h-5 w-full rounded-full;
-
-    background: var(--bg-primary);
-    box-shadow: var(--inner-box-shadow);
-}
-
-.year_remain .content .progress .passed {
-    @apply h-full rounded-full;
-
-    background: linear-gradient(145deg, #3cac70, #32915f);
-    transition: width 1.5s ease-in-out;
-}
-
-.year_remain .content .percentage {
-    @apply min-w-max text-xl;
-
-    color: var(--text-primary);
-}
-
-.year_remain .content .percentage_slim {
-    @apply hidden min-w-max;
-
-    color: var(--text-primary);
-}
-
-@media (width <= 760px) {
-    .year_remain .title {
-        @apply justify-between;
-    }
-}
-
-@media (width <= 500px) {
-    .year_remain .title .passed {
-        @apply hidden;
-    }
-}
-
-@media (width <= 375px) {
-    .year_remain .title .year {
-        @apply w-full text-center text-xl;
+        .passed {
+            @apply border-sec border-r pr-3;
+        }
     }
 
-    .year_remain .title .days {
-        @apply hidden;
+    .title {
+        @apply inline-flex w-full items-center;
+
+        @media (width <= 760px) {
+            @apply justify-between;
+        }
+
+        @media (width <= 375px) {
+            .year {
+                @apply w-full text-center text-xl;
+            }
+
+            .days {
+                @apply hidden;
+            }
+        }
+
+        .year {
+            @apply text-pri inline-flex w-full items-center;
+        }
+
+        .line {
+            @apply bg-sec w-full;
+        }
+
+        .days {
+            @apply text-sec flex min-w-max items-center gap-3 pl-6 text-xl;
+
+            .passed {
+                @apply border-sec border-r pr-3;
+
+                @media (width <= 500px) {
+                    @apply hidden;
+                }
+            }
+        }
     }
 
-    .year_remain .content {
-        @apply mt-3 gap-3;
-    }
+    .content {
+        @apply mt-7 flex items-center gap-6;
 
-    .year_remain .content .percentage {
-        @apply hidden;
-    }
+        @media (width <= 375px) {
+            @apply mt-3 gap-3;
 
-    .year_remain .content .percentage_slim {
-        display: unset;
-    }
+            .percentage {
+                @apply hidden;
+            }
+        }
 
-    .year_remain .mobile_days {
-        @apply flex;
+        .progress {
+            @apply bg-pri shadow-in h-5 w-full rounded-full;
+
+            .passed {
+                @apply h-full rounded-full;
+
+                background: linear-gradient(145deg, #3cac70, #32915f);
+                transition: width 1.5s ease-in-out;
+            }
+        }
+
+        .percentage {
+            @apply text-pri min-w-max text-xl;
+        }
+
+        .perLite {
+            @apply text-pri min-w-max;
+
+            @media (width >= 375px) {
+                @apply hidden;
+            }
+        }
     }
 }

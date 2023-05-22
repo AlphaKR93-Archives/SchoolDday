@@ -17,7 +17,7 @@ export default function UsefulLinksPage() {
                     <h1>석동중학교</h1>
                     <hr />
                 </div>
-                <ul className={styles.text_elements}>
+                <ul className={styles.textElements}>
                     <Link href="https://seokdong-m.gne.go.kr/seokdong-m/main.do">
                         <li>
                             <p>홈페이지</p>

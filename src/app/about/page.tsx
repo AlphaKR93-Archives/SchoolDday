@@ -20,7 +20,6 @@ export default function AboutPage() {
                             alt="Developer's profile avatar"
                             width={128}
                             height={128}
-                            className="rounded-full"
                         />
                         <div>
                             <div className={styles.me}>
@@ -29,7 +28,6 @@ export default function AboutPage() {
                                     alt="Developer's profile avatar"
                                     width={32}
                                     height={32}
-                                    className="hidden rounded-full"
                                 />
                                 <p className={styles.name}>AlphaKR93</p>
                                 <p className={styles.pronoun}>He/Him</p>

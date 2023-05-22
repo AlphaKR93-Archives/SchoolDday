@@ -1,25 +1,19 @@
 .counter {
-    @apply mt-3 flex min-w-max items-end justify-center;
+    @apply text-pri mt-3 flex min-w-max items-end justify-center;
 
-    color: var(--text-primary);
-}
+    span {
+        @apply flex justify-center gap-1 text-5xl;
 
-.counter span {
-    @apply flex justify-center gap-1 text-5xl;
-}
-
-.counter .milli {
-    @apply text-2xl;
-}
-
-@media (width <= 428px) {
-    .counter .milli {
-        @apply hidden;
+        @media (width <= 345px) {
+            @apply text-4xl;
+        }
     }
-}
 
-@media (width <= 345px) {
-    .counter span {
-        @apply text-4xl;
+    .milli {
+        @apply text-2xl;
+
+        @media (width <= 428px) {
+            @apply hidden;
+        }
     }
 }
