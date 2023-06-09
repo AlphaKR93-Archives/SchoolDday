@@ -2,6 +2,7 @@
 
 import { useAppDispatch } from "@/store/store";
 import React, { useEffect, useState } from "react";
+import { DdayType } from "@/components/modules/dday_box/components/tags/type/type.component";
 import styles from "./slider.module.css";
 
 type SliderProps = {
@@ -16,8 +17,7 @@ type SliderProps = {
         bgSecondary: string;
     };
     dispatcher: {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        payload: any;
+        payload: DdayType | string | number | undefined;
         type: string;
     };
     enabled: boolean;

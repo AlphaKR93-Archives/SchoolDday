@@ -199,6 +199,11 @@ const changelog: {
             "모바일에서 밀리초가 표시되도록 변경",
             "지난 디데이 제거"
         ]
+    },
+    {
+        version: "3.2.0.1",
+        date: "2023. 06. 10 AM 02:40",
+        content: ["일부 보안 문제 해결"]
     }
 ].reverse();
 export default changelog;

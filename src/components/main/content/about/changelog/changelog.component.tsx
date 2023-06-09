@@ -26,9 +26,9 @@ export default function ChangelogSection() {
                             </span>
                             <p className={styles.date}>적용일자: {version.date}</p>
                             <ul>
-                                {version.content.map((line, index) => {
-                                    // eslint-disable-next-line react/no-array-index-key
-                                    return <li key={`${version.version}-${index}`}>{line}</li>;
+                                {version.content.map((line, indexNumber) => {
+                                    const key = `${version.version}-${indexNumber}`;
+                                    return <li key={key}>{line}</li>;
                                 })}
                             </ul>
                         </li>
