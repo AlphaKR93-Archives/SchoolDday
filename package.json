@@ -7,11 +7,9 @@
         "webpack": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint",
+        "lint": "next lint && stylelint \"**/*.css\"",
         "prepare": "husky install",
-        "format": "prettier --write \"**/*.*\"",
-        "lintCss": "stylelint \"**/*.css\"",
-        "formatCss": "stylelint --fix \"**/*.css\""
+        "format": "prettier --write \"**/*.*\" && stylelint --fix \"**/*.css\""
     },
     "lint-staged": {
         "**/*": "prettier --write --ignore-unknown"

@@ -17,60 +17,6 @@ type ddayListType = {
 
 const ddays: ddayListType = [
     {
-        name: "5월 버스킹",
-        type: DdayType.EVENT,
-        grades: [1, 2, 3],
-        date: {
-            start: date(false, 5, 17, 12, 20),
-            end: date(false, 5, 17, 13, 10)
-        }
-    },
-    {
-        name: "부처님 오신날",
-        type: DdayType.HOLIDAY,
-        date: fromEnd({ month: 5, day: 27 }, { month: 5, day: 29 })
-    },
-    {
-        name: "진로캠프",
-        type: DdayType.EVENT,
-        grades: [1],
-        date: {
-            start: date(false, 5, 31, 8, 30),
-            end: date(false, 6, 2, 18, 0)
-        }
-    },
-    {
-        name: "수학여행",
-        type: DdayType.EVENT,
-        grades: [2],
-        date: {
-            start: date(false, 5, 31, 8, 30),
-            end: date(false, 6, 2, 18, 0)
-        }
-    },
-    {
-        name: "수련회",
-        type: DdayType.EVENT,
-        grades: [3],
-        date: {
-            start: date(false, 5, 31, 8, 30),
-            end: date(false, 6, 2, 18, 0)
-        }
-    },
-    {
-        name: "재량휴업일",
-        type: DdayType.HOLIDAY,
-        date: fromEnd({ month: 6, day: 3 }, { month: 6, day: 5 })
-    },
-    {
-        name: "석동중 디데이 1주년",
-        type: DdayType.EVENT,
-        date: {
-            start: date(false, 6, 7, 18, 0),
-            end: date(false, 6, 7, 18, 0)
-        }
-    },
-    {
         name: "1학기 2차고사",
         type: DdayType.EXAMINATION,
         grades: [2, 3],

@@ -1,7 +1,7 @@
 .unsupportedSize {
     @apply flex h-screen w-full items-center;
 
-    @media (width >= 282px) {
+    @media (width > 282px) {
         @apply hidden;
     }
 

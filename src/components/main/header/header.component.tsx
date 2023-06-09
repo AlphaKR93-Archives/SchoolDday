@@ -23,10 +23,10 @@ export default function Header() {
                         <ButtonSection />
                     </div>
                     <div className={styles.icons}>
-                        <Link href="https://open.kakao.com/me/alphakr93_education">
+                        <a href="https://open.kakao.com/me/alphakr93_education">
                             <KakaoTalkIcon />
-                        </Link>
-                        <Link href="https://www.instagram.com/alphakr93/">
+                        </a>
+                        <a href="https://www.instagram.com/alphakr93/">
                             <AnimatedSimpleIcon
                                 id="instagram"
                                 color={{
@@ -34,17 +34,17 @@ export default function Header() {
                                     dark: { primary: "6B7280", secondary: "ffffff" }
                                 }}
                             />
-                        </Link>
+                        </a>
                         <ThemeButton />
                     </div>
                     <ul className={styles.button}>
                         <li>
-                            <Link className="button default" href="https://github.com/AlphaKR93/SchoolDday">
+                            <a className="button default" href="https://github.com/AlphaKR93/SchoolDday">
                                 소스코드
-                            </Link>
+                            </a>
                         </li>
                         <li>
-                            <Link
+                            <a
                                 className="button highlight bg-blue-600"
                                 href="https://toss.me/alphakr93"
                                 style={
@@ -55,7 +55,7 @@ export default function Header() {
                                 }
                             >
                                 후원하기
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                 </div>

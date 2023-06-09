@@ -20,18 +20,8 @@
             @apply justify-between;
         }
 
-        @media (width <= 375px) {
-            .year {
-                @apply w-full text-center text-xl;
-            }
-
-            .days {
-                @apply hidden;
-            }
-        }
-
         .year {
-            @apply text-pri inline-flex w-full items-center;
+            @apply text-pri inline-flex min-w-max items-center pr-6 text-xl;
         }
 
         .line {
@@ -48,6 +38,10 @@
                     @apply hidden;
                 }
             }
+
+            @media (width <= 375px) {
+                @apply hidden;
+            }
         }
     }
 
@@ -63,7 +57,7 @@
         }
 
         .progress {
-            @apply bg-pri shadow-in h-5 w-full rounded-full;
+            @apply bg-pri !border-sec shadow-in h-5 w-full rounded-full border;
 
             .passed {
                 @apply h-full rounded-full;

@@ -4,7 +4,7 @@
     span {
         @apply flex justify-center gap-1 text-5xl;
 
-        @media (width <= 345px) {
+        @media (width <= 376px) {
             @apply text-4xl;
         }
     }
@@ -12,8 +12,8 @@
     .milli {
         @apply text-2xl;
 
-        @media (width <= 428px) {
-            @apply hidden;
+        @media (width <= 376px) {
+            @apply text-xl;
         }
     }
 }

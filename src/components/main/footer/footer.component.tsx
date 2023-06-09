@@ -1,6 +1,5 @@
 import * as pack from "@/../package.json";
 import dayjs from "dayjs";
-import Link from "next/link";
 import styles from "./footer.module.css";
 
 export default function Footer() {
@@ -14,9 +13,9 @@ export default function Footer() {
                     </span>
                     <p>Copyright (C) 2022-{dayjs().year()} AlphaKR93, Licenced under MIT License.</p>
                 </div>
-                <Link href="https://status.alpha93.kr/" className="button default">
+                <a href="https://status.alpha93.kr/" className="button default">
                     사이트 상태
-                </Link>
+                </a>
             </div>
         </footer>
     );

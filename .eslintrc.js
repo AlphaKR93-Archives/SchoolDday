@@ -20,8 +20,8 @@ module.exports = {
     plugins: ["react", "spellcheck", "@typescript-eslint"],
     rules: {
         "linebreak-style": ["error", "unix"],
-        quotes: ["error", "double"],
-        semi: ["error", "always"],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
         "react/jsx-filename-extension": ["off"],
         "import/extensions": ["off"],
         "import/no-extraneous-dependencies": ["off"],

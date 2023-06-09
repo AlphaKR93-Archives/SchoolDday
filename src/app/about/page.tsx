@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { AtSymbolIcon, CurrencyDollarIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
 import ChangelogSection from "@/components/main/content/about/changelog/changelog.component";
 import AnimatedSimpleIcon from "@/components/assets/icons/simple-icons/provider";
 import styles from "./page.module.css";
@@ -38,11 +37,11 @@ export default function AboutPage() {
                     </div>
                     <div className={styles.links}>
                         <div className={styles.social}>
-                            <Link href="mailto:dev@alpha93.kr">
+                            <a href="mailto:dev@alpha93.kr">
                                 <AtSymbolIcon />
                                 <p>dev@alpha93.kr</p>
-                            </Link>
-                            <Link href="https://github.com/AlphaKR93">
+                            </a>
+                            <a href="https://github.com/AlphaKR93">
                                 <AnimatedSimpleIcon
                                     id="github"
                                     color={{
@@ -51,8 +50,8 @@ export default function AboutPage() {
                                     }}
                                 />
                                 <p>AlphaKR93</p>
-                            </Link>
-                            <Link href="https://instagram.com/@alphakr93">
+                            </a>
+                            <a href="https://instagram.com/@alphakr93">
                                 <AnimatedSimpleIcon
                                     id="instagram"
                                     color={{
@@ -61,15 +60,15 @@ export default function AboutPage() {
                                     }}
                                 />
                                 <p>AlphaKR93</p>
-                            </Link>
+                            </a>
                         </div>
                         <div className={styles.icons}>
-                            <Link href="https://toss.me/alphakr93">
+                            <a href="https://toss.me/alphakr93">
                                 <CurrencyDollarIcon />
-                            </Link>
-                            <Link href="https://alpha93.kr/">
+                            </a>
+                            <a href="https://alpha93.kr/">
                                 <GlobeAltIcon />
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>

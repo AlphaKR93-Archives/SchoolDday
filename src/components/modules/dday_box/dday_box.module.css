@@ -13,12 +13,7 @@
         }
 
         .tags {
-            @apply bg-pri border-sec flex justify-between rounded-xl border p-1.5 text-sm;
-            box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #fff;
-
-            @include append-attr("dark") {
-                box-shadow: 5px 5px 10px #141414, -5px -5px 10px #1a1a1a;
-            }
+            @apply bg-pri border-sec shadow-pri flex justify-between rounded-xl border p-1.5 text-sm;
 
             p {
                 @apply rounded-[.4rem] px-1.5 py-1 font-bold text-white;
@@ -27,7 +22,7 @@
             .dateInformations {
                 @apply flex gap-1.5;
 
-                @media (width <= 428px) {
+                @media (width <= 402px) {
                     @apply hidden;
                 }
             }
