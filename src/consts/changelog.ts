@@ -204,6 +204,15 @@ const changelog: {
         version: "3.2.0.1",
         date: "2023. 06. 10 AM 02:40",
         content: ["일부 보안 문제 해결"]
+    },
+    {
+        version: "3.3.0.0",
+        date: "Work in progress",
+        content: [
+            "홈 화면 문의 알림을 닫을 수 있도록 변경",
+            "밀리초 활성화/비활성화 처리 시스템 개선",
+            "디데이 업데이트"
+        ]
     }
 ].reverse();
 export default changelog;

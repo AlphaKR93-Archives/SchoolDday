@@ -17,21 +17,11 @@ type ddayListType = {
 
 const ddays: ddayListType = [
     {
-        name: "1학기 2차고사",
-        type: DdayType.EXAMINATION,
-        grades: [2, 3],
+        name: "2분기 버스킹",
+        type: DdayType.EVENT,
         date: {
-            start: date(false, 6, 26, 8, 50),
-            end: date(false, 6, 28, 12, 10)
-        }
-    },
-    {
-        name: "선비교육",
-        type: DdayType.MISCELLANEOUS,
-        grades: [1],
-        date: {
-            start: date(false, 6, 26, 8, 50),
-            end: date(false, 6, 26, 15, 0)
+            start: date(false, 7, 12, 12, 40),
+            end: date(false, 7, 12, 13, 20)
         }
     },
     {
