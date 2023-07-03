@@ -2,10 +2,10 @@
 
 import InformationCircleIcon from "@heroicons/react/24/solid/InformationCircleIcon";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import styles from "./index.module.css";
 import { useAppDispatch, useAppSelector } from "@/store/store";
 import { dismissNotification } from "@/store/reducer/notifications.slice";
 import { useEffect, useState } from "react";
+import styles from "./index.module.css";
 
 export default function IndexNotification() {
     const [isReady, updateStatus] = useState(false);
@@ -26,7 +26,7 @@ export default function IndexNotification() {
                     있습니다.
                 </span>
             </div>
-            <button onClick={() => dispatch(dismissNotification("support"))}>
+            <button type="button" onClick={() => dispatch(dismissNotification("support"))}>
                 <XMarkIcon />
             </button>
         </div>

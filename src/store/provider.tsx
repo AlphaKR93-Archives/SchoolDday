@@ -36,7 +36,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         <NextThemeProvider disableTransitionOnChange>
             <Provider store={store}>
                 <LoadCookies />
-                {children}support
+                {children}
             </Provider>
         </NextThemeProvider>
     );
