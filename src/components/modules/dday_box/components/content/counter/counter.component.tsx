@@ -55,7 +55,7 @@ function process(
 }
 
 export default function CounterComponent(props: { start: number; end: number }) {
-    const milli = useAppSelector(state => state.isMillisecondEnabled.enabled);
+    const milli = useAppSelector(state => state.enabledOptions.enabled).includes("showMillisecond");
 
     const [isReady, updateStatus] = useState(false);
     const [passed, updatePassed] = useState(false);

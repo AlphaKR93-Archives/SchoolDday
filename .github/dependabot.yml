@@ -3,7 +3,7 @@ updates:
     - package-ecosystem: "github-actions"
       directory: "/.github/workflows"
       rebase-strategy: "auto"
-      target-branch: "dev"
+      target-branch: "master"
       assignees:
           - "AlphaKR93"
       reviewers:
@@ -16,7 +16,7 @@ updates:
     - package-ecosystem: "npm"
       directory: "/"
       rebase-strategy: "auto"
-      target-branch: "dev"
+      target-branch: "master"
       assignees:
           - "AlphaKR93"
       reviewers:
@@ -25,5 +25,3 @@ updates:
           interval: "daily"
           time: "00:00"
           timezone: "Asia/Seoul"
-      ignore:
-          - dependency-name: "next"

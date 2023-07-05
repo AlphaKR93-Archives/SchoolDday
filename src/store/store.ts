@@ -3,14 +3,16 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import enabledDdayTypesReducer from "./reducer/dday/enabled_types.slice";
 import enabledDdayGradesReducer from "./reducer/dday/enabled_grades.slice";
 import enabledDdaySemestersReducer from "./reducer/dday/enabled_semester.slice";
-import isMillisecondEnabledReducer from "./reducer/dday/is_millisecond_enabled.reducer";
+import dismissedNotificationsReducer from "./reducer/notifications.slice";
+import optionsReducer from "./reducer/options.slice";
 
 const store = configureStore({
     reducer: {
         enabledDdayTypes: enabledDdayTypesReducer,
         enabledDdayGrades: enabledDdayGradesReducer,
         enabledDdaySemesters: enabledDdaySemestersReducer,
-        isMillisecondEnabled: isMillisecondEnabledReducer
+        dismissedNotifications: dismissedNotificationsReducer,
+        enabledOptions: optionsReducer
     },
     devTools: process.env.NODE_ENV !== "production"
 });

@@ -5,7 +5,7 @@ import { useState } from "react";
 import Sidebar from "@/components/main/sidebar/sidebar";
 import ButtonSection from "@/components/main/sidebar/button_section";
 import Link from "next/link";
-import * as pack from "../../../../package.json";
+import * as pack from "@/../package.json";
 import styles from "./mobile_navbar.module.css";
 
 export default function MobileNavigationBarComponent() {

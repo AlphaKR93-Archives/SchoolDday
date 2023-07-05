@@ -6,9 +6,10 @@ import { getCookie } from "cookies-next";
 import { setEnabledDdayTypes } from "@/store/reducer/dday/enabled_types.slice";
 import { setEnabledDdayGrades } from "@/store/reducer/dday/enabled_grades.slice";
 import { setEnabledDdaySemesters } from "@/store/reducer/dday/enabled_semester.slice";
-import { setMillisecondStatus } from "@/store/reducer/dday/is_millisecond_enabled.reducer";
 import { ThemeProvider as NextThemeProvider } from "next-themes";
 import store, { useAppDispatch } from "./store";
+import { setDismissedNotification } from "./reducer/notifications.slice";
+import { setEnabledOptions } from "./reducer/options.slice";
 
 function LoadCookies() {
     const dispatch = useAppDispatch();
@@ -16,13 +17,16 @@ function LoadCookies() {
     const enabledDdayTypes = getCookie("enabled_dday_types");
     const enabledDdayGrades = getCookie("enabled_dday_grades");
     const enabledDdaySemesters = getCookie("enabled_dday_semesters");
-    const isMillisecondEnabled = getCookie("is_millisecond_enabled");
+    const enabledOptions = getCookie("enabledOptions");
+    const dismissedNotifications = getCookie("dismissedNotifications");
 
     if (typeof enabledDdayTypes === "string") dispatch(setEnabledDdayTypes(enabledDdayTypes.split(" ")));
     if (typeof enabledDdayGrades === "string")
         dispatch(setEnabledDdayGrades(enabledDdayGrades.split(" ").map(grade => Number(grade))));
     if (typeof enabledDdaySemesters === "string") dispatch(setEnabledDdaySemesters(enabledDdaySemesters.split(" ")));
-    dispatch(setMillisecondStatus(isMillisecondEnabled));
+    if (typeof enabledOptions === "string") dispatch(setEnabledOptions(enabledOptions.split(" ")));
+    if (typeof dismissedNotifications === "string")
+        dispatch(setDismissedNotification(dismissedNotifications.split(" ")));
 
     return <div />;
 }
