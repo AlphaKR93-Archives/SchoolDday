@@ -1,7 +1,7 @@
 .dateSection {
     @apply text-pri w-full;
 
-    span {
+    & span {
         @apply mt-3 w-full justify-center gap-2;
     }
 

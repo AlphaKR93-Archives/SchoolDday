@@ -9,7 +9,7 @@
 .loading {
     @apply flex h-6 w-6 items-center justify-center;
 
-    svg {
+    & svg {
         @apply text-sec fill-pri h-[20px] w-[20px] animate-loading;
     }
 }

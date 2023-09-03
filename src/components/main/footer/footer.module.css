@@ -4,15 +4,15 @@
     .body {
         @apply mx-auto flex w-full max-w-[1340px] items-center justify-between py-10;
 
-        span {
+        & span {
             @apply flex items-end gap-4;
         }
 
-        h1 {
+        & h1 {
             @apply text-2xl font-bold;
         }
 
-        p {
+        & p {
             @apply text-sec;
         }
 

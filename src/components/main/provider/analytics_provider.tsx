@@ -16,14 +16,6 @@ export default function AnalyticsProvider() {
                     gtag('config', 'G-X3TG17T2YP');
                     `}
             </Script>
-            <Script type="text/javascript" src="http://wcs.naver.net/wcslog.js" />
-            <Script id="naver_analytics">
-                {`
-                    if (!wcs_add) var wcs_add = {};
-                    wcs_add["wa"] = "1b01d690308afe0";
-                    if (window.wcs) wcs_do();
-                    `}
-            </Script>
         </>
     );
 }

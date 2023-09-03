@@ -28,11 +28,10 @@ export default function AboutPage() {
                                     width={32}
                                     height={32}
                                 />
-                                <p className={styles.name}>AlphaKR93</p>
-                                <p className={styles.pronoun}>He/Him</p>
+                                <p className={styles.name}>Alpha</p>
                             </div>
                             <hr className="my-5" />
-                            <p className={styles.desc}>Full-stack Student Developer</p>
+                            <p className={styles.desc}>학생 | 소프트웨어 엔지니어 | 저널리스트 | 한글 번역가</p>
                         </div>
                     </div>
                     <div className={styles.links}>
@@ -66,7 +65,10 @@ export default function AboutPage() {
                             <a href="https://toss.me/alphakr93">
                                 <CurrencyDollarIcon />
                             </a>
-                            <a href="https://alpha93.kr/">
+                            <a href="https://www.threads.net/@dev.alphakr93">
+                                <AtSymbolIcon />
+                            </a>
+                            <a href="https://linktr.ee/alphakr93">
                                 <GlobeAltIcon />
                             </a>
                         </div>

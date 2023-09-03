@@ -1,7 +1,7 @@
 .main {
     @apply mt-4 flex h-full min-w-full;
 
-    ul {
+    & ul {
         @media (width <= 714px) {
             @apply hidden;
         }
