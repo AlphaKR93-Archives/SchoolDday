@@ -7,11 +7,11 @@
         .title {
             @apply flex items-center gap-7;
 
-            h1 {
+            & h1 {
                 @apply text-pri min-w-max text-2xl font-bold;
             }
 
-            p {
+            & p {
                 @apply text-sec min-w-max text-xl;
 
                 @media (width <= 402px) {
@@ -55,15 +55,15 @@
         .vcontent {
             @apply bg-pri border-sec shadow-pri rounded-xl border p-5;
 
-            ul {
+            & ul {
                 @apply style-list pl-3.5;
             }
 
-            li {
+            & li {
                 @apply style-list mt-2;
             }
 
-            h1 {
+            & h1 {
                 @apply text-pri min-w-max text-xl font-bold;
             }
 

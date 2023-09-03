@@ -1,7 +1,7 @@
 .button {
     @apply flex items-center justify-center gap-3;
 
-    svg {
+    & svg {
         @apply text-sec trans h-6 w-6 hover:text-pri;
     }
 }
@@ -9,15 +9,15 @@
 .sidebar {
     @apply h-full min-w-[18rem] p-7;
 
-    li {
+    & li {
         @apply mb-5;
     }
 
-    ul {
+    & ul {
         @apply border-sec flex items-center justify-between border-l py-1 pl-4;
     }
 
-    h1 {
+    & h1 {
         @apply text-pri mb-2 font-bold;
     }
 

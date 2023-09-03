@@ -1,7 +1,7 @@
 .counter {
     @apply text-pri mt-3 flex min-w-max items-end justify-center;
 
-    span {
+    & span {
         @apply flex justify-center gap-1 text-5xl;
 
         @media (width <= 376px) {

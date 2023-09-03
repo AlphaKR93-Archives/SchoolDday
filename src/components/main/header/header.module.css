@@ -5,7 +5,7 @@
         @apply hidden;
     }
 
-    nav {
+    & nav {
         @apply mx-auto flex h-full w-full max-w-screen-xl items-center px-4;
 
         @media (width <= 962px) {
@@ -20,7 +20,7 @@
     .links {
         @apply ml-11 flex min-w-max items-center gap-6;
 
-        a {
+        & a {
             @apply text-sec trans hover:text-pri;
         }
     }
@@ -46,7 +46,7 @@
             .loading {
                 @apply flex h-6 w-6 items-center justify-center;
 
-                svg {
+                & svg {
                     @apply text-sec fill-pri h-[20px] w-[20px] animate-loading;
                 }
             }
