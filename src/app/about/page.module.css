@@ -1,12 +1,12 @@
 .about {
-    section {
+    & section {
         @apply bg-pri border-sec shadow-hg mb-16 rounded-3xl border p-6;
     }
 
     .title {
         @apply flex items-center gap-7;
 
-        h1 {
+        & h1 {
             @apply text-pri min-w-max text-2xl font-bold;
         }
     }
@@ -25,7 +25,7 @@
                 @apply justify-center;
             }
 
-            img {
+            & img {
                 @apply rounded-full;
 
                 @media (width <= 457px) {
@@ -68,7 +68,7 @@
                     }
                 }
 
-                img {
+                & img {
                     @media (width >= 457px) {
                         @apply hidden;
                     }
@@ -87,7 +87,7 @@
         .links {
             @apply text-sec;
 
-            svg {
+            & svg {
                 @apply h-6 w-6;
             }
 
@@ -98,17 +98,17 @@
                     @apply mt-7 grid grid-cols-3;
                 }
 
-                div {
+                & div {
                     @apply mb-1 ml-0.5 mr-0.5 h-5 w-5;
                 }
 
-                p {
+                & p {
                     @media (width <= 633px) {
                         @apply hidden;
                     }
                 }
 
-                a {
+                & a {
                     @apply flex items-center gap-1.5;
 
                     @media (width <= 758px) {
@@ -120,7 +120,7 @@
             .icons {
                 @apply mt-3 flex justify-center gap-3;
 
-                a {
+                & a {
                     @media (width <= 758px) {
                         @apply flex w-full justify-center;
                     }

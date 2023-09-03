@@ -5,7 +5,7 @@
         @apply hidden;
     }
 
-    p {
+    & p {
         @apply w-screen text-center;
     }
 }
@@ -15,14 +15,14 @@
         @apply hidden;
     }
 
-    main {
+    & main {
         @apply mx-auto min-h-screen w-full max-w-[1340px];
 
-        hr {
+        & hr {
             @apply bg-sec h-px w-full border-0;
         }
 
-        p {
+        & p {
             @apply min-w-max;
         }
     }

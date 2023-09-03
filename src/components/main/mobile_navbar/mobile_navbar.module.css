@@ -11,23 +11,23 @@
         .title {
             @apply flex items-center justify-center;
 
-            span {
+            & span {
                 @apply text-center;
 
                 flex: 1 0 80%;
             }
 
-            h1 {
+            & h1 {
                 @apply text-xl font-bold;
             }
 
-            p {
+            & p {
                 @apply text-sec w-full text-sm;
 
                 flex: 1 0 10%;
             }
 
-            svg {
+            & svg {
                 @apply h-7 w-7;
 
                 flex: 1 0 10%;
@@ -63,7 +63,7 @@
                     display: none;
                 }
 
-                a {
+                & a {
                     @apply text-center;
                 }
             }
