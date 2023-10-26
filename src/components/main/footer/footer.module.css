@@ -2,7 +2,7 @@
     @apply bg-sec mx-auto w-full;
 
     .body {
-        @apply mx-auto flex w-full max-w-screen items-center justify-between py-10 px-4;
+        @apply mx-auto flex w-full max-w-screen-xl items-center justify-between py-10 px-4;
 
         & span {
             @apply flex items-end gap-4;
