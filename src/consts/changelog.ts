@@ -227,9 +227,7 @@ const changelog: {
     {
         version: "3.3.0.2",
         date: "2023. 10. 26 AM 10:29",
-        content: [
-            "웹페이지 최하단 정보 패널 작은 화면 PC의 보기 개선"
-        ]
+        content: ["웹페이지 최하단 정보 패널 작은 화면 PC의 보기 개선"]
     }
 ].reverse();
 export default changelog;
