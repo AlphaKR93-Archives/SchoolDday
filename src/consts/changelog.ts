@@ -228,6 +228,17 @@ const changelog: {
         version: "3.3.0.2",
         date: "2023. 10. 26 AM 10:29",
         content: ["웹페이지 최하단 정보 패널 작은 화면 PC의 보기 개선"]
+    },
+    {
+        version: "3.3.0.3 (Last)",
+        date: "2023. 10. 27 PM 02:24",
+        content: [
+            "대학수학능력시험이 휴교일로 설정되지 않은 문제 해결",
+            "2023 수능 대박을 기원합니다!",
+            "1월 ~ 3월 일정이 정상적으로 표시되지 않던 문제 해결",
+            "서비스 종료 관련 내용은 상단 소스 코드를 클릭하여 확인하실 수 있습니다."
+        ]
     }
 ].reverse();
 export default changelog;
+export const ddayLastUpdateYear = 2023;
